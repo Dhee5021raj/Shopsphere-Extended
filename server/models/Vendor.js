@@ -20,4 +20,7 @@ const vendorSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Compound index to accelerate public vendor directory filtering and sorting
+vendorSchema.index({ status: 1, rating: -1, totalSales: -1 });
+
 module.exports = mongoose.model('Vendor', vendorSchema);

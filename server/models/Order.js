@@ -47,4 +47,13 @@ const orderSchema = new mongoose.Schema(
 // Compound index to quickly retrieve customer orders by date
 orderSchema.index({ customer: 1, createdAt: -1 });
 
+// Compound multikey index to accelerate vendor order filtering, status queries, and analytics
+orderSchema.index({ 'items.vendor': 1, 'items.status': 1, createdAt: -1 });
+
+// Compound index to accelerate admin order listing by lifecycle status and revenue aggregations
+orderSchema.index({ orderStatus: 1, createdAt: -1 });
+
+// Compound multikey index to accelerate verified purchase checks
+orderSchema.index({ customer: 1, 'items.product': 1 });
+
 module.exports = mongoose.model('Order', orderSchema);
