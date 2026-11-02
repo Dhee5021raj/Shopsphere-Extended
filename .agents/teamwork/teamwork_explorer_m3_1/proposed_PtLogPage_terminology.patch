@@ -1,0 +1,252 @@
+--- a/client/src/pages/PtLogPage.jsx
++++ b/client/src/pages/PtLogPage.jsx
+@@ -36,1 +36,1 @@
+-  order: 'Benchmark protocol record: one naive-vs-reduced comparison for a single join order',
++  order: 'Benchmark protocol record: one Standard MongoDB vs Optimized (mongo-pt) comparison for a single join order',
+@@ -98,7 +98,8 @@
+ const phaseChip = (phase, runStatus, nowTick) => {
+-  const p = (runStatus && runStatus[phase]) || null;
++  const p = (runStatus && (runStatus[phase] || (phase === 'standard' ? runStatus.naive : phase === 'optimized' ? runStatus.reduced : null))) || null;
+   if (!p) return null;
+-  const label = phase === 'naive' ? 'NAIVE (slow)' : 'REDUCED (faster)';
++  const isBaseline = phase === 'standard' || phase === 'naive';
++  const label = isBaseline ? 'STANDARD MONGODB' : 'OPTIMIZED (mongo-pt)';
+   if (p.done) {
+     return (
+@@ -147,1 +148,1 @@
+-          {good ? '▲ PT wins here' : '▼ Overhead dominates'}
++          {good ? '▲ Optimized wins here' : '▼ Overhead dominates'}
+@@ -185,10 +186,16 @@
+   const {
+     totalRuns: overallRuns, wins: overallWins, winRate: overallWinRate,
+-    avgNaiveMs: overallAvgNaive, avgReducedMs: overallAvgRed,
+-    medNaiveMs: overallMedNaive, medReducedMs: overallMedRed,
+-    throughputNaive: overallTpNaive, throughputReduced: overallTpRed,
++    avgStandardMs, avgNaiveMs,
++    avgOptimizedMs, avgReducedMs,
++    medStandardMs, medNaiveMs,
++    medOptimizedMs, medReducedMs,
++    throughputStandard, throughputNaive,
++    throughputOptimized, throughputReduced,
+     avgSpeedup: overallAvgSpeedup, maxSpeedup: overallMaxSpeedup, minSpeedup: overallMinSpeedup,
+     robustnessGap: overallGap,
+     avgOverheadPct: overallOverhead, avgTransferMs: overallTransfer, avgMatMs: overallMat,
+     perSpecStats = [], timeline: overallTimeline = [],
+   } = metrics;
++  const overallAvgStd = avgStandardMs ?? avgNaiveMs;
++  const overallAvgOpt = avgOptimizedMs ?? avgReducedMs;
++  const overallMedStd = medStandardMs ?? medNaiveMs;
++  const overallMedOpt = medOptimizedMs ?? medReducedMs;
++  const overallTpStd = throughputStandard ?? throughputNaive;
++  const overallTpOpt = throughputOptimized ?? throughputReduced;
+@@ -201,10 +208,16 @@
+   const displayData = activeSpecData || {
+     runs: overallRuns,
+     wins: overallWins,
+     winRate: overallWinRate,
+-    avgNaiveMs: overallAvgNaive,
+-    avgReducedMs: overallAvgRed,
+-    medNaiveMs: overallMedNaive,
+-    medReducedMs: overallMedRed,
+-    throughputNaive: overallTpNaive,
+-    throughputReduced: overallTpRed,
++    avgStandardMs: overallAvgStd,
++    avgOptimizedMs: overallAvgOpt,
++    medStandardMs: overallMedStd,
++    medOptimizedMs: overallMedOpt,
++    throughputStandard: overallTpStd,
++    throughputOptimized: overallTpOpt,
++    avgNaiveMs: overallAvgStd,
++    avgReducedMs: overallAvgOpt,
++    medNaiveMs: overallMedStd,
++    medReducedMs: overallMedOpt,
++    throughputNaive: overallTpStd,
++    throughputReduced: overallTpOpt,
+     avgSpeedup: overallAvgSpeedup,
+@@ -221,7 +234,9 @@
+   const chartTimeline = activeSpecData ? (activeSpecData.timeline || []) : overallTimeline;
+   const chartData = (chartTimeline || []).map((r, i) => ({
+     run: i + 1,
+-    'Naive (ms)': Math.round(r.naive_ms),
+-    'Reduced (ms)': Math.round(r.reduced_ms),
++    'Standard MongoDB (ms)': Math.round(r.standard_ms ?? r.naive_ms ?? 0),
++    'Optimized (mongo-pt) (ms)': Math.round(r.optimized_ms ?? r.reduced_ms ?? r.total_ms ?? 0),
+     speedup: r.speedup,
+   }));
+@@ -229,3 +244,5 @@
+-  const tpImprove = displayData.throughputNaive && displayData.throughputReduced
+-    ? (displayData.throughputReduced / displayData.throughputNaive).toFixed(1)
++  const tpStd = displayData.throughputStandard ?? displayData.throughputNaive;
++  const tpOpt = displayData.throughputOptimized ?? displayData.throughputReduced;
++  const tpImprove = tpStd && tpOpt
++    ? (tpOpt / tpStd).toFixed(1)
+     : null;
+@@ -242,1 +259,1 @@
+-              Query-by-Query breakdown: Naive vs Predicate-Transfer (Throughput, Latency, Speedup & Overhead)
++              Query-by-Query breakdown: Standard MongoDB vs Optimized (mongo-pt) (Throughput, Latency, Speedup & Overhead)
+@@ -314,7 +331,7 @@
+             <StatCard
+               icon={Zap}
+-              label="Naive Throughput"
+-              value={fmtThroughput(displayData.throughputNaive)}
+-              sub={`Avg latency: ${fmtMs(displayData.avgNaiveMs)}`}
++              label="Standard Throughput"
++              value={fmtThroughput(displayData.throughputStandard ?? displayData.throughputNaive)}
++              sub={`Avg latency: ${fmtMs(displayData.avgStandardMs ?? displayData.avgNaiveMs)}`}
+               color="rose"
+             />
+             <StatCard
+               icon={Zap}
+-              label="PT Throughput"
+-              value={fmtThroughput(displayData.throughputReduced)}
+-              sub={`Avg latency: ${fmtMs(displayData.avgReducedMs)}`}
++              label="Optimized Throughput"
++              value={fmtThroughput(displayData.throughputOptimized ?? displayData.throughputReduced)}
++              sub={`Avg latency: ${fmtMs(displayData.avgOptimizedMs ?? displayData.avgReducedMs)}`}
+               color="emerald"
+             />
+             <StatCard
+               icon={TrendingUp}
+               label="Throughput Gain"
+               value={tpImprove ? `${tpImprove}×` : '—'}
+-              sub="PT queries/sec ÷ Naive queries/sec"
++              sub="Optimized queries/sec ÷ Standard queries/sec"
+               color="indigo"
+               good={tpImprove > 1}
+             />
+             <StatCard
+               icon={Activity}
+-              label="Median Naive"
+-              value={fmtMs(displayData.medNaiveMs)}
+-              sub="Median latency (unoptimised)"
++              label="Median Standard"
++              value={fmtMs(displayData.medStandardMs ?? displayData.medNaiveMs)}
++              sub="Median latency (Standard MongoDB)"
+               color="amber"
+             />
+             <StatCard
+               icon={Activity}
+-              label="Median Reduced"
+-              value={fmtMs(displayData.medReducedMs)}
+-              sub="Median latency (PT side)"
++              label="Median Optimized"
++              value={fmtMs(displayData.medOptimizedMs ?? displayData.medReducedMs)}
++              sub="Median latency (Optimized mongo-pt)"
+               color="violet"
+             />
+@@ -361,3 +378,3 @@
+               label="Avg Speedup"
+               value={displayData.avgSpeedup != null ? `${displayData.avgSpeedup}×` : '—'}
+-              sub="reduced ÷ naive latency ratio"
++              sub="Standard ÷ Optimized latency ratio"
+               color={displayData.avgSpeedup >= 1 ? 'emerald' : 'rose'}
+@@ -383,3 +400,3 @@
+               label="Win Rate"
+               value={`${displayData.winRate}%`}
+-              sub={`${displayData.wins || 0} / ${displayData.runs || 0} runs where PT won`}
++              sub={`${displayData.wins || 0} / ${displayData.runs || 0} runs where Optimized won`}
+               color={displayData.winRate >= 50 ? 'emerald' : 'rose'}
+@@ -391,3 +408,3 @@
+               label="Robustness Gap"
+               value={displayData.robustnessGap != null ? `${displayData.robustnessGap}×` : '≥ 2 runs needed'}
+-              sub="max naive ÷ min naive order spread"
++              sub="max standard ÷ min standard order spread"
+               color={displayData.robustnessGap > 3 ? 'rose' : 'amber'}
+@@ -405,3 +422,3 @@
+               label="Avg Overhead %"
+               value={pct(displayData.avgOverheadPct)}
+-              sub="(transfer + mat) as % of reduced total"
++              sub="(transfer + mat) as % of Optimized total"
+               color={displayData.avgOverheadPct < 20 ? 'emerald' : displayData.avgOverheadPct < 60 ? 'amber' : 'rose'}
+@@ -458,5 +475,5 @@
+-                  <Bar dataKey="Naive (ms)" fill="#f87171" radius={[4, 4, 0, 0]} />
+-                  <Bar dataKey="Reduced (ms)" fill="#34d399" radius={[4, 4, 0, 0]} />
++                  <Bar dataKey="Standard MongoDB (ms)" fill="#f87171" radius={[4, 4, 0, 0]} />
++                  <Bar dataKey="Optimized (mongo-pt) (ms)" fill="#34d399" radius={[4, 4, 0, 0]} />
+                 </BarChart>
+               </ResponsiveContainer>
+               <p className="text-[10px] text-slate-400 text-center mt-2">
+-                Red = Naive (Full DB join) · Green = Reduced (With Predicate Transfer). Shorter bar = faster query execution.
++                Red = Standard MongoDB (Full DB join) · Green = Optimized (mongo-pt with Predicate Transfer). Shorter bar = faster query execution.
+               </p>
+@@ -486,6 +503,6 @@
+                     <th className="px-4 py-2.5 font-bold">Query Spec</th>
+                     <th className="px-4 py-2.5 font-bold text-right">Runs</th>
+-                    <th className="px-4 py-2.5 font-bold text-right">Naive avg</th>
+-                    <th className="px-4 py-2.5 font-bold text-right">PT avg</th>
+-                    <th className="px-4 py-2.5 font-bold text-right">Naive tput</th>
+-                    <th className="px-4 py-2.5 font-bold text-right">PT tput</th>
++                    <th className="px-4 py-2.5 font-bold text-right">Standard avg</th>
++                    <th className="px-4 py-2.5 font-bold text-right">Optimized avg</th>
++                    <th className="px-4 py-2.5 font-bold text-right">Standard tput</th>
++                    <th className="px-4 py-2.5 font-bold text-right">Optimized tput</th>
+                     <th className="px-4 py-2.5 font-bold text-right">Avg speedup</th>
+@@ -511,6 +528,6 @@
+                         <td className="px-4 py-2.5 text-right text-slate-700">{s.runs}</td>
+-                        <td className="px-4 py-2.5 text-right text-rose-600 font-semibold">{fmtMs(s.avgNaiveMs)}</td>
+-                        <td className="px-4 py-2.5 text-right text-emerald-600 font-semibold">{fmtMs(s.avgReducedMs)}</td>
+-                        <td className="px-4 py-2.5 text-right text-slate-500">{fmtThroughput(s.throughputNaive)}</td>
+-                        <td className="px-4 py-2.5 text-right text-slate-700 font-semibold">{fmtThroughput(s.throughputReduced)}</td>
++                        <td className="px-4 py-2.5 text-right text-rose-600 font-semibold">{fmtMs(s.avgStandardMs ?? s.avgNaiveMs)}</td>
++                        <td className="px-4 py-2.5 text-right text-emerald-600 font-semibold">{fmtMs(s.avgOptimizedMs ?? s.avgReducedMs)}</td>
++                        <td className="px-4 py-2.5 text-right text-slate-500">{fmtThroughput(s.throughputStandard ?? s.throughputNaive)}</td>
++                        <td className="px-4 py-2.5 text-right text-slate-700 font-semibold">{fmtThroughput(s.throughputOptimized ?? s.throughputReduced)}</td>
+                         <td className="px-4 py-2.5 text-right font-bold">
+@@ -631,7 +648,7 @@
+                 {runStatus.running ? (
+                   <>
+-                    {runStatus.reduced || runStatus.naive ? (
++                    {(runStatus.optimized || runStatus.reduced || runStatus.standard || runStatus.naive) ? (
+                       <>
+-                        {phaseChip('reduced', runStatus, nowTick)}
+-                        {phaseChip('naive', runStatus, nowTick)}
++                        {phaseChip('optimized', runStatus, nowTick)}
++                        {phaseChip('standard', runStatus, nowTick)}
+                       </>
+@@ -651,4 +668,4 @@
+               <p className="text-xs text-slate-500 mt-1">
+                 {runStatus.running
+-                  ? 'A background benchmark is being measured right now — your request was never slowed. The reduced (fast) side finishes in seconds; the naive side keeps grinding until the log row appears (every 5 s). Each chip above shows its own phase.'
+-                  : 'Search the Products page (e.g. type "laptop") to fire one; you\'ll get a separate chip for the naive and the reduced (faster) measurement. Last 100 records log shown below.'}
++                  ? 'A background benchmark is being measured right now — your request was never slowed. The Optimized (mongo-pt) side finishes in seconds; the Standard MongoDB side keeps executing until the log row appears (every 5 s). Each chip above shows its own phase.'
++                  : 'Search the Products page (e.g. type "laptop") to fire one; you\'ll get a separate chip for the Standard MongoDB and Optimized (mongo-pt) measurement. Last 100 records log shown below.'}
+               </p>
+@@ -660,1 +677,1 @@
+-                  title="Only rows fired by real site actions (search / category browse / dashboards) — the live naive-vs-reduced comparisons"
++                  title="Only rows fired by real site actions (search / category browse / dashboards) — the live Standard MongoDB vs Optimized (mongo-pt) comparisons"
+@@ -708,1 +725,1 @@
+-              <span className="font-bold">Click any row</span> to see the full story: which action fired the measurement, what the benchmark query computed, and how the naive vs reduced times were produced.
++              <span className="font-bold">Click any row</span> to see the full story: which action fired the measurement, what the benchmark query computed, and how the Standard MongoDB vs Optimized (mongo-pt) times were produced.
+@@ -717,4 +734,4 @@
+                     <th className="px-4 py-3 font-bold">Order</th>
+-                    <th className="px-4 py-3 font-bold text-right">Naive</th>
+-                    <th className="px-4 py-3 font-bold text-right">Reduced</th>
+-                    <th className="px-4 py-3 font-bold text-right" title="Median reduced time ÷ median naive time, both on the SAME (deliberately worst) pinned order.">Speedup</th>
++                    <th className="px-4 py-3 font-bold text-right" title="Standard MongoDB baseline execution latency">Standard MongoDB</th>
++                    <th className="px-4 py-3 font-bold text-right" title="Optimized (mongo-pt) semi-join reduction latency">Optimized (mongo-pt)</th>
++                    <th className="px-4 py-3 font-bold text-right" title="Standard MongoDB latency ÷ Optimized (mongo-pt) latency, both on the SAME (deliberately worst) pinned order.">Speedup</th>
+@@ -777,2 +794,2 @@
+-                          <td className="px-4 py-3 text-right text-slate-700">{fmtMs(r.naive_ms)}</td>
+-                          <td className="px-4 py-3 text-right text-slate-700">{fmtMs(r.reduced_ms ?? r.total_ms)}</td>
++                          <td className="px-4 py-3 text-right text-slate-700">{fmtMs(r.standard_ms ?? r.naive_ms)}</td>
++                          <td className="px-4 py-3 text-right text-slate-700">{fmtMs(r.optimized_ms ?? r.reduced_ms ?? r.total_ms)}</td>
+@@ -784,1 +801,1 @@
+-                          <td className="px-4 py-3 text-right font-bold" title={r.worst_case && r.worst_case.speedup != null ? `fixed catalog query, same pinned order — naive ${fmtMs(r.worst_case.naive_ms)} vs reduced ${fmtMs(r.worst_case.reduced_ms)}` : ''}>
++                          <td className="px-4 py-3 text-right font-bold" title={r.worst_case && r.worst_case.speedup != null ? `fixed catalog query, same pinned order — Standard MongoDB ${fmtMs(r.worst_case.standard_ms ?? r.worst_case.naive_ms)} vs Optimized ${fmtMs(r.worst_case.optimized_ms ?? r.worst_case.reduced_ms)}` : ''}>
+@@ -816,1 +833,1 @@
+-                                <p><span className="font-bold">Join path (join order:</span> {prettyOrder(r.order)}) — the milestones are collections; the pinned bad order is why the naive side is slow.</p>
++                                <p><span className="font-bold">Join path (join order:</span> {prettyOrder(r.order)}) — the milestones are collections; the pinned bad order is why the Standard MongoDB baseline is slow.</p>
+@@ -822,1 +839,1 @@
+-                                    naive {fmtMs(r.best.naive_ms)} · reduced {fmtMs(r.best.reduced_ms)} (transfer {fmtMs(r.best.transfer_ms)} + mat {fmtMs(r.best.materialization_ms)}) · <span className="font-bold">{r.best.speedup}x</span>
++                                    Standard {fmtMs(r.best.standard_ms ?? r.best.naive_ms)} · Optimized {fmtMs(r.best.optimized_ms ?? r.best.reduced_ms)} (transfer {fmtMs(r.best.transfer_ms)} + mat {fmtMs(r.best.materialization_ms)}) · <span className="font-bold">{r.best.speedup}x</span>
+@@ -833,3 +850,3 @@
+-                                    the fixed catalog spec <code className="font-mono">[{r.worst_case.spec}]</code> — i.e. your search term REMOVED — timed on the same pinned bad order: naive {fmtMs(r.worst_case.naive_ms)} · reduced {fmtMs(r.worst_case.reduced_ms)} (transfer {fmtMs(r.worst_case.transfer_ms)} + mat {fmtMs(r.worst_case.materialization_ms)}) · <span className="font-bold">{r.worst_case.speedup}x</span>
++                                    the fixed catalog spec <code className="font-mono">[{r.worst_case.spec}]</code> — i.e. your search term REMOVED — timed on the same pinned bad order: Standard {fmtMs(r.worst_case.standard_ms ?? r.worst_case.naive_ms)} · Optimized {fmtMs(r.worst_case.optimized_ms ?? r.worst_case.reduced_ms)} (transfer {fmtMs(r.worst_case.transfer_ms)} + mat {fmtMs(r.worst_case.materialization_ms)}) · <span className="font-bold">{r.worst_case.speedup}x</span>
+                                     {r.worst_case.equal ? <span className="text-emerald-600"> · equality ok</span> : <span className="text-rose-600 font-bold"> · MISMATCH</span>}
+-                                    {' '}This is the comparison &quot;the way it was set before&quot;: without a search filter on the first relation, the naive side pays the full-catalog penalty, so the reduction win is large again.
++                                    {' '}This is the comparison &quot;the way it was set before&quot;: without a search filter on the first relation, the Standard MongoDB baseline pays the full-catalog penalty, so the Optimized (mongo-pt) reduction win is large again.
+@@ -855,2 +872,2 @@
+-          Transfer and materialization are reported separately and are already included in the reduced time;
+-          overhead = (transfer + materialization) / reduced total. Shadow runs execute in a detached process
++          Transfer and materialization are reported separately and are already included in the Optimized (mongo-pt) time;
++          overhead = (transfer + materialization) / Optimized total. Shadow runs execute in a detached process

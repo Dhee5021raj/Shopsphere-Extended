@@ -1,0 +1,9 @@
+<html><head><meta charset="utf-8"><title>mongo-pt: time per join order</title></head><body>
+<h1>mongo-pt — time per join order (naive vs reduced)</h1>
+**Environment**
+mongod 8.2.6 | 16-core AMD Ryzen 7 7735HS with Radeon Graphics         | 15.19 GB RAM (2.61 GB free) | win32 10.0.26200 | Node v22.19.0
+scale=small runs=1 caps=[10000, 50000, 200000] bloom=true timeout=8000ms
+other heavy processes: Memory Compression (0.87 GB); chrome.exe (0.64 GB); chrome.exe (0.63 GB); freebuff.exe (0.73 GB); mongod-x64-win32-8.2.6.exe (1.15 GB)
+
+<h2>rare_category_revenue_7d</h2><svg width="900" height="158" font-family="sans-serif" font-size="11"><text x="4" y="72">oi>o>p>v>cat</text><rect x="240" y="60" width="515.306753458096" height="9" fill="#c0392b"/><rect x="240" y="70" width="0.08787632221318144" height="9" fill="#27ae60"/><rect x="240" y="80" width="0.2636289666395443" height="5" fill="#2980b9"/><text x="759.306753458096" y="72">n=5864 r=1 b=3</text><text x="4" y="98">p>oi>o>cat>v</text><rect x="240" y="86" width="540" height="9" fill="#c0392b"/><rect x="240" y="96" width="0.2636289666395443" height="9" fill="#27ae60"/><rect x="240" y="106" width="0.2636289666395443" height="5" fill="#2980b9"/><text x="784" y="98">n=6145 r=3 b=3</text><text x="4" y="124">p>cat>oi>v>o</text><rect x="240" y="112" width="28.73555736371033" height="9" fill="#c0392b"/><rect x="240" y="122" width="0.35150528885272575" height="9" fill="#27ae60"/><rect x="240" y="132" width="0.35150528885272575" height="5" fill="#2980b9"/><text x="272.7355573637103" y="124">n=327 r=4 b=4</text></svg>
+<p>red = naive, green = exact-reduced, blue = bloom-reduced. Bars scaled per spec.</p></body></html>

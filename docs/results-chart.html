@@ -1,0 +1,10 @@
+<html><head><meta charset="utf-8"><title>mongo-pt: time per join order</title></head><body>
+<h1>mongo-pt — time per join order (naive vs exact vs adaptive)</h1>
+Environment
+mongod 8.2.6 | 16-core AMD Ryzen 7 7735HS with Radeon Graphics         | 15.19 GB RAM (3.91 GB free) | win32 10.0.26200 | Node v22.19.0
+label=full scale=medium runs=5 caps=[10000, 50000, 200000] timeout=120000ms edge_ratio=0.3 mat_ratio=0.5 bloom=false
+other heavy processes: Memory Compression (0.96 GB); chrome.exe (0.58 GB); mongod-x64-win32-8.2.6.exe (0.92 GB)
+
+<h2>rare_category_revenue_7d</h2><svg width="960" height="140" font-family="sans-serif" font-size="11"><text x="4" y="72">p>oi>o>cat>v</text><rect x="260" y="60" width="540" height="7" fill="#c0392b"/><rect x="260" y="68" width="0.09511973147269223" height="7" fill="#27ae60"/><rect x="260" y="76" width="0.13739516768277765" height="7" fill="#8e44ad"/><text x="804" y="72">n=102187 e=18 a=26</text><text x="4" y="102">p>cat>oi>v>o</text><rect x="260" y="90" width="39.99784708426708" height="7" fill="#c0392b"/><rect x="260" y="98" width="0.07926644289391017" height="7" fill="#27ae60"/><rect x="260" y="106" width="0.08455087242017087" height="7" fill="#8e44ad"/><text x="303.99784708426705" y="102">n=7569 e=15 a=16</text></svg>
+<h2>common_category_revenue_365d</h2><svg width="960" height="110" font-family="sans-serif" font-size="11"><text x="4" y="72">p>oi>o>cat>v [DNF]</text><rect x="260" y="60" width="540" height="7" fill="#c0392b"/><rect x="260" y="68" width="212.15249999999997" height="7" fill="#27ae60"/><rect x="260" y="76" width="231.1695" height="7" fill="#8e44ad"/><text x="804" y="72">n=DNF e=47145 a=51371</text></svg>
+<p>red = naive, green = exact-reduced, purple = adaptive-reduced, blue = bloom-reduced. Bars scaled per spec; DNF bars use the timeout lower bound.</p></body></html>

@@ -1,0 +1,25 @@
+# **Environment**
+# mongod 8.2.6 | 16-core AMD Ryzen 7 7735HS with Radeon Graphics         | 15.19 GB RAM (3.96 GB free) | win32 10.0.26200 | Node v22.19.0
+# label=smoke scale=small runs=2 caps=[10000, 50000, 200000] timeout=15000ms edge_ratio=0.3 mat_ratio=0.5 bloom=false
+# other heavy processes: Memory Compression (0.99 GB); chrome.exe (0.60 GB); mongod-x64-win32-8.2.6.exe (0.91 GB)
+spec,label,scale,order,naive_median_ms,naive_dnf,exact_median_ms,exact_dnf,adaptive_median_ms,adaptive_dnf,bloom_median_ms,bloom_dnf,transfer_ms,materialization_ms,total_ms,equal
+rare_category_revenue_7d,smoke,small,oi>o>p>v>cat,5911.5,0,3,0,26,0,,,186,100,289,true
+rare_category_revenue_7d,smoke,small,p>oi>o>cat>v,6342,0,3,0,28.5,0,,,186,100,289,true
+rare_category_revenue_7d,smoke,small,p>cat>oi>v>o,347.5,0,2,0,34.5,0,,,186,100,288,true
+common_category_revenue_365d,smoke,small,oi>o>p>v>cat,,1,4730,0,7622.5,0,,,655,500,5885,n/v
+vendor_scoped_revenue_90d,smoke,small,v>oi>p>o,2689.5,0,409.5,0,713.5,0,,,1808,206,2423.5,true
+vendor_scoped_revenue_90d,smoke,small,oi>p>v>o,10185.5,0,639,0,1107,0,,,1808,206,2653,true
+user_scoped_spend_30d,smoke,small,o>u>oi>p,98,0,4.5,0,1.5,0,,,399,79,482.5,true
+user_scoped_spend_30d,smoke,small,o>oi>u>p,555.5,0,2.5,0,2.5,0,,,399,79,480.5,true
+user_scoped_spend_30d,smoke,small,oi>p>o>u,9019,0,2,0,2.5,0,,,399,79,480,true
+user_scoped_spend_30d,smoke,small,u>o>oi>p,2,0,2,0,2.5,0,,,399,79,480,true
+user_scoped_spend_30d,smoke,small,p>oi>o>u,6691.5,0,2,0,2.5,0,,,399,79,480,true
+low_rating_reviews_by_category,smoke,small,r>p>v>c,493.5,0,507,0,758,0,,,344,157,1008,true
+low_rating_reviews_by_category,smoke,small,p>v>r>c,777,0,511,0,744,0,,,344,157,1012,true
+low_rating_reviews_by_category,smoke,small,p>r>v>c,765.5,0,553,0,797,0,,,344,157,1054,true
+low_rating_reviews_by_category,smoke,small,r>p>c>v,895.5,0,480,0,1379,0,,,344,157,981,true
+low_rating_reviews_by_category,smoke,small,p>v>c>r,1329,0,742,0,1388,0,,,344,157,1243,true
+vendor_category_revenue_365d,smoke,small,oi>p>o>v>c,,1,5720,0,9817.5,0,,,1028,559,7307,n/v
+user_vendor_category_spend_30d,smoke,small,o>oi>u>v>p>c,1028,0,5.5,0,5.5,0,,,1104,174,1283.5,true
+user_vendor_category_spend_30d,smoke,small,o>oi>p>u>v>c,1526,0,6.5,0,5.5,0,,,1104,174,1284.5,true
+user_vendor_category_spend_30d,smoke,small,oi>v>o>u>p>c,,1,5,0,6,0,,,1104,174,1283,n/v

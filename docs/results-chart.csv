@@ -1,0 +1,4 @@
+spec,order,naive_ms,naive_dnf,exact_ms,adaptive_ms,bloom_ms
+rare_category_revenue_7d,p>oi>o>cat>v,102187,0,18,26,
+rare_category_revenue_7d,p>cat>oi>v>o,7569,0,15,16,
+common_category_revenue_365d,p>oi>o>cat>v,,1,47145,51371,

@@ -1,0 +1,8 @@
+--- a/client/src/pages/ProductDiscoveryPage.jsx
++++ b/client/src/pages/ProductDiscoveryPage.jsx
+@@ -43,1 +43,1 @@
+-          title="A naive-vs-reduced comparison of your search is being measured detached in the background — click to watch it live"
++          title="A Standard MongoDB vs Optimized (mongo-pt) comparison of your search is being measured detached in the background — click to watch it live"
+@@ -52,1 +52,1 @@
+-          title="Shadow benchmarks idle — open the live naive-vs-reduced comparison log"
++          title="Shadow benchmarks idle — open the live Standard MongoDB vs Optimized (mongo-pt) comparison log"

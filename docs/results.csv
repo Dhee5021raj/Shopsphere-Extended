@@ -1,0 +1,8 @@
+# **Environment**
+# mongod 8.2.6 | 16-core AMD Ryzen 7 7735HS with Radeon Graphics         | 15.19 GB RAM (3.91 GB free) | win32 10.0.26200 | Node v22.19.0
+# label=full scale=medium runs=5 caps=[10000, 50000, 200000] timeout=120000ms edge_ratio=0.3 mat_ratio=0.5 bloom=false
+# other heavy processes: Memory Compression (0.96 GB); chrome.exe (0.58 GB); mongod-x64-win32-8.2.6.exe (0.92 GB)
+spec,label,scale,order,naive_median_ms,naive_dnf,exact_median_ms,exact_dnf,adaptive_median_ms,adaptive_dnf,bloom_median_ms,bloom_dnf,transfer_ms,materialization_ms,total_ms,equal
+rare_category_revenue_7d,full,medium,p>oi>o>cat>v,102187,0,18,0,26,0,,,823,126,967,true
+rare_category_revenue_7d,full,medium,p>cat>oi>v>o,7569,0,15,0,16,0,,,823,126,964,true
+common_category_revenue_365d,full,medium,p>oi>o>cat>v,,1,47145,0,51371,0,,,3471,7705,58321,n/v
