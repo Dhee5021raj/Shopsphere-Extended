@@ -22,7 +22,9 @@ const getVendorAnalytics = async (req, res) => {
     const vendorId = vendor._id;
 
     // PIPELINE 1: Monthly Sales & Revenue breakdown for this Vendor
+    // Optimized: Pre-filters by items.vendor using multikey index BEFORE $unwind
     const monthlyRevenue = await Order.aggregate([
+      { $match: { 'items.vendor': vendorId } },
       { $unwind: '$items' },
       {
         $match: {
@@ -45,7 +47,9 @@ const getVendorAnalytics = async (req, res) => {
     ]);
 
     // PIPELINE 2: Best-Selling Products for this Vendor
+    // Optimized: Pre-filters by items.vendor using multikey index BEFORE $unwind
     const bestSellingProducts = await Order.aggregate([
+      { $match: { 'items.vendor': vendorId } },
       { $unwind: '$items' },
       {
         $match: {
@@ -97,8 +101,14 @@ const getVendorAnalytics = async (req, res) => {
 // @route   GET /api/analytics/admin
 const getAdminAnalytics = async (req, res) => {
   try {
-    // PIPELINE 1: Platform Monthly Revenue & Order Volume
+    // PIPELINE 1: Platform Monthly Revenue & Order Volume (Excludes Cancelled Orders)
+    // Optimized: Uses orderStatus_1_createdAt_-1 index to filter cancelled orders at the storage engine level
     const monthlyOverview = await Order.aggregate([
+      {
+        $match: {
+          orderStatus: { $ne: 'Cancelled' }
+        }
+      },
       {
         $group: {
           _id: {
@@ -113,7 +123,9 @@ const getAdminAnalytics = async (req, res) => {
     ]);
 
     // PIPELINE 2: Top Vendors by Sales Volume
+    // Optimized: Pre-filters non-cancelled orders using index BEFORE $unwind
     const topVendors = await Order.aggregate([
+      { $match: { orderStatus: { $ne: 'Cancelled' } } },
       { $unwind: '$items' },
       { $match: { 'items.status': { $ne: 'Cancelled' } } },
       {
@@ -147,7 +159,9 @@ const getAdminAnalytics = async (req, res) => {
     ]);
 
     // PIPELINE 3: Top Categories by Sales Revenue
+    // Optimized: Excludes cancelled parent orders BEFORE unwinding items
     const topCategories = await Order.aggregate([
+      { $match: { orderStatus: { $ne: 'Cancelled' } } },
       { $unwind: '$items' },
       { $match: { 'items.status': { $ne: 'Cancelled' } } },
       {
@@ -192,9 +206,12 @@ const getAdminAnalytics = async (req, res) => {
     const totalVendors = await Vendor.countDocuments({ status: 'approved' });
     const pendingVendors = await Vendor.countDocuments({ status: 'pending' });
     const totalProducts = await Product.countDocuments();
+    // totalOrders represents cumulative checkout volume across platform history
     const totalOrders = await Order.countDocuments();
     
+    // Gross revenue reflects non-cancelled sales volume
     const grossRevenueResult = await Order.aggregate([
+      { $match: { orderStatus: { $ne: 'Cancelled' } } },
       { $group: { _id: null, total: { $sum: '$totalAmount' } } }
     ]);
     const grossRevenue = grossRevenueResult[0] ? grossRevenueResult[0].total : 0;
