@@ -52,20 +52,30 @@ const getVendorDashboardStats = async (req, res) => {
 
     const totalProducts = await Product.countDocuments({ vendor: vendor._id });
 
-    // Aggregate orders containing vendor's products
-    const ordersWithVendorItems = await Order.find({ 'items.vendor': vendor._id });
-    
-    let totalSalesCount = 0;
-    let totalRevenue = 0;
+    // Count distinct customer orders containing this vendor's items (indexed count)
+    const totalOrders = await Order.countDocuments({ 'items.vendor': vendor._id });
 
-    ordersWithVendorItems.forEach(order => {
-      order.items.forEach(item => {
-        if (item.vendor.toString() === vendor._id.toString() && item.status !== 'Cancelled') {
-          totalSalesCount += item.quantity;
-          totalRevenue += item.price * item.quantity;
+    // Aggregate sales count and revenue for vendor's non-cancelled items using native MongoDB aggregation
+    const salesStats = await Order.aggregate([
+      { $match: { 'items.vendor': vendor._id } },
+      { $unwind: '$items' },
+      {
+        $match: {
+          'items.vendor': vendor._id,
+          'items.status': { $ne: 'Cancelled' }
         }
-      });
-    });
+      },
+      {
+        $group: {
+          _id: null,
+          totalSalesCount: { $sum: '$items.quantity' },
+          totalRevenue: { $sum: { $multiply: ['$items.price', '$items.quantity'] } }
+        }
+      }
+    ]);
+
+    const totalSalesCount = salesStats[0]?.totalSalesCount || 0;
+    const totalRevenue = salesStats[0]?.totalRevenue || 0;
 
     res.json({
       storeName: vendor.storeName,
@@ -73,7 +83,7 @@ const getVendorDashboardStats = async (req, res) => {
       rating: vendor.rating,
       numRatings: vendor.numRatings,
       totalProducts,
-      totalOrders: ordersWithVendorItems.length,
+      totalOrders,
       totalSalesCount,
       totalRevenue
     });
