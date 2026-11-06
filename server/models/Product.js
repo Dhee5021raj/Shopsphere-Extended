@@ -11,6 +11,7 @@ const productSchema = new mongoose.Schema(
     vendor: { type: mongoose.Schema.Types.ObjectId, ref: 'Vendor', required: true },
     images: [{ type: String, required: true }],
     isFeatured: { type: Boolean, default: false },
+    isActive: { type: Boolean, default: true },
     rating: { type: Number, default: 0 },
     numReviews: { type: Number, default: 0 },
     soldCount: { type: Number, default: 0 }
