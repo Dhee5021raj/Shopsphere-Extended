@@ -16,7 +16,7 @@ const getProducts = async (req, res) => {
       query.$text = { $search: req.query.search.trim() };
     }
 
-    // 2. CATEGORY FILTER (Uses Compound Index: category + price)
+    // 2. CATEGORY FILTER (Uses Compound Index: category + createdAt OR category + price)
     if (req.query.category && req.query.category !== 'all') {
       query.category = req.query.category;
     }
@@ -55,13 +55,17 @@ const getProducts = async (req, res) => {
     if (req.query.sort === 'rating') sortOptions = { rating: -1 };
     if (req.query.sort === 'popularity') sortOptions = { soldCount: -1 };
 
-    const total = await Product.countDocuments(query);
-    const products = await Product.find(query)
-      .populate('category', 'name slug icon')
-      .populate('vendor', 'storeName storeSlug logo rating')
-      .sort(sortOptions)
-      .skip(skip)
-      .limit(limit);
+    // Concurrently count total matching documents and retrieve paginated lean results
+    const [total, products] = await Promise.all([
+      Product.countDocuments(query),
+      Product.find(query)
+        .populate('category', 'name slug icon')
+        .populate('vendor', 'storeName storeSlug logo rating')
+        .sort(sortOptions)
+        .skip(skip)
+        .limit(limit)
+        .lean()
+    ]);
 
     res.json({
       products,
@@ -80,7 +84,8 @@ const getProductById = async (req, res) => {
   try {
     const product = await Product.findById(req.params.id)
       .populate('category', 'name slug icon description')
-      .populate('vendor', 'storeName storeSlug logo banner rating description user');
+      .populate('vendor', 'storeName storeSlug logo banner rating description user')
+      .lean();
 
     if (!product) {
       return res.status(404).json({ message: 'Product not found' });
@@ -99,7 +104,9 @@ const getFeaturedProducts = async (req, res) => {
     const products = await Product.find({ isFeatured: true })
       .populate('category', 'name slug')
       .populate('vendor', 'storeName storeSlug logo rating')
-      .limit(8);
+      .sort({ createdAt: -1 })
+      .limit(8)
+      .lean();
 
     res.json(products);
   } catch (error) {
@@ -115,7 +122,8 @@ const getTrendingProducts = async (req, res) => {
       .populate('category', 'name slug')
       .populate('vendor', 'storeName storeSlug logo rating')
       .sort({ soldCount: -1, rating: -1 })
-      .limit(8);
+      .limit(8)
+      .lean();
 
     res.json(products);
   } catch (error) {
@@ -127,7 +135,7 @@ const getTrendingProducts = async (req, res) => {
 // @route   GET /api/products/:id/related
 const getRelatedProducts = async (req, res) => {
   try {
-    const product = await Product.findById(req.params.id);
+    const product = await Product.findById(req.params.id).select('category').lean();
     if (!product) {
       return res.status(404).json({ message: 'Product not found' });
     }
@@ -138,7 +146,8 @@ const getRelatedProducts = async (req, res) => {
     })
       .populate('category', 'name slug')
       .populate('vendor', 'storeName storeSlug logo rating')
-      .limit(4);
+      .limit(4)
+      .lean();
 
     res.json(related);
   } catch (error) {
@@ -183,7 +192,8 @@ const createProduct = async (req, res) => {
 
     const populated = await Product.findById(product._id)
       .populate('category', 'name slug')
-      .populate('vendor', 'storeName storeSlug');
+      .populate('vendor', 'storeName storeSlug')
+      .lean();
 
     res.status(201).json(populated);
   } catch (error) {
@@ -222,7 +232,8 @@ const updateProduct = async (req, res) => {
     const updatedProduct = await product.save();
     const populated = await Product.findById(updatedProduct._id)
       .populate('category', 'name slug')
-      .populate('vendor', 'storeName storeSlug');
+      .populate('vendor', 'storeName storeSlug')
+      .lean();
 
     res.json(populated);
   } catch (error) {
