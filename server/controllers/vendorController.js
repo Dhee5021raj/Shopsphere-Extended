@@ -2,6 +2,7 @@ const Vendor = require('../models/Vendor');
 const Product = require('../models/Product');
 const Order = require('../models/Order');
 const inventoryService = require('../services/inventoryService');
+const { syncOrderLifecycle, validateItemStatusTransition } = require('../services/orderLifecycleService');
 
 // @desc    Get all public approved vendors
 // @route   GET /api/vendors
@@ -177,10 +178,16 @@ const updateVendorOrderItemStatus = async (req, res) => {
       return res.status(400).json({ message: 'Cannot update status of a cancelled item' });
     }
 
+    const transitionCheck = validateItemStatusTransition(item.status, status);
+    if (!transitionCheck.allowed) {
+      return res.status(400).json({ message: transitionCheck.reason });
+    }
+
     item.status = status;
+    syncOrderLifecycle(order);
     await order.save();
 
-    res.json({ message: 'Order item status updated successfully', item });
+    res.json({ message: 'Order item status updated successfully', item, order });
   } catch (error) {
     const errStatus = error.statusCode || error.status || 500;
     res.status(errStatus).json({ message: error.message });

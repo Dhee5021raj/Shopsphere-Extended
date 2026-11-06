@@ -5,6 +5,7 @@ const Vendor = require('../models/Vendor');
 const Product = require('../models/Product');
 const Order = require('../models/Order');
 const inventoryService = require('../services/inventoryService');
+const { syncOrderLifecycle, ALLOWED_ORDER_STATUSES } = require('../services/orderLifecycleService');
 const { byName: specByName } = require('../pt/specs');
 
 // @desc    Get all users
@@ -94,6 +95,10 @@ const updateOrderStatusAdmin = async (req, res) => {
     const { orderStatus } = req.body;
     const orderId = req.params.id;
 
+    if (!ALLOWED_ORDER_STATUSES.includes(orderStatus)) {
+      return res.status(400).json({ message: `Invalid order status "${orderStatus}". Allowed: ${ALLOWED_ORDER_STATUSES.join(', ')}` });
+    }
+
     if (orderStatus === 'Cancelled') {
       const result = await inventoryService.cancelAdminOrder({ orderId });
       return res.json({
@@ -118,8 +123,15 @@ const updateOrderStatusAdmin = async (req, res) => {
           item.status = 'Delivered';
         }
       });
+    } else if (orderStatus === 'Shipped') {
+      order.items.forEach(item => {
+        if (item.status !== 'Cancelled' && item.status !== 'Delivered') {
+          item.status = 'Shipped';
+        }
+      });
     }
 
+    syncOrderLifecycle(order);
     await order.save();
     res.json({ message: 'Order status updated successfully', order });
   } catch (error) {

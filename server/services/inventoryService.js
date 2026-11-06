@@ -4,6 +4,7 @@ const Order = require('../models/Order');
 const Product = require('../models/Product');
 const Vendor = require('../models/Vendor');
 const { checkTransactionSupport } = require('../utils/dbSupport');
+const { syncOrderLifecycle } = require('./orderLifecycleService');
 
 // In-memory mutex to serialize concurrent cancellations for the same order
 const activeOrderCancellations = new Set();
@@ -380,10 +381,7 @@ const cancelVendorOrderItem = async ({ orderId, itemId, vendorUserId }) => {
         await restoreInventoryItems([item], session);
 
         item.status = 'Cancelled';
-        const allCancelled = order.items.every(i => i.status === 'Cancelled');
-        if (allCancelled) {
-          order.orderStatus = 'Cancelled';
-        }
+        syncOrderLifecycle(order);
 
         await order.save({ session });
         await session.commitTransaction();
@@ -398,10 +396,7 @@ const cancelVendorOrderItem = async ({ orderId, itemId, vendorUserId }) => {
       const { compensationStack } = await restoreInventoryItems([item], null);
 
       item.status = 'Cancelled';
-      const allCancelled = order.items.every(i => i.status === 'Cancelled');
-      if (allCancelled) {
-        order.orderStatus = 'Cancelled';
-      }
+      syncOrderLifecycle(order);
 
       try {
         await order.save();
