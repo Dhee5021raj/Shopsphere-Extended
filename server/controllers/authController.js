@@ -3,20 +3,47 @@ const Vendor = require('../models/Vendor');
 const Cart = require('../models/Cart');
 const generateToken = require('../utils/generateToken');
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 // @desc    Register a new customer
 // @route   POST /api/auth/register
 const registerCustomer = async (req, res) => {
   try {
+    if (!req.body || typeof req.body !== 'object') {
+      return res.status(400).json({ message: 'Request body is required' });
+    }
+
     const { name, email, password } = req.body;
 
-    const userExists = await User.findOne({ email });
+    if (!name || typeof name !== 'string' || !name.trim()) {
+      return res.status(400).json({ message: 'Full name is required' });
+    }
+
+    if (!email || typeof email !== 'string' || !email.trim()) {
+      return res.status(400).json({ message: 'Email address is required' });
+    }
+
+    const normalizedEmail = email.toLowerCase().trim();
+    if (!EMAIL_REGEX.test(normalizedEmail)) {
+      return res.status(400).json({ message: 'Please enter a valid email address' });
+    }
+
+    if (!password || typeof password !== 'string') {
+      return res.status(400).json({ message: 'Password is required' });
+    }
+
+    if (password.length < 6) {
+      return res.status(400).json({ message: 'Password must be at least 6 characters long' });
+    }
+
+    const userExists = await User.findOne({ email: normalizedEmail });
     if (userExists) {
       return res.status(400).json({ message: 'User already exists with this email' });
     }
 
     const user = await User.create({
-      name,
-      email,
+      name: name.trim(),
+      email: normalizedEmail,
       password,
       role: 'customer'
     });
@@ -32,7 +59,13 @@ const registerCustomer = async (req, res) => {
       token: generateToken(user._id)
     });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error.code === 11000) {
+      return res.status(400).json({ message: 'User already exists with this email' });
+    }
+    if (error.name === 'ValidationError') {
+      return res.status(400).json({ message: Object.values(error.errors).map(e => e.message).join(', ') });
+    }
+    res.status(500).json({ message: error.message || 'Internal Server Error' });
   }
 };
 
@@ -40,33 +73,68 @@ const registerCustomer = async (req, res) => {
 // @route   POST /api/auth/register-vendor
 const registerVendor = async (req, res) => {
   try {
+    if (!req.body || typeof req.body !== 'object') {
+      return res.status(400).json({ message: 'Request body is required' });
+    }
+
     const { name, email, password, storeName, description } = req.body;
 
-    const userExists = await User.findOne({ email });
+    if (!name || typeof name !== 'string' || !name.trim()) {
+      return res.status(400).json({ message: 'Full name is required' });
+    }
+
+    if (!email || typeof email !== 'string' || !email.trim()) {
+      return res.status(400).json({ message: 'Email address is required' });
+    }
+
+    const normalizedEmail = email.toLowerCase().trim();
+    if (!EMAIL_REGEX.test(normalizedEmail)) {
+      return res.status(400).json({ message: 'Please enter a valid email address' });
+    }
+
+    if (!password || typeof password !== 'string') {
+      return res.status(400).json({ message: 'Password is required' });
+    }
+
+    if (password.length < 6) {
+      return res.status(400).json({ message: 'Password must be at least 6 characters long' });
+    }
+
+    if (!storeName || typeof storeName !== 'string' || !storeName.trim()) {
+      return res.status(400).json({ message: 'Store / Business name is required' });
+    }
+
+    const userExists = await User.findOne({ email: normalizedEmail });
     if (userExists) {
       return res.status(400).json({ message: 'User already exists with this email' });
     }
 
     let storeSlug = storeName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    if (!storeSlug) {
+      storeSlug = `store-${Date.now().toString().slice(-6)}`;
+    }
     const slugExists = await Vendor.findOne({ storeSlug });
     if (slugExists) {
       storeSlug = `${storeSlug}-${Date.now().toString().slice(-4)}`;
     }
 
     const user = await User.create({
-      name,
-      email,
+      name: name.trim(),
+      email: normalizedEmail,
       password,
       role: 'vendor'
     });
 
     const vendor = await Vendor.create({
       user: user._id,
-      storeName,
+      storeName: storeName.trim(),
       storeSlug,
-      description: description || `Welcome to ${storeName}`,
+      description: typeof description === 'string' && description.trim() ? description.trim() : `Welcome to ${storeName.trim()}`,
       status: 'approved' // Auto-approve for seamless demo testing, admin can manage status
     });
+
+    // Create empty cart for vendor account as well
+    await Cart.create({ user: user._id, items: [] });
 
     res.status(201).json({
       _id: user._id,
@@ -82,7 +150,13 @@ const registerVendor = async (req, res) => {
       token: generateToken(user._id)
     });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error.code === 11000) {
+      return res.status(400).json({ message: 'User already exists with this email' });
+    }
+    if (error.name === 'ValidationError') {
+      return res.status(400).json({ message: Object.values(error.errors).map(e => e.message).join(', ') });
+    }
+    res.status(500).json({ message: error.message || 'Internal Server Error' });
   }
 };
 
@@ -90,9 +164,18 @@ const registerVendor = async (req, res) => {
 // @route   POST /api/auth/login
 const loginUser = async (req, res) => {
   try {
+    if (!req.body || typeof req.body !== 'object') {
+      return res.status(400).json({ message: 'Please provide both email and password' });
+    }
+
     const { email, password } = req.body;
 
-    const user = await User.findOne({ email });
+    if (!email || !password || typeof email !== 'string' || typeof password !== 'string' || !email.trim() || !password.trim()) {
+      return res.status(400).json({ message: 'Please provide both email and password' });
+    }
+
+    const normalizedEmail = email.toLowerCase().trim();
+    const user = await User.findOne({ email: normalizedEmail });
 
     if (user && (await user.matchPassword(password))) {
       if (user.isBlocked) {
@@ -118,7 +201,7 @@ const loginUser = async (req, res) => {
       res.status(401).json({ message: 'Invalid email or password' });
     }
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: error.message || 'Internal Server Error' });
   }
 };
 
@@ -143,7 +226,7 @@ const getMe = async (req, res) => {
       vendor: vendorData
     });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ message: error.message || 'Internal Server Error' });
   }
 };
 
@@ -154,11 +237,20 @@ const updateProfile = async (req, res) => {
     const user = await User.findById(req.user._id);
 
     if (user) {
-      user.name = req.body.name || user.name;
+      if (req.body.name !== undefined) {
+        if (typeof req.body.name !== 'string' || !req.body.name.trim()) {
+          return res.status(400).json({ message: 'Name cannot be empty' });
+        }
+        user.name = req.body.name.trim();
+      }
+
       if (req.body.avatar) user.avatar = req.body.avatar;
       if (req.body.addresses) user.addresses = req.body.addresses;
 
-      if (req.body.password) {
+      if (req.body.password !== undefined) {
+        if (typeof req.body.password !== 'string' || req.body.password.length < 6) {
+          return res.status(400).json({ message: 'Password must be at least 6 characters long' });
+        }
         user.password = req.body.password;
       }
 
@@ -183,7 +275,10 @@ const updateProfile = async (req, res) => {
       res.status(404).json({ message: 'User not found' });
     }
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    if (error.name === 'ValidationError') {
+      return res.status(400).json({ message: Object.values(error.errors).map(e => e.message).join(', ') });
+    }
+    res.status(500).json({ message: error.message || 'Internal Server Error' });
   }
 };
 

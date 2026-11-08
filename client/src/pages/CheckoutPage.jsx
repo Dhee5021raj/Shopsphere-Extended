@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ShieldCheck, CreditCard, Truck, CheckCircle2, Lock, Sparkles, Building2 } from 'lucide-react';
+import { ShieldCheck, CreditCard, Truck, CheckCircle2, Lock, Sparkles, AlertCircle, Loader2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 
@@ -19,19 +19,53 @@ const CheckoutPage = ({ onToast }) => {
 
   const [paymentMethod, setPaymentMethod] = useState('Card');
   const [processing, setProcessing] = useState(false);
+  const [checkoutError, setCheckoutError] = useState(null);
   const [successResult, setSuccessResult] = useState(null);
+
+  const isSubmittingRef = useRef(false);
+  const attemptKeyRef = useRef(null);
+
+  const isCartEmpty = !cart.items || cart.items.length === 0;
 
   const handleSubmitCheckout = async (e) => {
     e.preventDefault();
+
+    if (isSubmittingRef.current || processing) {
+      return;
+    }
+
+    if (isCartEmpty) {
+      setCheckoutError('Your shopping cart is empty. Please add items before checking out.');
+      return;
+    }
+
+    if (!shippingAddress.street?.trim() || !shippingAddress.city?.trim() || !shippingAddress.zipCode?.trim()) {
+      setCheckoutError('Please provide a complete shipping address (Street, City, and PIN / Zip Code).');
+      return;
+    }
+
+    setCheckoutError(null);
+    isSubmittingRef.current = true;
     setProcessing(true);
 
+    if (!attemptKeyRef.current) {
+      attemptKeyRef.current = `chk_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    }
+    const currentKey = attemptKeyRef.current;
+
     try {
-      const result = await processCheckout(shippingAddress, paymentMethod);
+      const result = await processCheckout(shippingAddress, paymentMethod, currentKey);
+      attemptKeyRef.current = null; // Reset on success
       setSuccessResult(result);
       if (onToast) onToast('Order completed via MongoDB ACID Transaction!');
     } catch (err) {
-      if (onToast) onToast(err.response?.data?.message || 'Checkout transaction aborted', 'error');
+      const message = err.response?.data?.message || 'Checkout failed. Please review your cart and details and try again.';
+      setCheckoutError(message);
+      if (onToast) onToast(message, 'error');
+      // Reset attempt key on failure so user can retry with a clean submission attempt
+      attemptKeyRef.current = null;
     } finally {
+      isSubmittingRef.current = false;
       setProcessing(false);
     }
   };
@@ -80,13 +114,13 @@ const CheckoutPage = ({ onToast }) => {
         <div className="flex gap-4">
           <button
             onClick={() => navigate('/dashboard')}
-            className="flex-1 gradient-button text-white font-bold py-3.5 rounded-2xl shadow-sm"
+            className="flex-1 gradient-button text-white font-bold py-3.5 rounded-2xl shadow-sm cursor-pointer"
           >
             Track Order History
           </button>
           <button
             onClick={() => navigate('/products')}
-            className="flex-1 py-3.5 rounded-2xl bg-white text-slate-700 border border-slate-200 font-bold hover:bg-slate-50 shadow-sm transition-colors"
+            className="flex-1 py-3.5 rounded-2xl bg-white text-slate-700 border border-slate-200 font-bold hover:bg-slate-50 shadow-sm transition-colors cursor-pointer"
           >
             Continue Shopping
           </button>
@@ -121,9 +155,13 @@ const CheckoutPage = ({ onToast }) => {
                 <input
                   type="text"
                   required
+                  disabled={processing}
                   value={shippingAddress.street}
-                  onChange={(e) => setShippingAddress({ ...shippingAddress, street: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors"
+                  onChange={(e) => {
+                    setShippingAddress({ ...shippingAddress, street: e.target.value });
+                    if (checkoutError) setCheckoutError(null);
+                  }}
+                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors disabled:opacity-50"
                 />
               </div>
 
@@ -132,9 +170,13 @@ const CheckoutPage = ({ onToast }) => {
                 <input
                   type="text"
                   required
+                  disabled={processing}
                   value={shippingAddress.city}
-                  onChange={(e) => setShippingAddress({ ...shippingAddress, city: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors"
+                  onChange={(e) => {
+                    setShippingAddress({ ...shippingAddress, city: e.target.value });
+                    if (checkoutError) setCheckoutError(null);
+                  }}
+                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors disabled:opacity-50"
                 />
               </div>
 
@@ -143,9 +185,13 @@ const CheckoutPage = ({ onToast }) => {
                 <input
                   type="text"
                   required
+                  disabled={processing}
                   value={shippingAddress.state}
-                  onChange={(e) => setShippingAddress({ ...shippingAddress, state: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors"
+                  onChange={(e) => {
+                    setShippingAddress({ ...shippingAddress, state: e.target.value });
+                    if (checkoutError) setCheckoutError(null);
+                  }}
+                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors disabled:opacity-50"
                 />
               </div>
 
@@ -154,9 +200,13 @@ const CheckoutPage = ({ onToast }) => {
                 <input
                   type="text"
                   required
+                  disabled={processing}
                   value={shippingAddress.zipCode}
-                  onChange={(e) => setShippingAddress({ ...shippingAddress, zipCode: e.target.value })}
-                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors"
+                  onChange={(e) => {
+                    setShippingAddress({ ...shippingAddress, zipCode: e.target.value });
+                    if (checkoutError) setCheckoutError(null);
+                  }}
+                  className="w-full bg-slate-50 border border-slate-200 text-slate-900 rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors disabled:opacity-50"
                 />
               </div>
 
@@ -184,8 +234,9 @@ const CheckoutPage = ({ onToast }) => {
                 <button
                   type="button"
                   key={method}
+                  disabled={processing}
                   onClick={() => setPaymentMethod(method)}
-                  className={`p-4 rounded-2xl border text-center transition-all ${
+                  className={`p-4 rounded-2xl border text-center transition-all disabled:opacity-50 cursor-pointer ${
                     paymentMethod === method
                       ? 'bg-emerald-50 text-emerald-700 border-emerald-500 font-bold shadow-xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
@@ -228,13 +279,33 @@ const CheckoutPage = ({ onToast }) => {
               </div>
             </div>
 
+            {/* Error Message Alert Box */}
+            {checkoutError && (
+              <div className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-xs text-rose-700 flex items-start gap-2 shadow-xs">
+                <AlertCircle size={16} className="shrink-0 mt-0.5 text-rose-500" />
+                <div>
+                  <div className="font-bold">Checkout Error</div>
+                  <div>{checkoutError}</div>
+                </div>
+              </div>
+            )}
+
             <button
               type="submit"
-              disabled={processing}
-              className="w-full gradient-button text-white font-extrabold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-md shadow-brand-500/25 disabled:opacity-50"
+              disabled={processing || isCartEmpty}
+              className="w-full gradient-button text-white font-extrabold py-4 rounded-2xl flex items-center justify-center gap-2 shadow-md shadow-brand-500/25 disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
             >
-              <Lock size={18} />
-              <span>{processing ? 'Running ACID Session Transaction...' : 'Place Order (Commit Transaction)'}</span>
+              {processing ? (
+                <>
+                  <Loader2 size={18} className="animate-spin" />
+                  <span>Running ACID Session Transaction...</span>
+                </>
+              ) : (
+                <>
+                  <Lock size={18} />
+                  <span>Place Order (Commit Transaction)</span>
+                </>
+              )}
             </button>
 
             <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-[11px] text-slate-600 space-y-1">
@@ -243,7 +314,7 @@ const CheckoutPage = ({ onToast }) => {
                 <span>MongoDB ACID Transaction Notice</span>
               </div>
               <p>
-                Submitting executes <code className="text-emerald-700 font-mono font-semibold">session.startTransaction()</code> in Express backend. If any seller stock check fails, all database changes automatically rollback!
+                Submitting executes <code className="text-emerald-700 font-mono font-semibold">session.startTransaction()</code> in Express backend. Protected by double-click mutex locks and request idempotency.
               </p>
             </div>
           </div>

@@ -33,17 +33,31 @@ const processCheckout = async (req, res) => {
   if (idempotencyKey && req.user?._id) {
     const cachedResponse = getIdempotentResponse(idempotencyKey, req.user._id);
     if (cachedResponse) {
+      if (typeof res.set === 'function') {
+        res.set('X-Idempotent-Replay', 'true');
+      } else if (typeof res.setHeader === 'function') {
+        res.setHeader('X-Idempotent-Replay', 'true');
+      }
       return res.status(cachedResponse.status || 200).json(cachedResponse.body);
     }
   }
 
   // 2. Validate Customer and basic input requirements
-  if (!shippingAddress || !shippingAddress.street || !shippingAddress.city || !shippingAddress.zipCode) {
-    return res.status(400).json({ message: 'Complete shipping address is required' });
-  }
-
   if (!req.user?._id) {
     return res.status(401).json({ message: 'User authentication required' });
+  }
+
+  if (
+    !shippingAddress ||
+    typeof shippingAddress !== 'object' ||
+    typeof shippingAddress.street !== 'string' ||
+    !shippingAddress.street.trim() ||
+    typeof shippingAddress.city !== 'string' ||
+    !shippingAddress.city.trim() ||
+    typeof shippingAddress.zipCode !== 'string' ||
+    !shippingAddress.zipCode.trim()
+  ) {
+    return res.status(400).json({ message: 'Complete shipping address is required' });
   }
 
   // 3. Acquire Per-User In-Flight Checkout Lock
@@ -220,11 +234,11 @@ const processCheckout = async (req, res) => {
         customer: customer._id,
         items: orderItems,
         shippingAddress: {
-          street: shippingAddress.street,
-          city: shippingAddress.city,
-          state: shippingAddress.state || 'State',
-          zipCode: shippingAddress.zipCode,
-          country: shippingAddress.country || 'India'
+          street: shippingAddress.street.trim(),
+          city: shippingAddress.city.trim(),
+          state: typeof shippingAddress.state === 'string' && shippingAddress.state.trim() ? shippingAddress.state.trim() : 'State',
+          zipCode: shippingAddress.zipCode.trim(),
+          country: typeof shippingAddress.country === 'string' && shippingAddress.country.trim() ? shippingAddress.country.trim() : 'India'
         },
         totalAmount: finalTotal,
         paymentStatus: initialPaymentStatus,

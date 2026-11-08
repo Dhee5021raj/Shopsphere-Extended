@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "seed": "node seed.js && node scripts/addDemoProducts.js --per-cat=60",
+    "seed": "node seed.js",
     "seed:base": "node seed.js",
     "mongod": "bash scripts/mongod.sh start",
     "mongod:win": "powershell -File scripts/mongod.ps1 start",
@@ -21,7 +21,8 @@
     "repro": "node scripts/repro.js",
     "test:pt": "node --test tests/*.test.js",
     "pt:log": "node scripts/ptLog.js",
-    "db:show": "node scripts/showDb.js"
+    "db:show": "node scripts/showDb.js",
+    "seed:safe": "node scripts/seedProductsSafe.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

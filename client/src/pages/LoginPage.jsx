@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { LogIn, Sparkles, ShieldCheck, Store, User } from 'lucide-react';
+import { LogIn, Sparkles, AlertCircle, Loader2 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 const LoginPage = ({ onToast }) => {
@@ -10,46 +10,82 @@ const LoginPage = ({ onToast }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [formError, setFormError] = useState(null);
+
+  const isSubmittingRef = useRef(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmittingRef.current || loading) return;
+
+    if (!email.trim() || !password) {
+      const msg = 'Please enter both your email address and password.';
+      setFormError(msg);
+      if (onToast) onToast(msg, 'error');
+      return;
+    }
+
+    setFormError(null);
+    isSubmittingRef.current = true;
     setLoading(true);
+
     try {
-      const data = await login(email, password);
+      const data = await login(email.trim().toLowerCase(), password);
       if (onToast) onToast(`Welcome back, ${data.name}!`);
       if (data.role === 'admin') navigate('/admin/dashboard');
       else if (data.role === 'vendor') navigate('/vendor/dashboard');
       else navigate('/products');
     } catch (err) {
-      if (onToast) onToast(err.response?.data?.message || 'Invalid credentials', 'error');
+      const message = err.response?.data?.message || 'Invalid email or password';
+      setFormError(message);
+      if (onToast) onToast(message, 'error');
     } finally {
+      isSubmittingRef.current = false;
       setLoading(false);
     }
   };
 
   const handleQuickLogin = async (role) => {
+    if (isSubmittingRef.current || loading) return;
+    setFormError(null);
+    isSubmittingRef.current = true;
+    setLoading(true);
+
     try {
+      let targetEmail = '';
+      let targetPass = '';
+      let targetRole = '';
+
       if (role === 'admin') {
-        setEmail('admin@shopsphere.com');
-        setPassword('adminpassword123');
-        const data = await login('admin@shopsphere.com', 'adminpassword123');
-        if (onToast) onToast('Logged in as Admin');
-        navigate('/admin/dashboard');
+        targetEmail = 'admin@shopsphere.com';
+        targetPass = 'adminpassword123';
+        targetRole = 'admin';
       } else if (role === 'vendor') {
-        setEmail('nexus@vendors.com');
-        setPassword('password123');
-        const data = await login('nexus@vendors.com', 'password123');
-        if (onToast) onToast('Logged in as Vendor');
-        navigate('/vendor/dashboard');
+        targetEmail = 'nexus@vendors.com';
+        targetPass = 'password123';
+        targetRole = 'vendor';
       } else if (role === 'customer') {
-        setEmail('alex@gmail.com');
-        setPassword('password123');
-        const data = await login('alex@gmail.com', 'password123');
-        if (onToast) onToast('Logged in as Customer');
-        navigate('/products');
+        targetEmail = 'alex@gmail.com';
+        targetPass = 'password123';
+        targetRole = 'customer';
       }
+
+      setEmail(targetEmail);
+      setPassword(targetPass);
+
+      const data = await login(targetEmail, targetPass);
+      if (onToast) onToast(`Logged in as ${data.name}!`);
+
+      if (targetRole === 'admin') navigate('/admin/dashboard');
+      else if (targetRole === 'vendor') navigate('/vendor/dashboard');
+      else navigate('/products');
     } catch (err) {
-      if (onToast) onToast(err.response?.data?.message || 'Login failed', 'error');
+      const message = err.response?.data?.message || 'Quick login failed. Ensure database has seed data.';
+      setFormError(message);
+      if (onToast) onToast(message, 'error');
+    } finally {
+      isSubmittingRef.current = false;
+      setLoading(false);
     }
   };
 
@@ -69,38 +105,56 @@ const LoginPage = ({ onToast }) => {
         <div className="grid grid-cols-3 gap-2">
           <button
             type="button"
+            disabled={loading}
             onClick={() => handleQuickLogin('admin')}
-            className="p-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold transition-all text-center"
+            className="p-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 text-xs font-bold transition-all text-center disabled:opacity-50"
           >
             Admin
           </button>
           <button
             type="button"
+            disabled={loading}
             onClick={() => handleQuickLogin('vendor')}
-            className="p-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 text-xs font-bold transition-all text-center"
+            className="p-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 text-xs font-bold transition-all text-center disabled:opacity-50"
           >
             Seller
           </button>
           <button
             type="button"
+            disabled={loading}
             onClick={() => handleQuickLogin('customer')}
-            className="p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-bold transition-all text-center"
+            className="p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-bold transition-all text-center disabled:opacity-50"
           >
             Customer
           </button>
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-3xl p-6 space-y-4 shadow-sm">
+      {/* Error Message Box */}
+      {formError && (
+        <div className="p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-xs text-rose-700 flex items-start gap-2 shadow-xs">
+          <AlertCircle size={16} className="shrink-0 mt-0.5 text-rose-500" />
+          <div>
+            <span className="font-bold">Authentication issue: </span>
+            <span>{formError}</span>
+          </div>
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="bg-white border border-slate-200 rounded-3xl p-6 space-y-4 shadow-sm text-xs">
         <div>
           <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
           <input
             type="email"
             required
+            disabled={loading}
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              if (formError) setFormError(null);
+            }}
             placeholder="alex@gmail.com"
-            className="w-full bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors"
+            className="w-full bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors disabled:opacity-50"
           />
         </div>
 
@@ -109,20 +163,33 @@ const LoginPage = ({ onToast }) => {
           <input
             type="password"
             required
+            disabled={loading}
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              if (formError) setFormError(null);
+            }}
             placeholder="••••••••"
-            className="w-full bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors"
+            className="w-full bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl p-3 focus:border-brand-500 focus:bg-white focus:outline-none transition-colors disabled:opacity-50"
           />
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full gradient-button text-white font-bold py-3.5 rounded-2xl flex items-center justify-center gap-2 shadow-sm"
+          className="w-full gradient-button text-white font-bold py-3.5 rounded-2xl flex items-center justify-center gap-2 shadow-sm disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed text-xs"
         >
-          <LogIn size={18} />
-          <span>{loading ? 'Authenticating...' : 'Sign In'}</span>
+          {loading ? (
+            <>
+              <Loader2 size={18} className="animate-spin" />
+              <span>Authenticating...</span>
+            </>
+          ) : (
+            <>
+              <LogIn size={18} />
+              <span>Sign In</span>
+            </>
+          )}
         </button>
 
         <div className="text-center pt-2 text-xs text-slate-500">

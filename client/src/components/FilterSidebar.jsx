@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Filter, RotateCcw, Check, Star } from 'lucide-react';
 
 const FilterSidebar = ({
@@ -8,6 +8,44 @@ const FilterSidebar = ({
   onFilterChange,
   onResetFilters
 }) => {
+  const [localMin, setLocalMin] = useState(filters.minPrice || '');
+  const [localMax, setLocalMax] = useState(filters.maxPrice || '');
+  const minTimerRef = useRef(null);
+  const maxTimerRef = useRef(null);
+
+  useEffect(() => {
+    setLocalMin(filters.minPrice || '');
+  }, [filters.minPrice]);
+
+  useEffect(() => {
+    setLocalMax(filters.maxPrice || '');
+  }, [filters.maxPrice]);
+
+  useEffect(() => {
+    return () => {
+      if (minTimerRef.current) clearTimeout(minTimerRef.current);
+      if (maxTimerRef.current) clearTimeout(maxTimerRef.current);
+    };
+  }, []);
+
+  const handleMinChange = (e) => {
+    const val = e.target.value;
+    setLocalMin(val);
+    if (minTimerRef.current) clearTimeout(minTimerRef.current);
+    minTimerRef.current = setTimeout(() => {
+      onFilterChange('minPrice', val);
+    }, 400);
+  };
+
+  const handleMaxChange = (e) => {
+    const val = e.target.value;
+    setLocalMax(val);
+    if (maxTimerRef.current) clearTimeout(maxTimerRef.current);
+    maxTimerRef.current = setTimeout(() => {
+      onFilterChange('maxPrice', val);
+    }, 400);
+  };
+
   return (
     <aside className="bg-white border border-slate-200 rounded-2xl p-5 space-y-6 shadow-sm">
       <div className="flex items-center justify-between pb-4 border-b border-slate-100">
@@ -17,7 +55,7 @@ const FilterSidebar = ({
         </div>
         <button
           onClick={onResetFilters}
-          className="flex items-center gap-1 text-xs text-slate-500 hover:text-emerald-600 transition-colors"
+          className="flex items-center gap-1 text-xs text-slate-500 hover:text-emerald-600 transition-colors cursor-pointer"
         >
           <RotateCcw size={13} />
           <span>Reset</span>
@@ -32,7 +70,7 @@ const FilterSidebar = ({
         <div className="space-y-1.5 max-h-48 overflow-y-auto pr-1">
           <button
             onClick={() => onFilterChange('category', 'all')}
-            className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-between ${
+            className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-between cursor-pointer ${
               filters.category === 'all'
                 ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 font-semibold'
                 : 'text-slate-700 hover:bg-slate-50'
@@ -45,7 +83,7 @@ const FilterSidebar = ({
             <button
               key={cat._id}
               onClick={() => onFilterChange('category', cat._id)}
-              className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-between ${
+              className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors flex items-center justify-between cursor-pointer ${
                 filters.category === cat._id
                   ? 'bg-emerald-50 text-emerald-800 border border-emerald-300 font-semibold'
                   : 'text-slate-700 hover:bg-slate-50'
@@ -79,7 +117,7 @@ const FilterSidebar = ({
         </div>
       )}
 
-      {/* Price Range Filter */}
+      {/* Price Range Filter (Debounced) */}
       <div>
         <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
           Price Range (₹)
@@ -88,15 +126,15 @@ const FilterSidebar = ({
           <input
             type="number"
             placeholder="Min"
-            value={filters.minPrice}
-            onChange={(e) => onFilterChange('minPrice', e.target.value)}
+            value={localMin}
+            onChange={handleMinChange}
             className="bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded-xl p-2.5 focus:border-emerald-500 focus:outline-none focus:bg-white"
           />
           <input
             type="number"
             placeholder="Max"
-            value={filters.maxPrice}
-            onChange={(e) => onFilterChange('maxPrice', e.target.value)}
+            value={localMax}
+            onChange={handleMaxChange}
             className="bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded-xl p-2.5 focus:border-emerald-500 focus:outline-none focus:bg-white"
           />
         </div>
@@ -112,7 +150,7 @@ const FilterSidebar = ({
             <button
               key={star}
               onClick={() => onFilterChange('minRating', filters.minRating === String(star) ? '' : String(star))}
-              className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
+              className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-medium transition-colors cursor-pointer ${
                 filters.minRating === String(star)
                   ? 'bg-amber-50 text-amber-800 border border-amber-300 font-semibold'
                   : 'text-slate-700 hover:bg-slate-50'
@@ -137,7 +175,7 @@ const FilterSidebar = ({
             type="checkbox"
             checked={filters.inStock === 'true'}
             onChange={(e) => onFilterChange('inStock', e.target.checked ? 'true' : 'false')}
-            className="w-4 h-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+            className="w-4 h-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 cursor-pointer"
           />
         </label>
       </div>

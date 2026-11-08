@@ -27,4 +27,19 @@ api.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
+// Response interceptor for token invalidation and auth resilience
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      const url = error.config?.url || '';
+      // Only clear token if this 401 was not from an explicit login or registration attempt
+      if (!url.includes('/auth/login') && !url.includes('/auth/register')) {
+        localStorage.removeItem('shopsphere_token');
+      }
+    }
+    return Promise.reject(error);
+  }
+);
+
 export default api;

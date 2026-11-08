@@ -131,7 +131,11 @@ const ProductDiscoveryPage = ({ onToast }) => {
   }, []);
 
   // Fetch Products whenever filters or page change
+  // Uses AbortController to cleanly cancel previous in-flight requests and prevent race condition overwrites
   useEffect(() => {
+    const abortController = new AbortController();
+    let isMounted = true;
+
     const fetchProducts = async () => {
       setLoading(true);
       try {
@@ -150,18 +154,35 @@ const ProductDiscoveryPage = ({ onToast }) => {
         if (filters.inStock === 'true') params.inStock = 'true';
         if (filters.featured === 'true') params.featured = 'true';
 
-        const { data } = await api.get('/products', { params });
-        setProducts(data.products || []);
-        setTotalPages(data.pages || 1);
-        setTotalProducts(data.total || 0);
+        const { data } = await api.get('/products', {
+          params,
+          signal: abortController.signal
+        });
+
+        if (isMounted) {
+          setProducts(data.products || []);
+          setTotalPages(data.pages || 1);
+          setTotalProducts(data.total || 0);
+        }
       } catch (err) {
+        if (err.name === 'CanceledError' || err.code === 'ERR_CANCELED' || err.message === 'canceled') {
+          // Request cancelled by newer filter/search query; safely ignore
+          return;
+        }
         console.error('Error fetching products:', err);
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
     };
 
     fetchProducts();
+
+    return () => {
+      isMounted = false;
+      abortController.abort();
+    };
   }, [filters, page]);
 
   const handleFilterChange = (key, value) => {
@@ -199,7 +220,7 @@ const ProductDiscoveryPage = ({ onToast }) => {
           <h1 className="text-3xl font-extrabold text-slate-900">Explore Products</h1>
         </div>
         <div className="max-w-2xl">
-          <SearchBar onSearch={handleSearch} initialQuery={filters.search} />
+          <SearchBar onSearch={handleSearch} initialQuery={filters.search} debounceMs={400} autoSearch={true} />
         </div>
       </div>
 

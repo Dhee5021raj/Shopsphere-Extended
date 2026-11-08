@@ -33,5 +33,6 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Git backups
+# Git backups   
 .git-backup/
+server/data/backups/

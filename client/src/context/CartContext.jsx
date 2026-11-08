@@ -88,8 +88,16 @@ export const CartProvider = ({ children }) => {
     return data;
   };
 
-  const processCheckout = async (shippingAddress, paymentMethod) => {
-    const { data } = await api.post('/checkout', { shippingAddress, paymentMethod });
+  const processCheckout = async (shippingAddress, paymentMethod, idempotencyKey) => {
+    const key =
+      idempotencyKey ||
+      `chk_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+
+    const { data } = await api.post(
+      '/checkout',
+      { shippingAddress, paymentMethod, idempotencyKey: key },
+      { headers: { 'Idempotency-Key': key } }
+    );
     await fetchCart(); // Reset cart after successful transaction
     return data;
   };

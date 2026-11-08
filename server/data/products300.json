@@ -1,0 +1,5021 @@
+[
+  {
+    "name": "Apple MacBook Pro 14 Inch Space Grey",
+    "categoryName": "Electronics",
+    "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+    "price": 169999,
+    "discountPrice": 161999,
+    "stock": 24,
+    "rating": 3.8,
+    "numReviews": 35,
+    "soldCount": 158,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/apple-macbook-pro-14-inch-space-grey/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Asus Zenbook Pro Dual Screen Laptop",
+    "categoryName": "Electronics",
+    "description": "The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.",
+    "price": 152999,
+    "discountPrice": 135999,
+    "stock": 45,
+    "rating": 4,
+    "numReviews": 45,
+    "soldCount": 103,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/asus-zenbook-pro-dual-screen-laptop/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Huawei Matebook X Pro",
+    "categoryName": "Electronics",
+    "description": "The Huawei Matebook X Pro is a slim and stylish laptop with a high-resolution touchscreen display, offering a premium experience for users on the go.",
+    "price": 118999,
+    "discountPrice": 107799,
+    "stock": 75,
+    "rating": 5,
+    "numReviews": 49,
+    "soldCount": 247,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/huawei-matebook-x-pro/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Lenovo Yoga 920",
+    "categoryName": "Electronics",
+    "description": "The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability.",
+    "price": 92999,
+    "discountPrice": 86899,
+    "stock": 40,
+    "rating": 3.8,
+    "numReviews": 69,
+    "soldCount": 239,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/lenovo-yoga-920/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "New DELL XPS 13 9300 Laptop",
+    "categoryName": "Electronics",
+    "description": "The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks.",
+    "price": 126999,
+    "discountPrice": 111899,
+    "stock": 74,
+    "rating": 3.8,
+    "numReviews": 28,
+    "soldCount": 104,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/1.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/2.webp",
+      "https://cdn.dummyjson.com/product-images/laptops/new-dell-xps-13-9300-laptop/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Amazon Echo Plus",
+    "categoryName": "Electronics",
+    "description": "The Amazon Echo Plus is a smart speaker with built-in Alexa voice control. It features premium sound quality and serves as a hub for controlling smart home devices.",
+    "price": 8499,
+    "discountPrice": 7499,
+    "stock": 61,
+    "rating": 5,
+    "numReviews": 54,
+    "soldCount": 257,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/2.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Apple Airpods",
+    "categoryName": "Electronics",
+    "description": "The Apple Airpods offer a seamless wireless audio experience. With easy pairing, high-quality sound, and Siri integration, they are perfect for on-the-go listening.",
+    "price": 10999,
+    "discountPrice": 9299,
+    "stock": 67,
+    "rating": 4.2,
+    "numReviews": 81,
+    "soldCount": 215,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/2.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Apple AirPods Max Silver",
+    "categoryName": "Electronics",
+    "description": "The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation. Experience immersive sound in style.",
+    "price": 46999,
+    "discountPrice": 40599,
+    "stock": 59,
+    "rating": 3.8,
+    "numReviews": 33,
+    "soldCount": 110,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Apple Airpower Wireless Charger",
+    "categoryName": "Electronics",
+    "description": "The Apple AirPower Wireless Charger provides a convenient way to charge your compatible Apple devices wirelessly. Simply place your devices on the charging mat for effortless charging.",
+    "price": 6999,
+    "discountPrice": 6699,
+    "stock": 8,
+    "rating": 3.8,
+    "numReviews": 62,
+    "soldCount": 59,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpower-wireless-charger/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Apple HomePod Mini Cosmic Grey",
+    "categoryName": "Electronics",
+    "description": "The Apple HomePod Mini in Cosmic Grey is a compact smart speaker that delivers impressive audio and integrates seamlessly with the Apple ecosystem for a smart home experience.",
+    "price": 8499,
+    "discountPrice": 6999,
+    "stock": 27,
+    "rating": 4.6,
+    "numReviews": 42,
+    "soldCount": 68,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Apple iPhone Charger",
+    "categoryName": "Electronics",
+    "description": "The Apple iPhone Charger is a high-quality charger designed for fast and efficient charging of your iPhone. Ensure your device stays powered up and ready to go.",
+    "price": 1699,
+    "discountPrice": 1399,
+    "stock": 31,
+    "rating": 4.2,
+    "numReviews": 59,
+    "soldCount": 106,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-iphone-charger/2.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Apple MagSafe Battery Pack",
+    "categoryName": "Electronics",
+    "description": "The Apple MagSafe Battery Pack is a portable and convenient way to add extra battery life to your MagSafe-compatible iPhone. Attach it magnetically for a secure connection.",
+    "price": 8499,
+    "discountPrice": 6999,
+    "stock": 8,
+    "rating": 3.8,
+    "numReviews": 45,
+    "soldCount": 226,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-magsafe-battery-pack/2.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Apple Watch Series 4 Gold",
+    "categoryName": "Electronics",
+    "description": "The Apple Watch Series 4 in Gold is a stylish and advanced smartwatch with features like heart rate monitoring, fitness tracking, and a beautiful Retina display.",
+    "price": 29999,
+    "discountPrice": 26399,
+    "stock": 33,
+    "rating": 3.8,
+    "numReviews": 80,
+    "soldCount": 286,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/2.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-watch-series-4-gold/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Beats Flex Wireless Earphones",
+    "categoryName": "Electronics",
+    "description": "The Beats Flex Wireless Earphones offer a comfortable and versatile audio experience. With magnetic earbuds and up to 12 hours of battery life, they are ideal for everyday use.",
+    "price": 3999,
+    "discountPrice": 3799,
+    "stock": 50,
+    "rating": 4.2,
+    "numReviews": 80,
+    "soldCount": 56,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "iPhone 12 Silicone Case with MagSafe Plum",
+    "categoryName": "Electronics",
+    "description": "The iPhone 12 Silicone Case with MagSafe in Plum is a stylish and protective case designed for the iPhone 12. It features MagSafe technology for easy attachment of accessories.",
+    "price": 2499,
+    "discountPrice": 2199,
+    "stock": 69,
+    "rating": 3.8,
+    "numReviews": 88,
+    "soldCount": 229,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/2.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/3.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/iphone-12-silicone-case-with-magsafe-plum/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Monopod",
+    "categoryName": "Electronics",
+    "description": "The Monopod is a versatile camera accessory for stable and adjustable shooting. Perfect for capturing selfies, group photos, and videos with ease.",
+    "price": 1699,
+    "discountPrice": 1599,
+    "stock": 48,
+    "rating": 4.4,
+    "numReviews": 68,
+    "soldCount": 220,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/1.webp",
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/monopod/2.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Selfie Lamp with iPhone",
+    "categoryName": "Electronics",
+    "description": "The Selfie Lamp with iPhone is a portable and adjustable LED light designed to enhance your selfies and video calls. Attach it to your iPhone for well-lit photos.",
+    "price": 1299,
+    "discountPrice": 999,
+    "stock": 58,
+    "rating": 3.8,
+    "numReviews": 38,
+    "soldCount": 210,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-lamp-with-iphone/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Selfie Stick Monopod",
+    "categoryName": "Electronics",
+    "description": "The Selfie Stick Monopod is a extendable and foldable device for capturing the perfect selfie or group photo. Compatible with smartphones and cameras.",
+    "price": 1099,
+    "discountPrice": 889,
+    "stock": 11,
+    "rating": 3.9,
+    "numReviews": 30,
+    "soldCount": 201,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/selfie-stick-monopod/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "TV Studio Camera Pedestal",
+    "categoryName": "Electronics",
+    "description": "The TV Studio Camera Pedestal is a professional-grade camera support system for smooth and precise camera movements in a studio setting. Ideal for broadcast and production.",
+    "price": 41999,
+    "discountPrice": 38499,
+    "stock": 15,
+    "rating": 3.8,
+    "numReviews": 87,
+    "soldCount": 66,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mobile-accessories/tv-studio-camera-pedestal/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "iPhone 5s",
+    "categoryName": "Electronics",
+    "description": "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+    "price": 16999,
+    "discountPrice": 14799,
+    "stock": 25,
+    "rating": 3.8,
+    "numReviews": 67,
+    "soldCount": 181,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "iPhone 6",
+    "categoryName": "Electronics",
+    "description": "The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.",
+    "price": 24999,
+    "discountPrice": 23299,
+    "stock": 60,
+    "rating": 3.8,
+    "numReviews": 37,
+    "soldCount": 256,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "iPhone 13 Pro",
+    "categoryName": "Electronics",
+    "description": "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.",
+    "price": 92999,
+    "discountPrice": 84299,
+    "stock": 56,
+    "rating": 4.1,
+    "numReviews": 66,
+    "soldCount": 79,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "iPhone X",
+    "categoryName": "Electronics",
+    "description": "The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.",
+    "price": 75999,
+    "discountPrice": 61099,
+    "stock": 37,
+    "rating": 3.8,
+    "numReviews": 78,
+    "soldCount": 216,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/iphone-x/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Oppo A57",
+    "categoryName": "Electronics",
+    "description": "The Oppo A57 is a mid-range smartphone known for its sleek design and capable features. It offers a balance of performance and affordability, making it a popular choice.",
+    "price": 20999,
+    "discountPrice": 20499,
+    "stock": 19,
+    "rating": 3.9,
+    "numReviews": 57,
+    "soldCount": 234,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-a57/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Oppo F19 Pro Plus",
+    "categoryName": "Electronics",
+    "description": "The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.",
+    "price": 33999,
+    "discountPrice": 27699,
+    "stock": 78,
+    "rating": 3.8,
+    "numReviews": 33,
+    "soldCount": 201,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-f19-pro-plus/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Oppo K1",
+    "categoryName": "Electronics",
+    "description": "The Oppo K1 series offers a range of smartphones with various features and specifications. Known for their stylish design and reliable performance, the Oppo K1 series caters to diverse user preferences.",
+    "price": 24999,
+    "discountPrice": 20399,
+    "stock": 55,
+    "rating": 4.3,
+    "numReviews": 88,
+    "soldCount": 206,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/3.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/oppo-k1/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Realme C35",
+    "categoryName": "Electronics",
+    "description": "The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use. It offers a reliable performance and user-friendly experience.",
+    "price": 12999,
+    "discountPrice": 10999,
+    "stock": 48,
+    "rating": 4.2,
+    "numReviews": 42,
+    "soldCount": 202,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-c35/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Realme X",
+    "categoryName": "Electronics",
+    "description": "The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.",
+    "price": 24999,
+    "discountPrice": 23299,
+    "stock": 12,
+    "rating": 3.8,
+    "numReviews": 77,
+    "soldCount": 60,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-x/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Realme XT",
+    "categoryName": "Electronics",
+    "description": "The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.",
+    "price": 29999,
+    "discountPrice": 26499,
+    "stock": 80,
+    "rating": 4.6,
+    "numReviews": 27,
+    "soldCount": 196,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/realme-xt/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Samsung Galaxy S7",
+    "categoryName": "Electronics",
+    "description": "The Samsung Galaxy S7 is a flagship smartphone known for its sleek design and advanced features. It features a high-resolution display, powerful camera, and robust performance.",
+    "price": 24999,
+    "discountPrice": 20099,
+    "stock": 67,
+    "rating": 3.8,
+    "numReviews": 52,
+    "soldCount": 101,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s7/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Samsung Galaxy S8",
+    "categoryName": "Electronics",
+    "description": "The Samsung Galaxy S8 is a premium smartphone with an Infinity Display, offering a stunning visual experience. It boasts advanced camera capabilities and cutting-edge technology.",
+    "price": 41999,
+    "discountPrice": 33799,
+    "stock": 25,
+    "rating": 4.4,
+    "numReviews": 86,
+    "soldCount": 255,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s8/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Samsung Galaxy S10",
+    "categoryName": "Electronics",
+    "description": "The Samsung Galaxy S10 is a flagship device featuring a dynamic AMOLED display, versatile camera system, and powerful performance. It represents innovation and excellence in smartphone technology.",
+    "price": 58999,
+    "discountPrice": 55699,
+    "stock": 19,
+    "rating": 3.8,
+    "numReviews": 41,
+    "soldCount": 49,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/samsung-galaxy-s10/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Vivo S1",
+    "categoryName": "Electronics",
+    "description": "The Vivo S1 is a stylish and mid-range smartphone offering a blend of design and performance. It features a vibrant display, capable camera system, and reliable functionality.",
+    "price": 20999,
+    "discountPrice": 18899,
+    "stock": 50,
+    "rating": 3.8,
+    "numReviews": 65,
+    "soldCount": 250,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-s1/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Vivo V9",
+    "categoryName": "Electronics",
+    "description": "The Vivo V9 is a smartphone known for its sleek design and emphasis on capturing high-quality selfies. It features a notch display, dual-camera setup, and a modern design.",
+    "price": 24999,
+    "discountPrice": 20599,
+    "stock": 82,
+    "rating": 3.8,
+    "numReviews": 68,
+    "soldCount": 142,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Vivo X21",
+    "categoryName": "Electronics",
+    "description": "The Vivo X21 is a premium smartphone with a focus on cutting-edge technology. It features an in-display fingerprint sensor, a high-resolution display, and advanced camera capabilities.",
+    "price": 41999,
+    "discountPrice": 34699,
+    "stock": 8,
+    "rating": 4.3,
+    "numReviews": 36,
+    "soldCount": 259,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/1.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/2.webp",
+      "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "iPad Mini 2021 Starlight",
+    "categoryName": "Electronics",
+    "description": "The iPad Mini 2021 in Starlight is a compact and powerful tablet from Apple. Featuring a stunning Retina display, powerful A-series chip, and a sleek design, it offers a premium tablet experience.",
+    "price": 41999,
+    "discountPrice": 40499,
+    "stock": 47,
+    "rating": 3.8,
+    "numReviews": 63,
+    "soldCount": 66,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/1.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/2.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/3.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/ipad-mini-2021-starlight/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Samsung Galaxy Tab S8 Plus Grey",
+    "categoryName": "Electronics",
+    "description": "The Samsung Galaxy Tab S8 Plus in Grey is a high-performance Android tablet by Samsung. With a large AMOLED display, powerful processor, and S Pen support, it's ideal for productivity and entertainment.",
+    "price": 50999,
+    "discountPrice": 44199,
+    "stock": 62,
+    "rating": 4.7,
+    "numReviews": 89,
+    "soldCount": 137,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/1.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/2.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/3.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-s8-plus-grey/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Samsung Galaxy Tab White",
+    "categoryName": "Electronics",
+    "description": "The Samsung Galaxy Tab in White is a sleek and versatile Android tablet. With a vibrant display, long-lasting battery, and a range of features, it offers a great user experience for various tasks.",
+    "price": 29999,
+    "discountPrice": 24499,
+    "stock": 92,
+    "rating": 3.8,
+    "numReviews": 49,
+    "soldCount": 153,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/1.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/2.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/3.webp",
+      "https://cdn.dummyjson.com/product-images/tablets/samsung-galaxy-tab-white/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "AeroBlade Cyber Gaming Laptop 16 Pro",
+    "categoryName": "Electronics",
+    "description": "Intel i9-14900HX, NVIDIA RTX 4080 12GB, 32GB DDR5 RAM, 1TB NVMe SSD, 240Hz QHD OLED — built for hardcore gaming and 3D rendering.",
+    "price": 185000,
+    "discountPrice": 169999,
+    "stock": 12,
+    "rating": 4.9,
+    "numReviews": 48,
+    "soldCount": 95,
+    "images": [
+      "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
+    "categoryName": "Electronics",
+    "description": "Industry-leading noise cancellation with two processors and 8 microphones, Hi-Res Audio, crystal-clear hands-free calling, 30-hour battery life.",
+    "price": 29990,
+    "discountPrice": 26990,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 120,
+    "soldCount": 350,
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Blue & Black Check Shirt",
+    "categoryName": "Clothing",
+    "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+    "price": 2499,
+    "discountPrice": 2099,
+    "stock": 38,
+    "rating": 3.8,
+    "numReviews": 35,
+    "soldCount": 88,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/blue-&-black-check-shirt/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Gigabyte Aorus Men Tshirt",
+    "categoryName": "Clothing",
+    "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+    "price": 1999,
+    "discountPrice": 1599,
+    "stock": 90,
+    "rating": 3.8,
+    "numReviews": 41,
+    "soldCount": 113,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/gigabyte-aorus-men-tshirt/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Man Plaid Shirt",
+    "categoryName": "Clothing",
+    "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+    "price": 2999,
+    "discountPrice": 2399,
+    "stock": 82,
+    "rating": 3.8,
+    "numReviews": 70,
+    "soldCount": 135,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-plaid-shirt/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Man Short Sleeve Shirt",
+    "categoryName": "Clothing",
+    "description": "The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.",
+    "price": 1699,
+    "discountPrice": 1599,
+    "stock": 8,
+    "rating": 3.8,
+    "numReviews": 94,
+    "soldCount": 104,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/man-short-sleeve-shirt/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Men Check Shirt",
+    "categoryName": "Clothing",
+    "description": "The Men Check Shirt is a classic and versatile shirt featuring a stylish check pattern. Suitable for various occasions, it adds a smart and polished touch to your wardrobe.",
+    "price": 2499,
+    "discountPrice": 2199,
+    "stock": 95,
+    "rating": 3.8,
+    "numReviews": 75,
+    "soldCount": 251,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shirts/men-check-shirt/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Brown Leather Belt Watch",
+    "categoryName": "Clothing",
+    "description": "The Brown Leather Belt Watch is a stylish timepiece with a classic design. Featuring a genuine leather strap and a sleek dial, it adds a touch of sophistication to your look.",
+    "price": 7499,
+    "discountPrice": 7099,
+    "stock": 32,
+    "rating": 4.2,
+    "numReviews": 26,
+    "soldCount": 52,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/brown-leather-belt-watch/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Longines Master Collection",
+    "categoryName": "Clothing",
+    "description": "The Longines Master Collection is an elegant and refined watch known for its precision and craftsmanship. With a timeless design, it's a symbol of luxury and sophistication.",
+    "price": 126999,
+    "discountPrice": 105099,
+    "stock": 100,
+    "rating": 3.9,
+    "numReviews": 60,
+    "soldCount": 138,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Rolex Cellini Date Black Dial",
+    "categoryName": "Clothing",
+    "description": "The Rolex Cellini Date with Black Dial is a classic and prestigious watch. With a black dial and date complication, it exudes sophistication and is a symbol of Rolex's heritage.",
+    "price": 764999,
+    "discountPrice": 697099,
+    "stock": 40,
+    "rating": 5,
+    "numReviews": 21,
+    "soldCount": 212,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-date-black-dial/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Rolex Cellini Moonphase",
+    "categoryName": "Clothing",
+    "description": "The Rolex Cellini Moonphase is a masterpiece of horology, featuring a moon phase complication and exquisite design. It reflects Rolex's commitment to precision and elegance.",
+    "price": 1104999,
+    "discountPrice": 911399,
+    "stock": 36,
+    "rating": 3.8,
+    "numReviews": 58,
+    "soldCount": 137,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-cellini-moonphase/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Rolex Datejust",
+    "categoryName": "Clothing",
+    "description": "The Rolex Datejust is an iconic and versatile timepiece with a date window. Known for its timeless design and reliability, it's a symbol of Rolex's watchmaking excellence.",
+    "price": 934999,
+    "discountPrice": 900099,
+    "stock": 86,
+    "rating": 3.8,
+    "numReviews": 94,
+    "soldCount": 81,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-datejust/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Rolex Submariner Watch",
+    "categoryName": "Clothing",
+    "description": "The Rolex Submariner is a legendary dive watch with a rich history. Known for its durability and water resistance, it's a symbol of adventure and exploration.",
+    "price": 1189999,
+    "discountPrice": 1129899,
+    "stock": 55,
+    "rating": 3.8,
+    "numReviews": 18,
+    "soldCount": 122,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-watches/rolex-submariner-watch/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Black Sun Glasses",
+    "categoryName": "Clothing",
+    "description": "The Black Sun Glasses are a classic and stylish choice, featuring a sleek black frame and tinted lenses. They provide both UV protection and a fashionable look.",
+    "price": 2499,
+    "discountPrice": 2399,
+    "stock": 60,
+    "rating": 4.4,
+    "numReviews": 92,
+    "soldCount": 283,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/1.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/2.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/black-sun-glasses/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Classic Sun Glasses",
+    "categoryName": "Clothing",
+    "description": "The Classic Sun Glasses offer a timeless design with a neutral frame and UV-protected lenses. These sunglasses are versatile and suitable for various occasions.",
+    "price": 1999,
+    "discountPrice": 1899,
+    "stock": 8,
+    "rating": 3.9,
+    "numReviews": 93,
+    "soldCount": 57,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/1.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/2.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/classic-sun-glasses/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Green and Black Glasses",
+    "categoryName": "Clothing",
+    "description": "The Green and Black Glasses feature a bold combination of green and black colors, adding a touch of vibrancy to your eyewear collection. They are both stylish and eye-catching.",
+    "price": 2999,
+    "discountPrice": 2399,
+    "stock": 24,
+    "rating": 4.5,
+    "numReviews": 47,
+    "soldCount": 125,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/1.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/2.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/green-and-black-glasses/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Party Glasses",
+    "categoryName": "Clothing",
+    "description": "The Party Glasses are designed to add flair to your party outfit. With unique shapes or colorful frames, they're perfect for adding a playful touch to your look during celebrations.",
+    "price": 1699,
+    "discountPrice": 1499,
+    "stock": 86,
+    "rating": 3.8,
+    "numReviews": 30,
+    "soldCount": 57,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/1.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/2.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/party-glasses/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Sunglasses",
+    "categoryName": "Clothing",
+    "description": "The Sunglasses offer a classic and simple design with a focus on functionality. These sunglasses provide essential UV protection while maintaining a timeless look.",
+    "price": 1999,
+    "discountPrice": 1599,
+    "stock": 27,
+    "rating": 3.8,
+    "numReviews": 54,
+    "soldCount": 86,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/1.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/2.webp",
+      "https://cdn.dummyjson.com/product-images/sunglasses/sunglasses/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Blue Frock",
+    "categoryName": "Clothing",
+    "description": "The Blue Frock is a charming and stylish dress for various occasions. With a vibrant blue color and a comfortable design, it adds a touch of elegance to your wardrobe.",
+    "price": 2499,
+    "discountPrice": 2199,
+    "stock": 52,
+    "rating": 4.2,
+    "numReviews": 73,
+    "soldCount": 136,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/tops/blue-frock/1.webp",
+      "https://cdn.dummyjson.com/product-images/tops/blue-frock/2.webp",
+      "https://cdn.dummyjson.com/product-images/tops/blue-frock/3.webp",
+      "https://cdn.dummyjson.com/product-images/tops/blue-frock/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Girl Summer Dress",
+    "categoryName": "Clothing",
+    "description": "The Girl Summer Dress is a cute and breezy dress designed for warm weather. With playful patterns and lightweight fabric, it's perfect for keeping cool and stylish during the summer.",
+    "price": 1699,
+    "discountPrice": 1399,
+    "stock": 43,
+    "rating": 4.8,
+    "numReviews": 23,
+    "soldCount": 68,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/1.webp",
+      "https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/2.webp",
+      "https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/3.webp",
+      "https://cdn.dummyjson.com/product-images/tops/girl-summer-dress/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Gray Dress",
+    "categoryName": "Clothing",
+    "description": "The Gray Dress is a versatile and chic option for various occasions. With a neutral gray color, it can be dressed up or down, making it a wardrobe staple for any fashion-forward individual.",
+    "price": 2999,
+    "discountPrice": 2599,
+    "stock": 55,
+    "rating": 3.8,
+    "numReviews": 44,
+    "soldCount": 49,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/tops/gray-dress/1.webp",
+      "https://cdn.dummyjson.com/product-images/tops/gray-dress/2.webp",
+      "https://cdn.dummyjson.com/product-images/tops/gray-dress/3.webp",
+      "https://cdn.dummyjson.com/product-images/tops/gray-dress/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Short Frock",
+    "categoryName": "Clothing",
+    "description": "The Short Frock is a playful and trendy dress with a shorter length. Ideal for casual outings or special occasions, it combines style and comfort for a fashionable look.",
+    "price": 1999,
+    "discountPrice": 1699,
+    "stock": 22,
+    "rating": 3.8,
+    "numReviews": 77,
+    "soldCount": 248,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/tops/short-frock/1.webp",
+      "https://cdn.dummyjson.com/product-images/tops/short-frock/2.webp",
+      "https://cdn.dummyjson.com/product-images/tops/short-frock/3.webp",
+      "https://cdn.dummyjson.com/product-images/tops/short-frock/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Tartan Dress",
+    "categoryName": "Clothing",
+    "description": "The Tartan Dress features a classic tartan pattern, bringing a timeless and sophisticated touch to your wardrobe. Perfect for fall and winter, it adds a hint of traditional charm.",
+    "price": 3499,
+    "discountPrice": 2999,
+    "stock": 73,
+    "rating": 4,
+    "numReviews": 78,
+    "soldCount": 82,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/tops/tartan-dress/1.webp",
+      "https://cdn.dummyjson.com/product-images/tops/tartan-dress/2.webp",
+      "https://cdn.dummyjson.com/product-images/tops/tartan-dress/3.webp",
+      "https://cdn.dummyjson.com/product-images/tops/tartan-dress/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Blue Women's Handbag",
+    "categoryName": "Clothing",
+    "description": "The Blue Women's Handbag is a stylish and spacious accessory for everyday use. With a vibrant blue color and multiple compartments, it combines fashion and functionality.",
+    "price": 3999,
+    "discountPrice": 3299,
+    "stock": 76,
+    "rating": 3.8,
+    "numReviews": 34,
+    "soldCount": 128,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/blue-women's-handbag/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Heshe Women's Leather Bag",
+    "categoryName": "Clothing",
+    "description": "The Heshe Women's Leather Bag is a luxurious and high-quality leather bag for the sophisticated woman. With a timeless design and durable craftsmanship, it's a versatile accessory.",
+    "price": 10999,
+    "discountPrice": 10599,
+    "stock": 99,
+    "rating": 4.9,
+    "numReviews": 52,
+    "soldCount": 233,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/heshe-women's-leather-bag/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Prada Women Bag",
+    "categoryName": "Clothing",
+    "description": "The Prada Women Bag is an iconic designer bag that exudes elegance and luxury. Crafted with precision and featuring the Prada logo, it's a statement piece for fashion enthusiasts.",
+    "price": 50999,
+    "discountPrice": 43799,
+    "stock": 75,
+    "rating": 3.8,
+    "numReviews": 32,
+    "soldCount": 131,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/prada-women-bag/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "White Faux Leather Backpack",
+    "categoryName": "Clothing",
+    "description": "The White Faux Leather Backpack is a trendy and practical backpack for the modern woman. With a sleek white design and ample storage space, it's perfect for both casual and on-the-go styles.",
+    "price": 3499,
+    "discountPrice": 2999,
+    "stock": 39,
+    "rating": 3.8,
+    "numReviews": 46,
+    "soldCount": 260,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/white-faux-leather-backpack/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Women Handbag Black",
+    "categoryName": "Clothing",
+    "description": "The Women Handbag in Black is a classic and versatile accessory that complements various outfits. With a timeless black color and functional design, it's a must-have in every woman's wardrobe.",
+    "price": 4999,
+    "discountPrice": 4399,
+    "stock": 11,
+    "rating": 3.8,
+    "numReviews": 79,
+    "soldCount": 288,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-bags/women-handbag-black/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Black Women's Gown",
+    "categoryName": "Clothing",
+    "description": "The Black Women's Gown is an elegant and timeless evening gown. With a sleek black design, it's perfect for formal events and special occasions, exuding sophistication and style.",
+    "price": 10999,
+    "discountPrice": 9799,
+    "stock": 25,
+    "rating": 3.8,
+    "numReviews": 66,
+    "soldCount": 123,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/black-women's-gown/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Corset Leather With Skirt",
+    "categoryName": "Clothing",
+    "description": "The Corset Leather With Skirt is a bold and edgy ensemble that combines a stylish corset with a matching skirt. Ideal for fashion-forward individuals, it makes a statement at any event.",
+    "price": 7499,
+    "discountPrice": 6299,
+    "stock": 30,
+    "rating": 3.8,
+    "numReviews": 84,
+    "soldCount": 253,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/corset-leather-with-skirt/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Corset With Black Skirt",
+    "categoryName": "Clothing",
+    "description": "The Corset With Black Skirt is a chic and versatile outfit that pairs a fashionable corset with a classic black skirt. It offers a trendy and coordinated look for various occasions.",
+    "price": 6999,
+    "discountPrice": 5899,
+    "stock": 33,
+    "rating": 4.5,
+    "numReviews": 27,
+    "soldCount": 179,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/corset-with-black-skirt/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Dress Pea",
+    "categoryName": "Clothing",
+    "description": "The Dress Pea is a stylish and comfortable dress with a pea pattern. Perfect for casual outings, it adds a playful and fun element to your wardrobe, making it a great choice for day-to-day wear.",
+    "price": 3999,
+    "discountPrice": 3299,
+    "stock": 8,
+    "rating": 4.9,
+    "numReviews": 74,
+    "soldCount": 142,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/dress-pea/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Marni Red & Black Suit",
+    "categoryName": "Clothing",
+    "description": "The Marni Red & Black Suit is a sophisticated and fashion-forward suit ensemble. With a combination of red and black tones, it showcases a modern design for a bold and confident look.",
+    "price": 14999,
+    "discountPrice": 12099,
+    "stock": 62,
+    "rating": 4.5,
+    "numReviews": 32,
+    "soldCount": 169,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-dresses/marni-red-&-black-suit/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Vintage Distressed Italian Leather Biker Jacket",
+    "categoryName": "Clothing",
+    "description": "Handcrafted 100% full-grain calfskin leather, satin interior lining, asymmetric heavy YKK zips, vintage motorcycle cut.",
+    "price": 28999,
+    "discountPrice": 22499,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 55,
+    "soldCount": 140,
+    "images": [
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Heavyweight 450 GSM Organic Cotton Boxy Hoodie",
+    "categoryName": "Clothing",
+    "description": "GOTS certified organic cotton, double-layered hood, ribbed side gussets, pre-shrunk heavyweight French terry.",
+    "price": 4999,
+    "discountPrice": 3499,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 30,
+    "soldCount": 206,
+    "images": [
+      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Superfine 18.5 Micron Merino Wool Blazer",
+    "categoryName": "Clothing",
+    "description": "Pure Merino wool, half-canvas chest piece, notch lapels, horn buttons, breathable four-season luxury drape.",
+    "price": 19999,
+    "discountPrice": 15999,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 64,
+    "soldCount": 66,
+    "images": [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Technical 4-Way Stretch Cargo Jogger Pants",
+    "categoryName": "Clothing",
+    "description": "Water-resistant DWR finish, zippered cargo utility pockets, articulated knee seams, tapered elastic cuffs.",
+    "price": 3999,
+    "discountPrice": 2799,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 31,
+    "soldCount": 208,
+    "images": [
+      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Bamboo Fiber Breathable Essential V-Neck Tee 3-Pack",
+    "categoryName": "Clothing",
+    "description": "70% bamboo viscose, 30% organic cotton, silky soft handfeel, natural odor resistance, tagless collar.",
+    "price": 2999,
+    "discountPrice": 1999,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 24,
+    "soldCount": 243,
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "British Millerain Waxed Canvas Field Jacket",
+    "categoryName": "Clothing",
+    "description": "Weatherproof staywax canvas shell, corduroy collar, flannel handwarmer pockets, brass snaps and storm flap.",
+    "price": 12999,
+    "discountPrice": 9999,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 56,
+    "soldCount": 64,
+    "images": [
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Japanese 14.5oz Raw Selvedge Denim Jeans",
+    "categoryName": "Clothing",
+    "description": "Kuroki mills unsanforized raw denim, classic red selvedge ID line, hidden back pocket rivets, leather patch.",
+    "price": 8999,
+    "discountPrice": 6999,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 69,
+    "soldCount": 265,
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Pure Mulberry Silk Button-Down Collared Blouse",
+    "categoryName": "Clothing",
+    "description": "Grade 6A 22-momme pure mulberry silk, mother-of-pearl buttons, relaxed French seam tailoring, breathable luster.",
+    "price": 8499,
+    "discountPrice": 6299,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 72,
+    "soldCount": 203,
+    "images": [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Relaxed Pure French Linen Resort Collar Shirt",
+    "categoryName": "Clothing",
+    "description": "Normandy certified natural flax linen, garment-dyed, camp collar, shell buttons, airy breathable summer drape.",
+    "price": 4499,
+    "discountPrice": 3299,
+    "stock": 40,
+    "rating": 4.8,
+    "numReviews": 70,
+    "soldCount": 264,
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Nike Air Jordan 1 Red And Black",
+    "categoryName": "Shoes",
+    "description": "The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.",
+    "price": 12999,
+    "discountPrice": 12499,
+    "stock": 8,
+    "rating": 4.8,
+    "numReviews": 63,
+    "soldCount": 84,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-black/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Nike Baseball Cleats",
+    "categoryName": "Shoes",
+    "description": "Nike Baseball Cleats are designed for maximum traction and performance on the baseball field. They provide stability and support for players during games and practices.",
+    "price": 6999,
+    "discountPrice": 5699,
+    "stock": 12,
+    "rating": 3.9,
+    "numReviews": 18,
+    "soldCount": 103,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Puma Future Rider Trainers",
+    "categoryName": "Shoes",
+    "description": "The Puma Future Rider Trainers offer a blend of retro style and modern comfort. Perfect for casual wear, these trainers provide a fashionable and comfortable option for everyday use.",
+    "price": 7499,
+    "discountPrice": 7199,
+    "stock": 90,
+    "rating": 4.9,
+    "numReviews": 86,
+    "soldCount": 178,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Sports Sneakers Off White & Red",
+    "categoryName": "Shoes",
+    "description": "The Sports Sneakers in Off White and Red combine style and functionality, making them a fashionable choice for sports enthusiasts. The red and off-white color combination adds a bold and energetic touch.",
+    "price": 9999,
+    "discountPrice": 9499,
+    "stock": 17,
+    "rating": 4.8,
+    "numReviews": 46,
+    "soldCount": 227,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/4.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Sports Sneakers Off White Red",
+    "categoryName": "Shoes",
+    "description": "Another variant of the Sports Sneakers in Off White Red, featuring a unique design. These sneakers offer style and comfort for casual occasions.",
+    "price": 9499,
+    "discountPrice": 7599,
+    "stock": 62,
+    "rating": 4.7,
+    "numReviews": 27,
+    "soldCount": 214,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/1.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/2.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/3.webp",
+      "https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-red/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Black & Brown Slipper",
+    "categoryName": "Shoes",
+    "description": "The Black & Brown Slipper is a comfortable and stylish choice for casual wear. Featuring a blend of black and brown colors, it adds a touch of sophistication to your relaxation.",
+    "price": 1699,
+    "discountPrice": 1599,
+    "stock": 8,
+    "rating": 3.8,
+    "numReviews": 74,
+    "soldCount": 218,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/black-&-brown-slipper/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Calvin Klein Heel Shoes",
+    "categoryName": "Shoes",
+    "description": "Calvin Klein Heel Shoes are elegant and sophisticated, designed for formal occasions. With a classic design and high-quality materials, they complement your stylish ensemble.",
+    "price": 6999,
+    "discountPrice": 6799,
+    "stock": 93,
+    "rating": 4.9,
+    "numReviews": 30,
+    "soldCount": 53,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/calvin-klein-heel-shoes/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Golden Shoes Woman",
+    "categoryName": "Shoes",
+    "description": "The Golden Shoes for Women are a glamorous choice for special occasions. Featuring a golden hue and stylish design, they add a touch of luxury to your outfit.",
+    "price": 3999,
+    "discountPrice": 3399,
+    "stock": 88,
+    "rating": 3.8,
+    "numReviews": 39,
+    "soldCount": 111,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/golden-shoes-woman/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Pampi Shoes",
+    "categoryName": "Shoes",
+    "description": "Pampi Shoes offer a blend of comfort and style for everyday use. With a versatile design, they are suitable for various casual occasions, providing a trendy and relaxed look.",
+    "price": 2499,
+    "discountPrice": 2099,
+    "stock": 49,
+    "rating": 3.8,
+    "numReviews": 33,
+    "soldCount": 136,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/pampi-shoes/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Red Shoes",
+    "categoryName": "Shoes",
+    "description": "The Red Shoes make a bold statement with their vibrant red color. Whether for a party or a casual outing, these shoes add a pop of color and style to your wardrobe.",
+    "price": 2999,
+    "discountPrice": 2499,
+    "stock": 8,
+    "rating": 3.8,
+    "numReviews": 90,
+    "soldCount": 184,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/1.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/2.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/3.webp",
+      "https://cdn.dummyjson.com/product-images/womens-shoes/red-shoes/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Apex Runner Carbon Plate Road Racing Shoes",
+    "categoryName": "Shoes",
+    "description": "Full-length carbon fiber propulsion plate, nitrogen-infused supercritical foam midsole, breathable engineered mesh upper.",
+    "price": 16999,
+    "discountPrice": 13999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 15,
+    "soldCount": 226,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Handcrafted Goodyear Welted Oxford Leather Shoes",
+    "categoryName": "Shoes",
+    "description": "Full-grain calfskin leather, double oak-tanned leather sole, Goodyear welt construction, hand-burnished cognac finish.",
+    "price": 18999,
+    "discountPrice": 14999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 46,
+    "soldCount": 74,
+    "images": [
+      "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Classic Chelsea Suede Leather Ankle Boots",
+    "categoryName": "Shoes",
+    "description": "Water-repellent European suede leather, elasticized side gussets, stacked leather heel with non-slip rubber commando sole.",
+    "price": 8999,
+    "discountPrice": 6999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 44,
+    "soldCount": 206,
+    "images": [
+      "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Gore-Tex Waterproof Mountain Hiking Boots",
+    "categoryName": "Shoes",
+    "description": "Vibram Megagrip lug outsole, waterproof breathable Gore-Tex membrane, protective rubber rand, ergonomic ankle collar.",
+    "price": 14999,
+    "discountPrice": 11999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 33,
+    "soldCount": 93,
+    "images": [
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Minimalist Wide Toe-Box Barefoot Trainers",
+    "categoryName": "Shoes",
+    "description": "Zero-drop heel-to-toe, flexible 4mm puncture-resistant sole, wide anatomical toe box allowing natural splay.",
+    "price": 5999,
+    "discountPrice": 4499,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 20,
+    "soldCount": 259,
+    "images": [
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Classic White Leather Low-Top Tennis Sneakers",
+    "categoryName": "Shoes",
+    "description": "Buttery smooth Nappa leather, vulcanized rubber cupsole, padded collar, understated minimalist profile.",
+    "price": 6999,
+    "discountPrice": 4999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 37,
+    "soldCount": 105,
+    "images": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Chunky Lug-Sole Combat Boots in Polished Leather",
+    "categoryName": "Shoes",
+    "description": "8-eyelet lace-up silhouette, inside brass zip for quick access, heavy lugged cleated sole, durable pull tab.",
+    "price": 9999,
+    "discountPrice": 7499,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 75,
+    "soldCount": 86,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Breathable Knit Cushion Running Sneakers",
+    "categoryName": "Shoes",
+    "description": "Seamless sock-like Flyknit upper, responsive high-rebound EVA midsole, durable carbon rubber high-wear zones.",
+    "price": 4999,
+    "discountPrice": 3799,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 74,
+    "soldCount": 111,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Handwoven Espadrille Canvas Slip-On Shoes",
+    "categoryName": "Shoes",
+    "description": "Natural jute rope midsole, breathable organic cotton canvas upper, flexible non-slip natural rubber under-sole.",
+    "price": 2999,
+    "discountPrice": 1999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 84,
+    "soldCount": 249,
+    "images": [
+      "https://images.unsplash.com/photo-1465877783223-4eba513e27c6?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Italian Leather Penny Loafers with Moc-Toe Stitch",
+    "categoryName": "Shoes",
+    "description": "Classic penny keeper strap, unlined supple leather for barefoot comfort, flexible Blake-stitched leather sole.",
+    "price": 11999,
+    "discountPrice": 8999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 57,
+    "soldCount": 60,
+    "images": [
+      "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Trail-Ready Outdoor Shoes with Vibram Traction",
+    "categoryName": "Shoes",
+    "description": "Rugged ripstop upper with TPU overlays, rock protection plate in forefoot, quick-lace drawstring cord system.",
+    "price": 8499,
+    "discountPrice": 6499,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 87,
+    "soldCount": 143,
+    "images": [
+      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Cushioned Orthopedic Recovery Walking Clogs",
+    "categoryName": "Shoes",
+    "description": "High-density closed-cell foam with contoured arch support and deep heel cup to soothe tired feet after sports.",
+    "price": 3499,
+    "discountPrice": 2499,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 33,
+    "soldCount": 49,
+    "images": [
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Retro High-Top Basketball Leather Sneakers",
+    "categoryName": "Shoes",
+    "description": "Padded ankle collar, perforated toe box, pivot-point traction herringbone rubber sole, vintage two-tone colorway.",
+    "price": 8999,
+    "discountPrice": 6999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 25,
+    "soldCount": 227,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Low-Profile Skateboarding Canvas Shoes",
+    "categoryName": "Shoes",
+    "description": "Double-wrapped foxing tape, padded collar, sticky gum waffle outsole for board grip, reinforced ollie patch.",
+    "price": 3999,
+    "discountPrice": 2999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 80,
+    "soldCount": 47,
+    "images": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "All-Weather Insulated Winter Duck Boots",
+    "categoryName": "Shoes",
+    "description": "Waterproof molded rubber shell bottom, 200g Thinsulate insulation, full-grain oiled leather shaft, shearling lining.",
+    "price": 10999,
+    "discountPrice": 8499,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 76,
+    "soldCount": 46,
+    "images": [
+      "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Cap-Toe Derby Formal Shoes in Dark Espresso",
+    "categoryName": "Shoes",
+    "description": "Blind eyelets, clean cap-toe stitching, cushioned footbed, non-marking composite dress sole for all-day office comfort.",
+    "price": 7999,
+    "discountPrice": 5999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 63,
+    "soldCount": 134,
+    "images": [
+      "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Slip-On Driving Moccasins in Velvety Nubuck",
+    "categoryName": "Shoes",
+    "description": "Split rubber pod sole extending up the heel counter, contrast hand-stitching, ultra-flexible leather construction.",
+    "price": 5499,
+    "discountPrice": 3999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 38,
+    "soldCount": 78,
+    "images": [
+      "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Cross-Training High-Impact Stability Shoes",
+    "categoryName": "Shoes",
+    "description": "Flat stable heel for heavy squats and deadlifts, flexible forefoot for lunges and burpees, durable side rope-wraps.",
+    "price": 7499,
+    "discountPrice": 5499,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 44,
+    "soldCount": 93,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Bohemian Braided Strappy Flat Sandals",
+    "categoryName": "Shoes",
+    "description": "Hand-braided vegetable-tanned leather straps, cushioned suede footbed, flexible non-slip natural crepe sole.",
+    "price": 2999,
+    "discountPrice": 2199,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 63,
+    "soldCount": 42,
+    "images": [
+      "https://images.unsplash.com/photo-1465877783223-4eba513e27c6?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Spikeless Waterproof Leather Golf Shoes",
+    "categoryName": "Shoes",
+    "description": "Full-grain treated leather, integrated traction lugs for turf grip without damaging greens, cushioned EVA midsole.",
+    "price": 9999,
+    "discountPrice": 7499,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 19,
+    "soldCount": 224,
+    "images": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Waterproof Neoprene Ankle Deck Boots",
+    "categoryName": "Shoes",
+    "description": "100% waterproof 4mm neoprene with rubber overlay, non-marking chevron slip-resistant outsole, pull loops.",
+    "price": 6499,
+    "discountPrice": 4999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 91,
+    "soldCount": 204,
+    "images": [
+      "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Classic Double-Monk Strap Dress Shoes in Burnished Tan",
+    "categoryName": "Shoes",
+    "description": "Twin buckle straps over instep, chisel toe profile, handcrafted Argentine leather sole with rubber heel insert.",
+    "price": 12999,
+    "discountPrice": 9499,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 59,
+    "soldCount": 203,
+    "images": [
+      "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Ergonomic Arch-Support Slide Recovery Sandals",
+    "categoryName": "Shoes",
+    "description": "Waterproof molded EVA foam slide with deep heel cup and pronounced arch support for post-workout recovery.",
+    "price": 2199,
+    "discountPrice": 1599,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 36,
+    "soldCount": 106,
+    "images": [
+      "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Water-Resistant Cordura Winter Booties with Zip",
+    "categoryName": "Shoes",
+    "description": "DWR-treated Cordura nylon shell, cozy fleece lining, side YKK waterproof zipper, anti-slip Arctic grip sole.",
+    "price": 7999,
+    "discountPrice": 5999,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 18,
+    "soldCount": 141,
+    "images": [
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Heritage Suede Chukka Desert Boots",
+    "categoryName": "Shoes",
+    "description": "Two-eyelet desert boot pattern, rich unlined suede, plantation crepe sole, effortless casual weekend pairing.",
+    "price": 6999,
+    "discountPrice": 5299,
+    "stock": 30,
+    "rating": 4.7,
+    "numReviews": 34,
+    "soldCount": 119,
+    "images": [
+      "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Annibale Colombo Bed",
+    "categoryName": "Home & Kitchen",
+    "description": "The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.",
+    "price": 160999,
+    "discountPrice": 147199,
+    "stock": 88,
+    "rating": 4.8,
+    "numReviews": 41,
+    "soldCount": 163,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/2.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Annibale Colombo Sofa",
+    "categoryName": "Home & Kitchen",
+    "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
+    "price": 211999,
+    "discountPrice": 181499,
+    "stock": 60,
+    "rating": 3.9,
+    "numReviews": 67,
+    "soldCount": 99,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/2.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Bedside Table African Cherry",
+    "categoryName": "Home & Kitchen",
+    "description": "The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.",
+    "price": 24999,
+    "discountPrice": 20199,
+    "stock": 64,
+    "rating": 3.8,
+    "numReviews": 26,
+    "soldCount": 150,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/2.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Knoll Saarinen Executive Conference Chair",
+    "categoryName": "Home & Kitchen",
+    "description": "The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.",
+    "price": 41999,
+    "discountPrice": 41199,
+    "stock": 26,
+    "rating": 4.9,
+    "numReviews": 31,
+    "soldCount": 125,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/2.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Wooden Bathroom Sink With Mirror",
+    "categoryName": "Home & Kitchen",
+    "description": "The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.",
+    "price": 67999,
+    "discountPrice": 61999,
+    "stock": 8,
+    "rating": 3.8,
+    "numReviews": 53,
+    "soldCount": 195,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/2.webp",
+      "https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Decoration Swing",
+    "categoryName": "Home & Kitchen",
+    "description": "The Decoration Swing is a charming addition to your home decor. Crafted with intricate details, it adds a touch of elegance and whimsy to any room.",
+    "price": 4999,
+    "discountPrice": 4499,
+    "stock": 47,
+    "rating": 3.8,
+    "numReviews": 17,
+    "soldCount": 103,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/1.webp",
+      "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/2.webp",
+      "https://cdn.dummyjson.com/product-images/home-decoration/decoration-swing/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Family Tree Photo Frame",
+    "categoryName": "Home & Kitchen",
+    "description": "The Family Tree Photo Frame is a sentimental and stylish way to display your cherished family memories. With multiple photo slots, it tells the story of your loved ones.",
+    "price": 2499,
+    "discountPrice": 2099,
+    "stock": 77,
+    "rating": 4.5,
+    "numReviews": 39,
+    "soldCount": 138,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/home-decoration/family-tree-photo-frame/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "House Showpiece Plant",
+    "categoryName": "Home & Kitchen",
+    "description": "The House Showpiece Plant is an artificial plant that brings a touch of nature to your home without the need for maintenance. It adds greenery and style to any space.",
+    "price": 3499,
+    "discountPrice": 3199,
+    "stock": 28,
+    "rating": 4.7,
+    "numReviews": 23,
+    "soldCount": 132,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/1.webp",
+      "https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/2.webp",
+      "https://cdn.dummyjson.com/product-images/home-decoration/house-showpiece-plant/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Plant Pot",
+    "categoryName": "Home & Kitchen",
+    "description": "The Plant Pot is a stylish container for your favorite plants. With a sleek design, it complements your indoor or outdoor garden, adding a modern touch to your plant display.",
+    "price": 1299,
+    "discountPrice": 1199,
+    "stock": 59,
+    "rating": 3.8,
+    "numReviews": 64,
+    "soldCount": 266,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/1.webp",
+      "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/2.webp",
+      "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/3.webp",
+      "https://cdn.dummyjson.com/product-images/home-decoration/plant-pot/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Table Lamp",
+    "categoryName": "Home & Kitchen",
+    "description": "The Table Lamp is a functional and decorative lighting solution for your living space. With a modern design, it provides both ambient and task lighting, enhancing the atmosphere.",
+    "price": 3999,
+    "discountPrice": 3699,
+    "stock": 9,
+    "rating": 3.8,
+    "numReviews": 34,
+    "soldCount": 59,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/home-decoration/table-lamp/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Bamboo Spatula",
+    "categoryName": "Home & Kitchen",
+    "description": "The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo. Ideal for flipping, stirring, and serving various dishes.",
+    "price": 699,
+    "discountPrice": 679,
+    "stock": 37,
+    "rating": 3.8,
+    "numReviews": 66,
+    "soldCount": 111,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/bamboo-spatula/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Black Aluminium Cup",
+    "categoryName": "Home & Kitchen",
+    "description": "The Black Aluminium Cup is a stylish and durable cup suitable for both hot and cold beverages. Its sleek black design adds a modern touch to your drinkware collection.",
+    "price": 499,
+    "discountPrice": 421,
+    "stock": 75,
+    "rating": 4.5,
+    "numReviews": 19,
+    "soldCount": 232,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/1.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-aluminium-cup/2.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Black Whisk",
+    "categoryName": "Home & Kitchen",
+    "description": "The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.",
+    "price": 799,
+    "discountPrice": 717,
+    "stock": 73,
+    "rating": 3.9,
+    "numReviews": 39,
+    "soldCount": 178,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/black-whisk/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Boxed Blender",
+    "categoryName": "Home & Kitchen",
+    "description": "The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.",
+    "price": 3499,
+    "discountPrice": 3199,
+    "stock": 9,
+    "rating": 4.6,
+    "numReviews": 41,
+    "soldCount": 255,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/1.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/2.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/3.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Carbon Steel Wok",
+    "categoryName": "Home & Kitchen",
+    "description": "The Carbon Steel Wok is a versatile cooking pan suitable for stir-frying, sautéing, and deep frying. Its sturdy construction ensures even heat distribution for delicious meals.",
+    "price": 2499,
+    "discountPrice": 2299,
+    "stock": 40,
+    "rating": 4,
+    "numReviews": 74,
+    "soldCount": 117,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/carbon-steel-wok/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Chopping Board",
+    "categoryName": "Home & Kitchen",
+    "description": "The Chopping Board is an essential kitchen accessory for food preparation. Made from durable material, it provides a safe and hygienic surface for cutting and chopping.",
+    "price": 1099,
+    "discountPrice": 999,
+    "stock": 14,
+    "rating": 3.8,
+    "numReviews": 17,
+    "soldCount": 159,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/chopping-board/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Citrus Squeezer Yellow",
+    "categoryName": "Home & Kitchen",
+    "description": "The Citrus Squeezer in Yellow is a handy tool for extracting juice from citrus fruits. Its vibrant color adds a cheerful touch to your kitchen gadgets.",
+    "price": 799,
+    "discountPrice": 702,
+    "stock": 22,
+    "rating": 4.6,
+    "numReviews": 53,
+    "soldCount": 159,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/citrus-squeezer-yellow/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Egg Slicer",
+    "categoryName": "Home & Kitchen",
+    "description": "The Egg Slicer is a convenient tool for slicing boiled eggs evenly. It's perfect for salads, sandwiches, and other dishes where sliced eggs are desired.",
+    "price": 599,
+    "discountPrice": 511,
+    "stock": 40,
+    "rating": 3.8,
+    "numReviews": 73,
+    "soldCount": 192,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/egg-slicer/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Electric Stove",
+    "categoryName": "Home & Kitchen",
+    "description": "The Electric Stove provides a portable and efficient cooking solution. Ideal for small kitchens or as an additional cooking surface for various culinary needs.",
+    "price": 3999,
+    "discountPrice": 3399,
+    "stock": 21,
+    "rating": 4.1,
+    "numReviews": 28,
+    "soldCount": 115,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/1.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/2.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/3.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/electric-stove/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Fine Mesh Strainer",
+    "categoryName": "Home & Kitchen",
+    "description": "The Fine Mesh Strainer is a versatile tool for straining liquids and sifting dry ingredients. Its fine mesh ensures efficient filtering for smooth cooking and baking.",
+    "price": 799,
+    "discountPrice": 771,
+    "stock": 85,
+    "rating": 3.8,
+    "numReviews": 33,
+    "soldCount": 254,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/fine-mesh-strainer/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Fork",
+    "categoryName": "Home & Kitchen",
+    "description": "The Fork is a classic utensil for various dining and serving purposes. Its durable and ergonomic design makes it a reliable choice for everyday use.",
+    "price": 349,
+    "discountPrice": 321,
+    "stock": 8,
+    "rating": 3.8,
+    "numReviews": 34,
+    "soldCount": 58,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/fork/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Glass",
+    "categoryName": "Home & Kitchen",
+    "description": "The Glass is a versatile and elegant drinking vessel suitable for a variety of beverages. Its clear design allows you to enjoy the colors and textures of your drinks.",
+    "price": 399,
+    "discountPrice": 367,
+    "stock": 46,
+    "rating": 4,
+    "numReviews": 90,
+    "soldCount": 92,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/glass/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Grater Black",
+    "categoryName": "Home & Kitchen",
+    "description": "The Grater in Black is a handy kitchen tool for grating cheese, vegetables, and more. Its sleek design and sharp blades make food preparation efficient and easy.",
+    "price": 899,
+    "discountPrice": 867,
+    "stock": 84,
+    "rating": 3.8,
+    "numReviews": 23,
+    "soldCount": 237,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/grater-black/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Hand Blender",
+    "categoryName": "Home & Kitchen",
+    "description": "The Hand Blender is a versatile kitchen appliance for blending, pureeing, and mixing. Its compact design and powerful motor make it a convenient tool for various recipes.",
+    "price": 2999,
+    "discountPrice": 2499,
+    "stock": 84,
+    "rating": 3.9,
+    "numReviews": 56,
+    "soldCount": 104,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/hand-blender/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Ice Cube Tray",
+    "categoryName": "Home & Kitchen",
+    "description": "The Ice Cube Tray is a practical accessory for making ice cubes in various shapes. Perfect for keeping your drinks cool and adding a fun element to your beverages.",
+    "price": 499,
+    "discountPrice": 496,
+    "stock": 13,
+    "rating": 4.7,
+    "numReviews": 55,
+    "soldCount": 263,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/ice-cube-tray/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Kitchen Sieve",
+    "categoryName": "Home & Kitchen",
+    "description": "The Kitchen Sieve is a versatile tool for sifting and straining dry and wet ingredients. Its fine mesh design ensures smooth results in your cooking and baking.",
+    "price": 699,
+    "discountPrice": 567,
+    "stock": 68,
+    "rating": 3.8,
+    "numReviews": 78,
+    "soldCount": 132,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/kitchen-sieve/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Knife",
+    "categoryName": "Home & Kitchen",
+    "description": "The Knife is an essential kitchen tool for chopping, slicing, and dicing. Its sharp blade and ergonomic handle make it a reliable choice for food preparation.",
+    "price": 1299,
+    "discountPrice": 1099,
+    "stock": 8,
+    "rating": 3.8,
+    "numReviews": 17,
+    "soldCount": 192,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/knife/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Lunch Box",
+    "categoryName": "Home & Kitchen",
+    "description": "The Lunch Box is a convenient and portable container for packing and carrying your meals. With compartments for different foods, it's perfect for on-the-go dining.",
+    "price": 1099,
+    "discountPrice": 985,
+    "stock": 94,
+    "rating": 4.9,
+    "numReviews": 77,
+    "soldCount": 59,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/lunch-box/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Microwave Oven",
+    "categoryName": "Home & Kitchen",
+    "description": "The Microwave Oven is a versatile kitchen appliance for quick and efficient cooking, reheating, and defrosting. Its compact size makes it suitable for various kitchen setups.",
+    "price": 7499,
+    "discountPrice": 6599,
+    "stock": 59,
+    "rating": 4.8,
+    "numReviews": 72,
+    "soldCount": 266,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/1.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/2.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/3.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/microwave-oven/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Mug Tree Stand",
+    "categoryName": "Home & Kitchen",
+    "description": "The Mug Tree Stand is a stylish and space-saving solution for organizing your mugs. Keep your favorite mugs easily accessible and neatly displayed in your kitchen.",
+    "price": 1399,
+    "discountPrice": 1299,
+    "stock": 88,
+    "rating": 3.8,
+    "numReviews": 48,
+    "soldCount": 186,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/1.webp",
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/mug-tree-stand/2.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Pan",
+    "categoryName": "Home & Kitchen",
+    "description": "The Pan is a versatile and essential cookware item for frying, sautéing, and cooking various dishes. Its non-stick coating ensures easy food release and cleanup.",
+    "price": 1999,
+    "discountPrice": 1899,
+    "stock": 90,
+    "rating": 3.8,
+    "numReviews": 71,
+    "soldCount": 85,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/pan/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Plate",
+    "categoryName": "Home & Kitchen",
+    "description": "The Plate is a classic and essential dishware item for serving meals. Its durable and stylish design makes it suitable for everyday use or special occasions.",
+    "price": 349,
+    "discountPrice": 323,
+    "stock": 66,
+    "rating": 3.8,
+    "numReviews": 22,
+    "soldCount": 185,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/plate/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Red Tongs",
+    "categoryName": "Home & Kitchen",
+    "description": "The Red Tongs are versatile kitchen tongs suitable for various cooking and serving tasks. Their vibrant color adds a pop of excitement to your kitchen utensils.",
+    "price": 599,
+    "discountPrice": 512,
+    "stock": 82,
+    "rating": 4.4,
+    "numReviews": 83,
+    "soldCount": 158,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/red-tongs/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Silver Pot With Glass Cap",
+    "categoryName": "Home & Kitchen",
+    "description": "The Silver Pot with Glass Cap is a stylish and functional cookware item for boiling, simmering, and preparing delicious meals. Its glass cap allows you to monitor cooking progress.",
+    "price": 3499,
+    "discountPrice": 3299,
+    "stock": 40,
+    "rating": 3.8,
+    "numReviews": 51,
+    "soldCount": 263,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/silver-pot-with-glass-cap/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Slotted Turner",
+    "categoryName": "Home & Kitchen",
+    "description": "The Slotted Turner is a kitchen utensil designed for flipping and turning food items. Its slotted design allows excess liquid to drain, making it ideal for frying and sautéing.",
+    "price": 799,
+    "discountPrice": 692,
+    "stock": 88,
+    "rating": 3.8,
+    "numReviews": 58,
+    "soldCount": 251,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/slotted-turner/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Spice Rack",
+    "categoryName": "Home & Kitchen",
+    "description": "The Spice Rack is a convenient organizer for your spices and seasonings. Keep your kitchen essentials within reach and neatly arranged with this stylish spice rack.",
+    "price": 1699,
+    "discountPrice": 1499,
+    "stock": 79,
+    "rating": 4.9,
+    "numReviews": 43,
+    "soldCount": 164,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/spice-rack/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Spoon",
+    "categoryName": "Home & Kitchen",
+    "description": "The Spoon is a versatile kitchen utensil for stirring, serving, and tasting. Its ergonomic design and durable construction make it an essential tool for every kitchen.",
+    "price": 399,
+    "discountPrice": 393,
+    "stock": 59,
+    "rating": 4,
+    "numReviews": 36,
+    "soldCount": 222,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/spoon/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Tray",
+    "categoryName": "Home & Kitchen",
+    "description": "The Tray is a functional and decorative item for serving snacks, appetizers, or drinks. Its stylish design makes it a versatile accessory for entertaining guests.",
+    "price": 1399,
+    "discountPrice": 1299,
+    "stock": 71,
+    "rating": 4.6,
+    "numReviews": 83,
+    "soldCount": 233,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/tray/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Wooden Rolling Pin",
+    "categoryName": "Home & Kitchen",
+    "description": "The Wooden Rolling Pin is a classic kitchen tool for rolling out dough for baking. Its smooth surface and sturdy handles make it easy to achieve uniform thickness.",
+    "price": 999,
+    "discountPrice": 902,
+    "stock": 80,
+    "rating": 3.8,
+    "numReviews": 78,
+    "soldCount": 40,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/wooden-rolling-pin/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Yellow Peeler",
+    "categoryName": "Home & Kitchen",
+    "description": "The Yellow Peeler is a handy tool for peeling fruits and vegetables with ease. Its bright yellow color adds a cheerful touch to your kitchen gadgets.",
+    "price": 499,
+    "discountPrice": 437,
+    "stock": 35,
+    "rating": 4.2,
+    "numReviews": 81,
+    "soldCount": 165,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/kitchen-accessories/yellow-peeler/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Essence Mascara Lash Princess",
+    "categoryName": "Beauty & Skincare",
+    "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+    "price": 799,
+    "discountPrice": 715,
+    "stock": 99,
+    "rating": 3.8,
+    "numReviews": 66,
+    "soldCount": 66,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Eyeshadow Palette with Mirror",
+    "categoryName": "Beauty & Skincare",
+    "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+    "price": 1699,
+    "discountPrice": 1399,
+    "stock": 34,
+    "rating": 3.8,
+    "numReviews": 77,
+    "soldCount": 243,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Powder Canister",
+    "categoryName": "Beauty & Skincare",
+    "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
+    "price": 1299,
+    "discountPrice": 1199,
+    "stock": 89,
+    "rating": 4.6,
+    "numReviews": 86,
+    "soldCount": 59,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Red Lipstick",
+    "categoryName": "Beauty & Skincare",
+    "description": "The Red Lipstick is a classic and bold choice for adding a pop of color to your lips. With a creamy and pigmented formula, it provides a vibrant and long-lasting finish.",
+    "price": 1099,
+    "discountPrice": 965,
+    "stock": 91,
+    "rating": 4.4,
+    "numReviews": 63,
+    "soldCount": 103,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Red Nail Polish",
+    "categoryName": "Beauty & Skincare",
+    "description": "The Red Nail Polish offers a rich and glossy red hue for vibrant and polished nails. With a quick-drying formula, it provides a salon-quality finish at home.",
+    "price": 799,
+    "discountPrice": 708,
+    "stock": 79,
+    "rating": 4.3,
+    "numReviews": 55,
+    "soldCount": 218,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/beauty/red-nail-polish/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Calvin Klein CK One",
+    "categoryName": "Beauty & Skincare",
+    "description": "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
+    "price": 3999,
+    "discountPrice": 3899,
+    "stock": 29,
+    "rating": 4.4,
+    "numReviews": 37,
+    "soldCount": 40,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/1.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/2.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/calvin-klein-ck-one/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Chanel Coco Noir Eau De",
+    "categoryName": "Beauty & Skincare",
+    "description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
+    "price": 10999,
+    "discountPrice": 9199,
+    "stock": 58,
+    "rating": 4.3,
+    "numReviews": 78,
+    "soldCount": 98,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/1.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/2.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/chanel-coco-noir-eau-de/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Dior J'adore",
+    "categoryName": "Beauty & Skincare",
+    "description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
+    "price": 7499,
+    "discountPrice": 6399,
+    "stock": 98,
+    "rating": 3.8,
+    "numReviews": 94,
+    "soldCount": 86,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/1.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/2.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Dolce Shine Eau de",
+    "categoryName": "Beauty & Skincare",
+    "description": "Dolce Shine by Dolce & Gabbana is a vibrant and fruity fragrance, featuring notes of mango, jasmine, and blonde woods. It's a joyful and youthful scent.",
+    "price": 5999,
+    "discountPrice": 4799,
+    "stock": 8,
+    "rating": 4,
+    "numReviews": 84,
+    "soldCount": 201,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/1.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/2.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/dolce-shine-eau-de/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Gucci Bloom Eau de",
+    "categoryName": "Beauty & Skincare",
+    "description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
+    "price": 6999,
+    "discountPrice": 5999,
+    "stock": 91,
+    "rating": 3.8,
+    "numReviews": 77,
+    "soldCount": 218,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/1.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/2.webp",
+      "https://cdn.dummyjson.com/product-images/fragrances/gucci-bloom-eau-de/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Attitude Super Leaves Hand Soap",
+    "categoryName": "Beauty & Skincare",
+    "description": "Attitude Super Leaves Hand Soap is a natural and nourishing hand soap enriched with the goodness of super leaves. It cleanses and moisturizes your hands, leaving them feeling fresh and soft.",
+    "price": 799,
+    "discountPrice": 651,
+    "stock": 94,
+    "rating": 3.8,
+    "numReviews": 89,
+    "soldCount": 196,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/1.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/2.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/attitude-super-leaves-hand-soap/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Olay Ultra Moisture Shea Butter Body Wash",
+    "categoryName": "Beauty & Skincare",
+    "description": "Olay Ultra Moisture Shea Butter Body Wash is a luxurious body wash that hydrates and nourishes your skin with the moisturizing power of shea butter. Enjoy a rich lather and silky-smooth skin.",
+    "price": 1099,
+    "discountPrice": 919,
+    "stock": 34,
+    "rating": 4.5,
+    "numReviews": 16,
+    "soldCount": 58,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/1.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/2.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/olay-ultra-moisture-shea-butter-body-wash/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Vaseline Men Body and Face Lotion",
+    "categoryName": "Beauty & Skincare",
+    "description": "Vaseline Men Body and Face Lotion is a specially formulated lotion designed to provide long-lasting moisture to men's skin. It absorbs quickly and helps keep the skin hydrated and healthy.",
+    "price": 799,
+    "discountPrice": 692,
+    "stock": 95,
+    "rating": 3.8,
+    "numReviews": 33,
+    "soldCount": 155,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/1.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/2.webp",
+      "https://cdn.dummyjson.com/product-images/skin-care/vaseline-men-body-and-face-lotion/3.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "HydraGlow 20% Vitamin C + Ferulic Acid Serum",
+    "categoryName": "Beauty & Skincare",
+    "description": "Stable L-ascorbic acid with pure ferulic acid and hyaluronic acid to brighten dull skin, even tone, and boost collagen.",
+    "price": 1999,
+    "discountPrice": 1499,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 67,
+    "soldCount": 231,
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Advanced Encapsulated Retinol 0.5% Night Cream",
+    "categoryName": "Beauty & Skincare",
+    "description": "Slow-release micro-encapsulated retinol with peptides and niacinamide to accelerate cellular renewal without irritation.",
+    "price": 2199,
+    "discountPrice": 1699,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 83,
+    "soldCount": 174,
+    "images": [
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "2% BHA Salicylic Acid Pore Clarifying Liquid",
+    "categoryName": "Beauty & Skincare",
+    "description": "Leave-on liquid exfoliant that unclogs enlarged pores, smooths texture, and gently clears stubborn blackheads.",
+    "price": 1499,
+    "discountPrice": 1199,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 86,
+    "soldCount": 258,
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Niacinamide 10% + Zinc 1% Oil Control Serum",
+    "categoryName": "Beauty & Skincare",
+    "description": "High-strength vitamin and mineral blemish formula that balances sebum activity and minimizes pore congestion.",
+    "price": 999,
+    "discountPrice": 749,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 46,
+    "soldCount": 155,
+    "images": [
+      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Centella Asiatica Soothing Barrier Relief Gel",
+    "categoryName": "Beauty & Skincare",
+    "description": "92% fermented Cica extract with madecassoside to instantly calm redness, repair compromised skin barriers, and hydrate.",
+    "price": 1299,
+    "discountPrice": 999,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 79,
+    "soldCount": 159,
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Multi-Molecular Hyaluronic Acid Hydrating Gel",
+    "categoryName": "Beauty & Skincare",
+    "description": "5 distinct molecular weights of sodium hyaluronate providing multi-depth hydration for plump, bouncy skin.",
+    "price": 1199,
+    "discountPrice": 899,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 58,
+    "soldCount": 134,
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Broad Spectrum SPF 50+ Invisible Matte Sunscreen Gel",
+    "categoryName": "Beauty & Skincare",
+    "description": "Zero white cast, non-greasy water-resistant chemical sunscreen formulated with aloe vera and vitamin E.",
+    "price": 1399,
+    "discountPrice": 999,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 20,
+    "soldCount": 69,
+    "images": [
+      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Japanese Camellia Deep Cleansing Facial Oil",
+    "categoryName": "Beauty & Skincare",
+    "description": "Gentle emulsifying botanical oil cleanser that dissolves stubborn waterproof makeup without stripping natural lipids.",
+    "price": 1799,
+    "discountPrice": 1349,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 41,
+    "soldCount": 174,
+    "images": [
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Gentle Hydrating Ceramide Foaming Face Wash",
+    "categoryName": "Beauty & Skincare",
+    "description": "Soap-free pH 5.5 daily cleanser with 3 essential ceramides, amino acids, and soothing oat milk extract.",
+    "price": 899,
+    "discountPrice": 699,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 90,
+    "soldCount": 95,
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Organic Bulgarian Rosewater Facial Mist Toner",
+    "categoryName": "Beauty & Skincare",
+    "description": "100% pure steam-distilled Rosa Damascena floral water to refresh, balance pH, and prep skin for serums.",
+    "price": 799,
+    "discountPrice": 599,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 60,
+    "soldCount": 99,
+    "images": [
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "100% Pure Cold-Pressed Moroccan Argan Oil 50ml",
+    "categoryName": "Beauty & Skincare",
+    "description": "Unrefined certified organic liquid gold packed with oleic acid, linoleic acid, and vitamin E for hair and skin.",
+    "price": 1599,
+    "discountPrice": 1199,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 44,
+    "soldCount": 225,
+    "images": [
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Shea Butter & Peptide Intensive Lip Repair Balm",
+    "categoryName": "Beauty & Skincare",
+    "description": "Deeply restorative overnight lip butter with shea, cupuacu butter, and vegan peptides to heal chapped lips.",
+    "price": 599,
+    "discountPrice": 449,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 57,
+    "soldCount": 136,
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Himalayan Pink Salt & Arabica Coffee Body Scrub",
+    "categoryName": "Beauty & Skincare",
+    "description": "Exfoliating blend of mineral-rich Himalayan crystals, organic ground Arabica beans, sweet almond oil, and raw cacao.",
+    "price": 999,
+    "discountPrice": 749,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 70,
+    "soldCount": 285,
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Hydrolyzed Marine Collagen Firming Eye Gel",
+    "categoryName": "Beauty & Skincare",
+    "description": "Cooling roll-on applicator infused with caffeine, marine collagen, and eyebright extract to de-puff morning bags.",
+    "price": 1299,
+    "discountPrice": 949,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 86,
+    "soldCount": 143,
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Glycolic Acid 7% Resurfacing Exfoliating Toner",
+    "categoryName": "Beauty & Skincare",
+    "description": "Alpha hydroxy acid clarifying toner with Tasmanian pepperberry, ginseng root, and aloe vera for radiant glow.",
+    "price": 1099,
+    "discountPrice": 849,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 51,
+    "soldCount": 249,
+    "images": [
+      "https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Bamboo Charcoal Detoxifying Mineral Mud Mask",
+    "categoryName": "Beauty & Skincare",
+    "description": "Activated bamboo carbon with Dead Sea mineral mud to vacuum impurities, excess oil, and environmental pollution.",
+    "price": 899,
+    "discountPrice": 649,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 78,
+    "soldCount": 264,
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Ceramide & Squalane Moisture Barrier Recovery Balm",
+    "categoryName": "Beauty & Skincare",
+    "description": "Rich lipid repair salve with 5:1:1 physiological ceramide ratio, plant squalane, and colloidal oatmeal.",
+    "price": 1699,
+    "discountPrice": 1299,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 64,
+    "soldCount": 220,
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Oat Extract Calming & Soothing Facial Serum",
+    "categoryName": "Beauty & Skincare",
+    "description": "Concentrated colloidal oat suspension with beta-glucan to soothe flare-ups, eczema-prone skin, and stinging.",
+    "price": 1199,
+    "discountPrice": 899,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 24,
+    "soldCount": 42,
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Fermented Rice Water Brightening Glow Essence",
+    "categoryName": "Beauty & Skincare",
+    "description": "Korean galactomyces ferment filtrate with arbutin to soften texture, fade post-acne dark marks, and illuminate.",
+    "price": 1399,
+    "discountPrice": 1049,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 52,
+    "soldCount": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Probiotics Balancing Lightweight Daily Moisturizer",
+    "categoryName": "Beauty & Skincare",
+    "description": "Lactobacillus ferment lysate with panthenol B5, providing oil-free microbiome-friendly hydration all day.",
+    "price": 1199,
+    "discountPrice": 899,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 29,
+    "soldCount": 76,
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Tea Tree & Witch Hazel Clarifying Spot Treatment",
+    "categoryName": "Beauty & Skincare",
+    "description": "Targeted drying lotion with 100% Australian tea tree oil, sulfur, and zinc oxide to rapidly shrink whiteheads.",
+    "price": 699,
+    "discountPrice": 499,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 67,
+    "soldCount": 171,
+    "images": [
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Botanical Argan & Keratin Deep Conditioning Mask",
+    "categoryName": "Beauty & Skincare",
+    "description": "Intensive rinse-out salon reconstructor with hydrolysed keratin, panthenol, and shea butter for frizz-free silky hair.",
+    "price": 1299,
+    "discountPrice": 949,
+    "stock": 45,
+    "rating": 4.8,
+    "numReviews": 32,
+    "soldCount": 241,
+    "images": [
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "American Football",
+    "categoryName": "Sports & Fitness",
+    "description": "The American Football is a classic ball used in American football games. It is designed for throwing and catching, making it an essential piece of equipment for the sport.",
+    "price": 1699,
+    "discountPrice": 1599,
+    "stock": 53,
+    "rating": 4.9,
+    "numReviews": 78,
+    "soldCount": 93,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/american-football/1.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Baseball Ball",
+    "categoryName": "Sports & Fitness",
+    "description": "The Baseball Ball is a standard baseball used in baseball games. It features a durable leather cover and is designed for pitching, hitting, and fielding in the game of baseball.",
+    "price": 799,
+    "discountPrice": 785,
+    "stock": 100,
+    "rating": 3.8,
+    "numReviews": 70,
+    "soldCount": 42,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/baseball-ball/1.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Baseball Glove",
+    "categoryName": "Sports & Fitness",
+    "description": "The Baseball Glove is a protective glove worn by baseball players. It is designed to catch and field the baseball, providing players with comfort and control during the game.",
+    "price": 1999,
+    "discountPrice": 1899,
+    "stock": 22,
+    "rating": 4,
+    "numReviews": 87,
+    "soldCount": 223,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/1.webp",
+      "https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/2.webp",
+      "https://cdn.dummyjson.com/product-images/sports-accessories/baseball-glove/3.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Basketball",
+    "categoryName": "Sports & Fitness",
+    "description": "The Basketball is a standard ball used in basketball games. It is designed for dribbling, shooting, and passing in the game of basketball, suitable for both indoor and outdoor play.",
+    "price": 1299,
+    "discountPrice": 1199,
+    "stock": 75,
+    "rating": 4.7,
+    "numReviews": 68,
+    "soldCount": 83,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/basketball/1.webp"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Basketball Rim",
+    "categoryName": "Sports & Fitness",
+    "description": "The Basketball Rim is a sturdy hoop and net assembly mounted on a basketball backboard. It provides a target for shooting and scoring in the game of basketball.",
+    "price": 3499,
+    "discountPrice": 3199,
+    "stock": 43,
+    "rating": 4.6,
+    "numReviews": 68,
+    "soldCount": 219,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/basketball-rim/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Cricket Ball",
+    "categoryName": "Sports & Fitness",
+    "description": "The Cricket Ball is a hard leather ball used in the sport of cricket. It is bowled and batted in the game, and its hardness and seam contribute to the dynamics of cricket play.",
+    "price": 1099,
+    "discountPrice": 999,
+    "stock": 30,
+    "rating": 3.8,
+    "numReviews": 26,
+    "soldCount": 187,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-ball/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Cricket Bat",
+    "categoryName": "Sports & Fitness",
+    "description": "The Cricket Bat is an essential piece of cricket equipment used by batsmen to hit the cricket ball. It is made of wood and comes in various sizes and designs.",
+    "price": 2499,
+    "discountPrice": 2399,
+    "stock": 98,
+    "rating": 3.8,
+    "numReviews": 93,
+    "soldCount": 226,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-bat/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Cricket Helmet",
+    "categoryName": "Sports & Fitness",
+    "description": "The Cricket Helmet is a protective headgear worn by cricket players, especially batsmen and wicketkeepers. It provides protection against fast bowling and bouncers.",
+    "price": 3999,
+    "discountPrice": 3599,
+    "stock": 10,
+    "rating": 4.7,
+    "numReviews": 70,
+    "soldCount": 170,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/1.webp",
+      "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/2.webp",
+      "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/3.webp",
+      "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-helmet/4.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Cricket Wicket",
+    "categoryName": "Sports & Fitness",
+    "description": "The Cricket Wicket is a set of three stumps and two bails, forming a wicket used in the sport of cricket. Batsmen aim to protect the wicket while scoring runs.",
+    "price": 2499,
+    "discountPrice": 2099,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 55,
+    "soldCount": 247,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/cricket-wicket/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Feather Shuttlecock",
+    "categoryName": "Sports & Fitness",
+    "description": "The Feather Shuttlecock is used in the sport of badminton. It features natural feathers and is designed for high-speed play, providing stability and accuracy during matches.",
+    "price": 499,
+    "discountPrice": 484,
+    "stock": 95,
+    "rating": 3.8,
+    "numReviews": 34,
+    "soldCount": 207,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/feather-shuttlecock/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Football",
+    "categoryName": "Sports & Fitness",
+    "description": "The Football, also known as a soccer ball, is the standard ball used in the sport of football (soccer). It is designed for kicking and passing in the game.",
+    "price": 1499,
+    "discountPrice": 1399,
+    "stock": 96,
+    "rating": 3.8,
+    "numReviews": 48,
+    "soldCount": 136,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/football/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Golf Ball",
+    "categoryName": "Sports & Fitness",
+    "description": "The Golf Ball is a small ball used in the sport of golf. It features dimples on its surface, providing aerodynamic lift and distance when struck by a golf club.",
+    "price": 799,
+    "discountPrice": 660,
+    "stock": 84,
+    "rating": 4.3,
+    "numReviews": 88,
+    "soldCount": 210,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/golf-ball/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Iron Golf",
+    "categoryName": "Sports & Fitness",
+    "description": "The Iron Golf is a type of golf club designed for various golf shots. It features a solid metal head and is used for approach shots, chipping, and other golfing techniques.",
+    "price": 3999,
+    "discountPrice": 3699,
+    "stock": 90,
+    "rating": 4.4,
+    "numReviews": 54,
+    "soldCount": 158,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/iron-golf/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Metal Baseball Bat",
+    "categoryName": "Sports & Fitness",
+    "description": "The Metal Baseball Bat is a durable and lightweight baseball bat made from metal alloys. It is commonly used in baseball games for hitting and batting practice.",
+    "price": 2499,
+    "discountPrice": 1999,
+    "stock": 16,
+    "rating": 4.7,
+    "numReviews": 64,
+    "soldCount": 59,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/metal-baseball-bat/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Tennis Ball",
+    "categoryName": "Sports & Fitness",
+    "description": "The Tennis Ball is a standard ball used in the sport of tennis. It is designed for bouncing and hitting with tennis rackets during matches or practice sessions.",
+    "price": 599,
+    "discountPrice": 529,
+    "stock": 28,
+    "rating": 4.1,
+    "numReviews": 45,
+    "soldCount": 115,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/tennis-ball/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Tennis Racket",
+    "categoryName": "Sports & Fitness",
+    "description": "The Tennis Racket is an essential piece of equipment used in the sport of tennis. It features a frame with strings and a grip, allowing players to hit the tennis ball.",
+    "price": 3999,
+    "discountPrice": 3199,
+    "stock": 8,
+    "rating": 4,
+    "numReviews": 50,
+    "soldCount": 131,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/tennis-racket/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Volleyball",
+    "categoryName": "Sports & Fitness",
+    "description": "The Volleyball is a standard ball used in the sport of volleyball. It is designed for passing, setting, and spiking over the net during volleyball matches.",
+    "price": 999,
+    "discountPrice": 877,
+    "stock": 35,
+    "rating": 3.8,
+    "numReviews": 54,
+    "soldCount": 265,
+    "images": [
+      "https://cdn.dummyjson.com/product-images/sports-accessories/volleyball/1.webp"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "PowerMax Elite Adjustable Dumbbell 24kg Single",
+    "categoryName": "Sports & Fitness",
+    "description": "15 weight settings in one dial, from 2.5kg to 24kg. Compact space-saving cast iron dumbbell.",
+    "price": 14999,
+    "discountPrice": 11999,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 20,
+    "soldCount": 208,
+    "images": [
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "ProForm Natural High-Density Cork Yoga Mat 6mm",
+    "categoryName": "Sports & Fitness",
+    "description": "Natural Portuguese cork top layer, non-slip recycled rubber base, antimicrobial surface with carry strap.",
+    "price": 3499,
+    "discountPrice": 2499,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 83,
+    "soldCount": 217,
+    "images": [
+      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Competition Solid Cast Iron Kettlebell 16kg",
+    "categoryName": "Sports & Fitness",
+    "description": "Gravity-cast single piece iron kettlebell, flat machined base, smooth wide handle for two-handed swings.",
+    "price": 4499,
+    "discountPrice": 3499,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 43,
+    "soldCount": 119,
+    "images": [
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Heavy-Duty Resistance Loop Exercise Bands Set of 5",
+    "categoryName": "Sports & Fitness",
+    "description": "100% natural Malaysian latex loop bands ranging from 10 to 50 lbs resistance with compact carry pouch.",
+    "price": 1299,
+    "discountPrice": 899,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 68,
+    "soldCount": 237,
+    "images": [
+      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Deep Tissue Grid Trigger Foam Roller 33cm",
+    "categoryName": "Sports & Fitness",
+    "description": "High-density EVA foam with multi-density grid pattern for myofascial release, relieving tightness and soreness.",
+    "price": 1499,
+    "discountPrice": 999,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 17,
+    "soldCount": 62,
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Pro Speed Bearing Wire Jump Rope for Crossfit",
+    "categoryName": "Sports & Fitness",
+    "description": "Dual 360-degree ball bearings, tangle-free coated wire cable, ergonomic aluminum non-slip knurled handles.",
+    "price": 999,
+    "discountPrice": 699,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 73,
+    "soldCount": 137,
+    "images": [
+      "https://images.unsplash.com/photo-1434682881908-b43d0467b798?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Elite Leather Weightlifting Lever Belt 10mm",
+    "categoryName": "Sports & Fitness",
+    "description": "Top-grain cowhide leather, heavy-duty stainless steel quick-release lever buckle, 4-inch uniform width.",
+    "price": 5999,
+    "discountPrice": 4499,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 62,
+    "soldCount": 57,
+    "images": [
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Heavy-Bag Training Boxing Gloves 14oz Synthetic Leather",
+    "categoryName": "Sports & Fitness",
+    "description": "Multi-layer foam padding, breathable mesh palm, full wrap-around hook-and-loop wrist strap.",
+    "price": 2999,
+    "discountPrice": 2199,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 90,
+    "soldCount": 264,
+    "images": [
+      "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Adjustable Foldable Incline Decline Workout Bench",
+    "categoryName": "Sports & Fitness",
+    "description": "Commercial steel frame, 7 backrest positions, 3 seat angles, high-density foam padding, 300kg capacity.",
+    "price": 11999,
+    "discountPrice": 8999,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 43,
+    "soldCount": 72,
+    "images": [
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Olympic Barbell Quick-Release Clamp Collars Pair",
+    "categoryName": "Sports & Fitness",
+    "description": "Reinforced solid nylon resin frame, rubberized grip pads, fast locking snap-latch mechanism for 2\" bars.",
+    "price": 899,
+    "discountPrice": 649,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 53,
+    "soldCount": 152,
+    "images": [
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Bodyweight Suspension Training Straps Pro Kit",
+    "categoryName": "Sports & Fitness",
+    "description": "Industrial-grade nylon webbing, rubber handles, integrated foot cradles, door anchor and mesh travel bag.",
+    "price": 3499,
+    "discountPrice": 2499,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 68,
+    "soldCount": 97,
+    "images": [
+      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Stainless Steel Insulated Protein Shaker Bottle 750ml",
+    "categoryName": "Sports & Fitness",
+    "description": "Double-wall vacuum insulated kitchen-grade stainless steel, leak-proof flip cap, integrated blending whisk.",
+    "price": 1699,
+    "discountPrice": 1299,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 41,
+    "soldCount": 139,
+    "images": [
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Wood Gymnastic Rings with Heavy-Duty Numbered Straps",
+    "categoryName": "Sports & Fitness",
+    "description": "Smooth birch wood 32mm rings, 15ft heavy-duty straps with printed measurement markings and steel buckles.",
+    "price": 2799,
+    "discountPrice": 2099,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 48,
+    "soldCount": 194,
+    "images": [
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Ergonomic Push-Up Stand Bars with Foam Grip",
+    "categoryName": "Sports & Fitness",
+    "description": "Sturdy steel S-shaped construction, angled to minimize wrist strain, non-skid rubber base pads.",
+    "price": 999,
+    "discountPrice": 749,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 92,
+    "soldCount": 155,
+    "images": [
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Adjustable Hand Grip Strengthener 10kg-60kg",
+    "categoryName": "Sports & Fitness",
+    "description": "Stainless steel spring, textured rubber handle, rotatable dial to calibrate resistance for forearm training.",
+    "price": 699,
+    "discountPrice": 499,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 28,
+    "soldCount": 199,
+    "images": [
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Aerobic Exercise Stepper with Adjustable Risers",
+    "categoryName": "Sports & Fitness",
+    "description": "Shock-absorbing non-stick textured surface, 3 adjustable height levels (10cm, 15cm, 20cm), 150kg weight limit.",
+    "price": 2499,
+    "discountPrice": 1899,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 24,
+    "soldCount": 191,
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Interlocking EVA Foam Gym Flooring Tiles 6-Pack",
+    "categoryName": "Sports & Fitness",
+    "description": "High-density 12mm thick protective floor mats with border edges, water-resistant and noise-reducing.",
+    "price": 1999,
+    "discountPrice": 1499,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 42,
+    "soldCount": 176,
+    "images": [
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Foldable Magnetic Rowing Machine with LCD Display",
+    "categoryName": "Sports & Fitness",
+    "description": "8 magnetic resistance levels, silent belt drive, molded padded seat, foldable vertical storage design.",
+    "price": 24999,
+    "discountPrice": 19999,
+    "stock": 25,
+    "rating": 4.7,
+    "numReviews": 72,
+    "soldCount": 221,
+    "images": [
+      "https://images.unsplash.com/photo-1591291621164-2c6367723315?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Clean Code: A Handbook of Agile Software Craftsmanship",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Robert C. Martin. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1499,
+    "discountPrice": 1199,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 79,
+    "soldCount": 125,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "The Pragmatic Programmer: Your Journey to Mastery",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by David Thomas, Andrew Hunt. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1699,
+    "discountPrice": 1399,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 36,
+    "soldCount": 93,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780201616224-L.jpg"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Designing Data-Intensive Applications",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Martin Kleppmann. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1899,
+    "discountPrice": 1549,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 45,
+    "soldCount": 89,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9781491903063-L.jpg"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Effective Java: Best Practices for Java Platform",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Joshua Bloch. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1799,
+    "discountPrice": 1449,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 52,
+    "soldCount": 100,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780134685991-L.jpg"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Code Complete: Practical Handbook of Software Construction",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Steve McConnell. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1999,
+    "discountPrice": 1599,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 60,
+    "soldCount": 178,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780735619678-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Domain-Driven Design: Tackling Complexity in Software",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Eric Evans. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 2199,
+    "discountPrice": 1799,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 34,
+    "soldCount": 204,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780321125217-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Designing Web APIs: Principles and Best Practices",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Brenda Jin. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1399,
+    "discountPrice": 1099,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 67,
+    "soldCount": 148,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9781449373320-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Building Microservices: Designing Fine-Grained Systems",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Sam Newman. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1699,
+    "discountPrice": 1349,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 88,
+    "soldCount": 272,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9781491950357-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Learning JavaScript Design Patterns",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Addy Osmani. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1299,
+    "discountPrice": 999,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 67,
+    "soldCount": 82,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9781449331819-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Clean Architecture: A Craftsman's Guide to Software",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Robert C. Martin. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1599,
+    "discountPrice": 1299,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 48,
+    "soldCount": 62,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780134494166-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "JavaScript: The Good Parts",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Douglas Crockford. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 999,
+    "discountPrice": 799,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 16,
+    "soldCount": 73,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780596517748-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Fluent Python: Clear, Concise, and Effective Programming",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Luciano Ramalho. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1999,
+    "discountPrice": 1649,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 51,
+    "soldCount": 204,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9781491954249-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Atomic Habits: An Easy & Proven Way to Build Good Habits",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by James Clear. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 799,
+    "discountPrice": 599,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 71,
+    "soldCount": 161,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Deep Work: Rules for Focused Success in a Distracted World",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Cal Newport. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 899,
+    "discountPrice": 699,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 82,
+    "soldCount": 189,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9781455586691-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "The Subtle Art of Not Giving a F*ck",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Mark Manson. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 699,
+    "discountPrice": 549,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 54,
+    "soldCount": 194,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780062457714-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "The Power of Habit: Why We Do What We Do",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Charles Duhigg. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 799,
+    "discountPrice": 629,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 56,
+    "soldCount": 276,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780812981605-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Sapiens: A Brief History of Humankind",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Yuval Noah Harari. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 999,
+    "discountPrice": 799,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 75,
+    "soldCount": 134,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Thinking, Fast and Slow",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Daniel Kahneman. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 899,
+    "discountPrice": 699,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 73,
+    "soldCount": 257,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780374533557-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "The Lean Startup: How Constant Innovation Drives Growth",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Eric Ries. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 899,
+    "discountPrice": 719,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 43,
+    "soldCount": 107,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780307887894-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Essentialism: The Disciplined Pursuit of Less",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Greg McKeown. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 799,
+    "discountPrice": 619,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 30,
+    "soldCount": 220,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9781591846444-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Grit: The Power of Passion and Perseverance",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Angela Duckworth. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 799,
+    "discountPrice": 639,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 42,
+    "soldCount": 84,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780525536512-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Show Your Work!: 10 Ways to Share Your Creativity",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Austin Kleon. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 599,
+    "discountPrice": 479,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 45,
+    "soldCount": 255,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780761178972-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Zero to One: Notes on Startups, or How to Build the Future",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Peter Thiel. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 899,
+    "discountPrice": 699,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 20,
+    "soldCount": 198,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780804139298-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Range: Why Generalists Triumph in a Specialized World",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by David Epstein. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 899,
+    "discountPrice": 719,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 70,
+    "soldCount": 182,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780735214484-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Refactoring: Improving the Design of Existing Code",
+    "categoryName": "Books & Stationery",
+    "description": "Bestselling authoritative title by Martin Fowler. Comprehensive reference, hardcover / premium edition covering key concepts with clarity.",
+    "price": 1899,
+    "discountPrice": 1499,
+    "stock": 50,
+    "rating": 4.9,
+    "numReviews": 26,
+    "soldCount": 269,
+    "images": [
+      "https://covers.openlibrary.org/b/isbn/9780201485677-L.jpg"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Leuchtturm1917 Medium A5 Dotted Hardcover Notebook",
+    "categoryName": "Books & Stationery",
+    "description": "249 numbered pages, 80 gsm ink-proof acid-free paper, 2 ribbon page markers, expandable inner pocket, elastic enclosure band, sticker for labelling and archiving.",
+    "price": 1899,
+    "discountPrice": 1499,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 60,
+    "soldCount": 173,
+    "images": [
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Moleskine Classic Expanded Hard Cover Ruled Notebook",
+    "categoryName": "Books & Stationery",
+    "description": "400 lined ivory-colored acid-free pages, rounded corners, ribbon bookmark, expandable inner back pocket, iconic Italian notebook for writers and creatives.",
+    "price": 2199,
+    "discountPrice": 1749,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 80,
+    "soldCount": 69,
+    "images": [
+      "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Faber-Castell 9000 Graphite Artist Pencil Set of 12",
+    "categoryName": "Books & Stationery",
+    "description": "12 degrees of hardness (8B to 2H), SV-bonded lead to resist breakage, superior artist quality for technical drawing and shading in a vintage metal tin.",
+    "price": 1199,
+    "discountPrice": 899,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 58,
+    "soldCount": 287,
+    "images": [
+      "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Sakura Pigma Micron Archival Fineliner Pens 6-Pack",
+    "categoryName": "Books & Stationery",
+    "description": "Waterproof, chemically stable, fade-resistant archival Pigma pigment ink. Tip sizes 0.20mm to 0.50mm plus 1 brush pen for drafting, manga, and journaling.",
+    "price": 999,
+    "discountPrice": 799,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 43,
+    "soldCount": 58,
+    "images": [
+      "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Tombow Dual Brush Marker Pens Pastel 10-Pack",
+    "categoryName": "Books & Stationery",
+    "description": "Flexible brush tip and fine bullet tip in one pen. Water-based blendable ink, odorless, acid-free, 9 pastel hues plus 1 colorless blender pen.",
+    "price": 2499,
+    "discountPrice": 1999,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 26,
+    "soldCount": 198,
+    "images": [
+      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Midori MD Notebook A5 Minimalist Grid Paper",
+    "categoryName": "Books & Stationery",
+    "description": "Made in Japan with bleed-resistant MD Paper that prevents feathering even with fountain pens. Lies flat 180 degrees with subtle paraffin paper dust jacket.",
+    "price": 1499,
+    "discountPrice": 1199,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 62,
+    "soldCount": 242,
+    "images": [
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Rotring 600 Drafting Mechanical Pencil 0.5mm Matte Black",
+    "categoryName": "Books & Stationery",
+    "description": "Full metal hexagonal brass barrel, non-slip knurled grip, fixed lead guidance sleeve preventing breakage, lead hardness grade indicator dial.",
+    "price": 2999,
+    "discountPrice": 2399,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 57,
+    "soldCount": 212,
+    "images": [
+      "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Rhodia DotPad No. 16 Wirebound Notepad Black A5",
+    "categoryName": "Books & Stationery",
+    "description": "80 micro-perforated detachable sheets of superfine 80gsm Clairefontaine vellum paper. Pale violet geometric 5mm dot grid, water-resistant coated cover.",
+    "price": 799,
+    "discountPrice": 599,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 46,
+    "soldCount": 183,
+    "images": [
+      "https://images.unsplash.com/photo-1506784926709-22f1ec395907?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Staedtler Mars Lumograph Premium Drawing Pencils Set of 12",
+    "categoryName": "Books & Stationery",
+    "description": "Break-resistant super-bonded special lead formulation, metallic blue barrel, PEFC-certified cedar wood, perfect for sketching and expressive portraits.",
+    "price": 1399,
+    "discountPrice": 1049,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 94,
+    "soldCount": 165,
+    "images": [
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Pilot Custom 74 Clear Demonstrator Fountain Pen",
+    "categoryName": "Books & Stationery",
+    "description": "Japanese transparent resin barrel, 14K gold rhodium-plated nib (Fine), Con-70 high-capacity push-button converter included, smooth wet ink flow.",
+    "price": 14999,
+    "discountPrice": 11999,
+    "stock": 60,
+    "rating": 4.7,
+    "numReviews": 75,
+    "soldCount": 54,
+    "images": [
+      "https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Monstera Deliciosa Swiss Cheese Plant in Terracotta",
+    "categoryName": "Plants & Garden",
+    "description": "Lush tropical houseplant with iconic natural leaf fenestrations, potted in a porous 10-inch Italian terracotta pot. Air-purifying and adaptable to moderate indirect light.",
+    "price": 2499,
+    "discountPrice": 1899,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 46,
+    "soldCount": 62,
+    "images": [
+      "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Sansevieria Trifasciata Laurentii Snake Plant",
+    "categoryName": "Plants & Garden",
+    "description": "Architectural sword-like leaves with vivid yellow borders. NASA-certified top air purifier, thriving on minimal watering and low to bright light.",
+    "price": 1499,
+    "discountPrice": 1199,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 31,
+    "soldCount": 142,
+    "images": [
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Fiddle Leaf Fig Architectural Indoor Tree (4 Feet)",
+    "categoryName": "Plants & Garden",
+    "description": "Dramatic violin-shaped leathery leaves standing 4 feet tall in a designer matte white ceramic pot. The quintessential focal piece for bright living rooms.",
+    "price": 4499,
+    "discountPrice": 3499,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 69,
+    "soldCount": 114,
+    "images": [
+      "https://images.unsplash.com/photo-1463320898484-cdee8141c787?w=600"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Peace Lily Spathiphyllum Air-Purifying Plant",
+    "categoryName": "Plants & Garden",
+    "description": "Glossy dark green foliage producing elegant snow-white spathes. Effective at removing airborne VOCs; signals clearly when thirsty by gently drooping.",
+    "price": 1299,
+    "discountPrice": 999,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 60,
+    "soldCount": 144,
+    "images": [
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "ZZ Plant Zamioculcas Zamiifolia Low-Light Foliage",
+    "categoryName": "Plants & Garden",
+    "description": "Glossy waxy leaflets along thick upright stems that store moisture in subterranean rhizomes. Virtually indestructible even in shaded interior office spaces.",
+    "price": 1699,
+    "discountPrice": 1299,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 77,
+    "soldCount": 57,
+    "images": [
+      "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=600"
+    ],
+    "isFeatured": true,
+    "isActive": true
+  },
+  {
+    "name": "Golden Pothos Trailing Vine in Hanging Ceramic",
+    "categoryName": "Plants & Garden",
+    "description": "Heart-shaped variegated green and gold leaves cascading up to 4 feet. Potted in a handcrafted speckled stoneware hanging planter with jute macrame.",
+    "price": 999,
+    "discountPrice": 749,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 85,
+    "soldCount": 47,
+    "images": [
+      "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Aloe Barbadensis Miller Medicinal Succulent",
+    "categoryName": "Plants & Garden",
+    "description": "Thick fleshy leaves packed with nutrient-dense soothing gel. Thrives in sun-drenched windowsills with sparing bi-weekly watering in gritty cactus mix.",
+    "price": 799,
+    "discountPrice": 599,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 60,
+    "soldCount": 126,
+    "images": [
+      "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Areca Palm Dypsis Lutescens Tropical Indoor Palm",
+    "categoryName": "Plants & Garden",
+    "description": "Feathery arching fronds in a 12-inch woven seagrass basket. Natural humidifier capable of transpiring up to 1 liter of moisture daily in dry air.",
+    "price": 2999,
+    "discountPrice": 2299,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 33,
+    "soldCount": 209,
+    "images": [
+      "https://images.unsplash.com/photo-1545241047-6083a3684587?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Chlorophytum Comosum Variegated Spider Plant",
+    "categoryName": "Plants & Garden",
+    "description": "Arching ribbons with creamy ivory centers producing abundant miniature spiderettes on runner stems. Safe for households with dogs and cats.",
+    "price": 699,
+    "discountPrice": 499,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 65,
+    "soldCount": 183,
+    "images": [
+      "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Ficus Elastica Burgundy Rubber Tree",
+    "categoryName": "Plants & Garden",
+    "description": "Broad leathery foliage with deep burgundy and espresso sheen. Grows vigorously with weekly watering and bright indirect ambient sunlight.",
+    "price": 1999,
+    "discountPrice": 1499,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 86,
+    "soldCount": 164,
+    "images": [
+      "https://images.unsplash.com/photo-1463320898484-cdee8141c787?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Nephrolepis Exaltata Boston Sword Fern",
+    "categoryName": "Plants & Garden",
+    "description": "Voluminous cascading arching fronds in a moisture-retentive hanging planter. Thrives in bathroom humidity and filtered diffused window light.",
+    "price": 1199,
+    "discountPrice": 899,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 20,
+    "soldCount": 51,
+    "images": [
+      "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Calathea Ornata Pinstripe Peacock Plant",
+    "categoryName": "Plants & Garden",
+    "description": "Dark purple-backed leaves etched with delicate salmon-pink pinstripes. Folds its leaves gracefully upward each evening in prayer-like motion.",
+    "price": 1599,
+    "discountPrice": 1199,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 23,
+    "soldCount": 148,
+    "images": [
+      "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Crassula Ovata Lucky Jade Plant Bonsai",
+    "categoryName": "Plants & Garden",
+    "description": "Woody branching succulent stems crowned with plump emerald jade leaves. Regarded as a symbol of prosperity; requires minimal irrigation and direct light.",
+    "price": 1399,
+    "discountPrice": 1049,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 17,
+    "soldCount": 237,
+    "images": [
+      "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Senecio Rowleyanus String of Pearls Trailing Succulent",
+    "categoryName": "Plants & Garden",
+    "description": "Spherical bead-like foliage cascading dramatically over the edges of a concrete bowl. Striking architectural piece for sunny floating shelves.",
+    "price": 1299,
+    "discountPrice": 949,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 85,
+    "soldCount": 245,
+    "images": [
+      "https://images.unsplash.com/photo-1520302630591-fd1c66edc19d?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Strelitzia Nicolai Giant White Bird of Paradise",
+    "categoryName": "Plants & Garden",
+    "description": "Massive banana-like paddle leaves bringing dramatic conservatory atmosphere into large open living rooms. Thrives in high-light locations.",
+    "price": 4999,
+    "discountPrice": 3899,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 27,
+    "soldCount": 43,
+    "images": [
+      "https://images.unsplash.com/photo-1512428813834-c702c7702b78?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Philodendron Birkin Variegated White Pinstripe",
+    "categoryName": "Plants & Garden",
+    "description": "Compact glossy leaves featuring distinctive high-contrast white variegation lines that intensify as new leaves emerge under bright light.",
+    "price": 1799,
+    "discountPrice": 1349,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 27,
+    "soldCount": 102,
+    "images": [
+      "https://images.unsplash.com/photo-1600411833196-7c1f6b1a8b90?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Anthurium Andraeanum Red Flamingo Flower",
+    "categoryName": "Plants & Garden",
+    "description": "Glossy heart-shaped spathes in brilliant scarlet red with golden central spadix. Blooms continuously for up to 8 weeks in warm ambient temperatures.",
+    "price": 1899,
+    "discountPrice": 1449,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 68,
+    "soldCount": 214,
+    "images": [
+      "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Aspidistra Elatior Cast Iron Indestructible Plant",
+    "categoryName": "Plants & Garden",
+    "description": "Deep forest-green ribbed foliage named for its legendary resilience against neglect, dust, dry heating air, and low-light corner placements.",
+    "price": 2199,
+    "discountPrice": 1699,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 70,
+    "soldCount": 282,
+    "images": [
+      "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Hedera Helix Glacier English Ivy Hanging Basket",
+    "categoryName": "Plants & Garden",
+    "description": "Classic variegated ivy with creamy margins on three-lobed leaves. Vigorous grower that climbs trellises or cascades gracefully from wall planters.",
+    "price": 899,
+    "discountPrice": 649,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 73,
+    "soldCount": 263,
+    "images": [
+      "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Ficus Ginseng Microcarpa Root-Over-Rock Bonsai",
+    "categoryName": "Plants & Garden",
+    "description": "Exposed sculptural aerial root trunk trained over natural lava rock, topped with a dense canopy of miniature glossy ficus leaves. Ceramic tray included.",
+    "price": 3499,
+    "discountPrice": 2699,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 25,
+    "soldCount": 242,
+    "images": [
+      "https://images.unsplash.com/photo-1599598425947-5202edd56bdb?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Haworthia Fasciata Zebra Succulent in Concrete Pot",
+    "categoryName": "Plants & Garden",
+    "description": "Stiff triangular rosettes ringed with raised white pearly horizontal ridges. Extremely drought-tolerant and compact for minimalist modern desks.",
+    "price": 699,
+    "discountPrice": 519,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 23,
+    "soldCount": 130,
+    "images": [
+      "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Maranta Leuconeura Red Prayer Plant",
+    "categoryName": "Plants & Garden",
+    "description": "Tricolor velvet foliage with lime green centers and vivid red herringbone veins that fold vertically in prayer at nightfall.",
+    "price": 1399,
+    "discountPrice": 1049,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 36,
+    "soldCount": 278,
+    "images": [
+      "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Alocasia Polly African Mask Compact Elephant Ear",
+    "categoryName": "Plants & Garden",
+    "description": "Metallic arrow-shaped leaves with scalloped edges and prominent silvery veins. Compact hybrid bred for indoor tabletops.",
+    "price": 1699,
+    "discountPrice": 1299,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 47,
+    "soldCount": 274,
+    "images": [
+      "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Pilea Peperomioides Chinese Money Plant",
+    "categoryName": "Plants & Garden",
+    "description": "Coin-shaped circular leaves on delicate stems radiating outward from a central stalk. Easily sprouts miniature baby pups to share with friends.",
+    "price": 999,
+    "discountPrice": 749,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 92,
+    "soldCount": 207,
+    "images": [
+      "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Aglaonema Silver Bay Chinese Evergreen",
+    "categoryName": "Plants & Garden",
+    "description": "Wide silvery-gray leaves bordered with emerald green markings. Renowned as one of the most durable and air-purifying indoor species.",
+    "price": 1899,
+    "discountPrice": 1399,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 35,
+    "soldCount": 256,
+    "images": [
+      "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Dracaena Marginata Red-Edged Dragon Tree",
+    "categoryName": "Plants & Garden",
+    "description": "Slender architectural trunk crowned with a tuft of narrow ribbon-like leaves edged in thin crimson borders. 3 feet height in ribbed ceramic pot.",
+    "price": 2299,
+    "discountPrice": 1799,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 47,
+    "soldCount": 254,
+    "images": [
+      "https://images.unsplash.com/photo-1545241047-6083a3684587?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Peperomia Watermelon Striped Compact Houseplant",
+    "categoryName": "Plants & Garden",
+    "description": "Fleshy peltate leaves adorned with alternating dark green and shimmering silver stripes mirroring the rind of miniature watermelons.",
+    "price": 1099,
+    "discountPrice": 849,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 75,
+    "soldCount": 179,
+    "images": [
+      "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Tradescantia Zebrina Silver Wandering Dude",
+    "categoryName": "Plants & Garden",
+    "description": "Vibrant purple undersides with metallic silver parallel stripes on the upper leaf surface. Fast-rooting trailing vine for high shelves.",
+    "price": 799,
+    "discountPrice": 599,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 85,
+    "soldCount": 199,
+    "images": [
+      "https://images.unsplash.com/photo-1545241047-6083a3684587?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Begonia Maculata Polka Dot Spotted Houseplant",
+    "categoryName": "Plants & Garden",
+    "description": "Dramatic olive-green angel wing foliage speckled with silver polka dots and deep crimson undersides. Produces clusters of delicate white blossoms.",
+    "price": 1799,
+    "discountPrice": 1399,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 48,
+    "soldCount": 144,
+    "images": [
+      "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Ceropegia Woodii String of Hearts Hanging Vine",
+    "categoryName": "Plants & Garden",
+    "description": "Delicate purple wiry vines adorned with pairs of tiny marbled heart-shaped succulent leaves. Grows up to 6 feet long in sunny window spots.",
+    "price": 1299,
+    "discountPrice": 999,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 30,
+    "soldCount": 278,
+    "images": [
+      "https://images.unsplash.com/photo-1520302630591-fd1c66edc19d?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Handcrafted Terracotta Pots with Saucers 5-Pack",
+    "categoryName": "Plants & Garden",
+    "description": "Set of 5 graduated breathable natural clay planters (4\" to 8\") with drainage holes and matching drip saucers. Ideal for succulents, herbs, and aroids.",
+    "price": 1499,
+    "discountPrice": 1149,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 20,
+    "soldCount": 44,
+    "images": [
+      "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Self-Watering Hydroponic Windowsill Planters Trio",
+    "categoryName": "Plants & Garden",
+    "description": "Sub-irrigation reservoir pots with cotton wicking cords and water level indicators. Keeps indoor herbs and foliage hydrated for up to 14 days unattended.",
+    "price": 1799,
+    "discountPrice": 1399,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 56,
+    "soldCount": 74,
+    "images": [
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Heavy-Duty Bypass Pruning Shears Japanese Steel",
+    "categoryName": "Plants & Garden",
+    "description": "SK5 high-carbon Japanese steel blades, ergonomic shock-absorbing forged aluminum handles, precision sap groove, and brass safety thumb lock.",
+    "price": 1299,
+    "discountPrice": 949,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 25,
+    "soldCount": 161,
+    "images": [
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Stainless Steel Long-Spout Indoor Watering Can 1.5L",
+    "categoryName": "Plants & Garden",
+    "description": "Precision curved swan-neck spout allows targeted irrigation directly at soil level without splashing delicate foliage. Rust-proof brushed brass finish.",
+    "price": 1699,
+    "discountPrice": 1299,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 31,
+    "soldCount": 163,
+    "images": [
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Organic Perlite & Coco-Peat Potting Soil Mix 10kg",
+    "categoryName": "Plants & Garden",
+    "description": "Aerated, pH-buffered growing medium blended with washed coco-coir, horticultural perlite, vermiculite, and organic worm castings for optimal root health.",
+    "price": 899,
+    "discountPrice": 699,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 60,
+    "soldCount": 132,
+    "images": [
+      "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Pure Cold-Pressed Organic Neem Oil Plant Foliage Spray",
+    "categoryName": "Plants & Garden",
+    "description": "Ready-to-use botanical leaf wash and shine spray derived from organic cold-pressed neem seed oil. Naturally cleans foliage and discourages pests.",
+    "price": 699,
+    "discountPrice": 499,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 36,
+    "soldCount": 274,
+    "images": [
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Brass Fine-Mist Botanical Plant Mister 300ml",
+    "categoryName": "Plants & Garden",
+    "description": "Vintage pump-action mister generating ultra-fine diffused vapor for tropical humidity-loving orchids, calatheas, ferns, and terrariums.",
+    "price": 999,
+    "discountPrice": 749,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 72,
+    "soldCount": 275,
+    "images": [
+      "https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Premium Coco-Coir Climbing Moss Poles 4-Pack",
+    "categoryName": "Plants & Garden",
+    "description": "Extendable stackable coir totem poles providing sturdy aerial root anchorage and natural moisture retention for climbing monsteras and philodendrons.",
+    "price": 1199,
+    "discountPrice": 899,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 16,
+    "soldCount": 246,
+    "images": [
+      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Solid Bamboo Multi-Tier Indoor Plant Display Stand",
+    "categoryName": "Plants & Garden",
+    "description": "6-tier natural lacquered bamboo shelving rack holding up to 10 potted plants. Space-saving corner ladder design with 40kg total weight capacity.",
+    "price": 2999,
+    "discountPrice": 2299,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 27,
+    "soldCount": 66,
+    "images": [
+      "https://images.unsplash.com/photo-1545241047-6083a3684587?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  },
+  {
+    "name": "Ceramic Glazed Minimalist Cylinder Planters Set of 3",
+    "categoryName": "Plants & Garden",
+    "description": "Three nested ceramic planters (5\", 6.5\", 8\") in matte sage green glaze, complete with drainage mesh nets and protective silicone base plugs.",
+    "price": 2199,
+    "discountPrice": 1699,
+    "stock": 35,
+    "rating": 4.8,
+    "numReviews": 59,
+    "soldCount": 121,
+    "images": [
+      "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=600"
+    ],
+    "isFeatured": false,
+    "isActive": true
+  }
+]

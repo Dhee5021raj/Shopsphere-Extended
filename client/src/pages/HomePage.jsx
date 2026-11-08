@@ -86,7 +86,7 @@ const HomePage = ({ onToast }) => {
 
               {/* Search Bar Container */}
               <div className="pt-2 max-w-xl mx-auto lg:mx-0">
-                <SearchBar onSearch={handleSearchSubmit} />
+                <SearchBar onSearch={handleSearchSubmit} autoSearch={false} />
               </div>
 
               {/* CTA Buttons */}

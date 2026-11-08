@@ -8,20 +8,34 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
+
     const loadUser = async () => {
       const token = localStorage.getItem('shopsphere_token');
       if (token) {
         try {
           const { data } = await api.get('/auth/me');
-          setUser(data);
+          if (isMounted) {
+            setUser(data);
+          }
         } catch (error) {
-          console.error('Failed to load user session:', error);
+          console.error('Failed to load user session:', error.message || error);
           localStorage.removeItem('shopsphere_token');
+          if (isMounted) {
+            setUser(null);
+          }
         }
       }
-      setLoading(false);
+      if (isMounted) {
+        setLoading(false);
+      }
     };
+
     loadUser();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const login = async (email, password) => {
