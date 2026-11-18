@@ -196,14 +196,19 @@ async function seedProductsSafe() {
   }
 
   // 6. Final Database Verification
-  const finalTotalProducts = await Product.countDocuments();
+  // Verification is scoped to the 300 base-catalog products, so extra products
+  // (e.g. from scripts/seedCatalogExpansion.js) do not fail this check.
+  const baseNameFilter = { name: { $in: rawProducts.map((p) => p.name) } };
+  const finalTotalProducts = await Product.countDocuments(baseNameFilter);
+  const allProductsInDb = await Product.countDocuments();
   console.log('\n----------------------------------------------------------------');
   console.log('                 Safe Seeding Summary Report                    ');
   console.log('----------------------------------------------------------------');
   console.log(`  Initial Products in DB : ${initialProducts.length}`);
   console.log(`  New Products Inserted  : ${addedCount}`);
   console.log(`  Products Updated       : ${updatedCount}`);
-  console.log(`  Total Products in DB   : ${finalTotalProducts}`);
+  console.log(`  Base Catalog Products  : ${finalTotalProducts}`);
+  console.log(`  Total Products in DB   : ${allProductsInDb}`);
   console.log('----------------------------------------------------------------');
 
   console.log('\n[Safe Seeder] Verified Distribution Across Categories:');
@@ -221,7 +226,7 @@ async function seedProductsSafe() {
   let allMatches = true;
   for (const [catName, target] of Object.entries(TARGET_COUNTS)) {
     const catId = categoryMap[catName];
-    const actual = await Product.countDocuments({ category: catId });
+    const actual = await Product.countDocuments({ ...baseNameFilter, category: catId });
     const match = actual === target ? 'MATCH (OK)' : `MISMATCH (Expected ${target})`;
     console.log(`  - ${catName.padEnd(20)}: ${String(actual).padStart(3)} / ${target} -> ${match}`);
     if (actual !== target) allMatches = false;
@@ -235,7 +240,7 @@ async function seedProductsSafe() {
   }
 
   // Check active status
-  const activeCount = await Product.countDocuments({ isActive: true });
+  const activeCount = await Product.countDocuments({ ...baseNameFilter, isActive: true });
   console.log(`\n[Safe Seeder] Active Products: ${activeCount} / ${finalTotalProducts}`);
 
   // Check pricing and discount integrity

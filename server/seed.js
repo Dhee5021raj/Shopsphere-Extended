@@ -159,8 +159,18 @@ const seedData = async () => {
       paymentStatus: 'Paid', paymentMethod: 'Card', orderStatus: 'Delivered'
     });
 
+    // ── 6. EXPANDED CATALOG (+480 generated products, 60 per category) ──
+    // Skip with SEED_BASE_ONLY=1 to get just the curated 300-product catalog.
+    let totalProducts = productsData.length;
+    if (process.env.SEED_BASE_ONLY !== '1') {
+      const { seedCatalogExpansion } = require('./scripts/seedCatalogExpansion');
+      const expansion = await seedCatalogExpansion({ perCategory: 60 });
+      totalProducts = expansion.total;
+      console.log(`[ShopSphere Seed] Added ${expansion.inserted} expansion products.`);
+    }
+
     console.log('[ShopSphere Seed] Database successfully seeded!');
-    console.log(`  → ${productsData.length} products (${Math.ceil(productsData.length / 12)} pages at 12/page)`);
+    console.log(`  → ${totalProducts} products (${Math.ceil(totalProducts / 12)} pages at 12/page)`);
     console.log('  → 8 categories, 5 vendors, 1 admin, 2 customers');
     process.exit(0);
   } catch (error) {
