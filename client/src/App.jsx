@@ -11,6 +11,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import HomePage from './pages/HomePage';
 import ProductDiscoveryPage from './pages/ProductDiscoveryPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import VendorsPage from './pages/VendorsPage';
 import VendorStorefrontPage from './pages/VendorStorefrontPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
@@ -63,7 +64,7 @@ function App() {
                   <Route path="/products" element={<ProductDiscoveryPage onToast={showToast} />} />
                   <Route path="/products/:id" element={<ProductDetailPage onToast={showToast} />} />
                   <Route path="/store/:slug" element={<VendorStorefrontPage onToast={showToast} />} />
-                  <Route path="/vendors" element={<HomePage onToast={showToast} />} />
+                  <Route path="/vendors" element={<VendorsPage />} />
                   <Route path="/cart" element={<CartPage onToast={showToast} />} />
 
                   {/* Protected Routes */}

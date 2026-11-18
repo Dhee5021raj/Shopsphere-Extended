@@ -9,12 +9,16 @@ const CheckoutPage = ({ onToast }) => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
+  // Prefill from the customer's default saved address (or their first one).
+  // With no saved address the form starts empty instead of a demo address the
+  // customer could submit by mistake.
+  const savedAddress = user?.addresses?.find((a) => a.isDefault) || user?.addresses?.[0];
   const [shippingAddress, setShippingAddress] = useState({
-    street: user?.addresses?.[0]?.street || '42 Tech Park Avenue',
-    city: user?.addresses?.[0]?.city || 'Bengaluru',
-    state: user?.addresses?.[0]?.state || 'Karnataka',
-    zipCode: user?.addresses?.[0]?.zipCode || '560100',
-    country: 'India'
+    street: savedAddress?.street || '',
+    city: savedAddress?.city || '',
+    state: savedAddress?.state || '',
+    zipCode: savedAddress?.zipCode || '',
+    country: savedAddress?.country || 'India'
   });
 
   const [paymentMethod, setPaymentMethod] = useState('Card');
@@ -157,6 +161,7 @@ const CheckoutPage = ({ onToast }) => {
                   required
                   disabled={processing}
                   value={shippingAddress.street}
+                  placeholder="House no., street, area"
                   onChange={(e) => {
                     setShippingAddress({ ...shippingAddress, street: e.target.value });
                     if (checkoutError) setCheckoutError(null);
@@ -172,6 +177,7 @@ const CheckoutPage = ({ onToast }) => {
                   required
                   disabled={processing}
                   value={shippingAddress.city}
+                  placeholder="City"
                   onChange={(e) => {
                     setShippingAddress({ ...shippingAddress, city: e.target.value });
                     if (checkoutError) setCheckoutError(null);
@@ -187,6 +193,7 @@ const CheckoutPage = ({ onToast }) => {
                   required
                   disabled={processing}
                   value={shippingAddress.state}
+                  placeholder="State"
                   onChange={(e) => {
                     setShippingAddress({ ...shippingAddress, state: e.target.value });
                     if (checkoutError) setCheckoutError(null);
@@ -202,6 +209,7 @@ const CheckoutPage = ({ onToast }) => {
                   required
                   disabled={processing}
                   value={shippingAddress.zipCode}
+                  placeholder="e.g. 560100"
                   onChange={(e) => {
                     setShippingAddress({ ...shippingAddress, zipCode: e.target.value });
                     if (checkoutError) setCheckoutError(null);
