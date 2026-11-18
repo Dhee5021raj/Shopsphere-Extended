@@ -10,7 +10,7 @@ const {
   updateProduct,
   deleteProduct
 } = require('../controllers/productController');
-const { protect, authorizeRoles } = require('../middleware/authMiddleware');
+const { protect, authorizeRoles, authorizeVendor } = require('../middleware/authMiddleware');
 const ptShadow = require('../middleware/ptShadow');
 
 // ptShadow fires only on real searches/category browses (see requireQuery) and
@@ -21,8 +21,8 @@ router.get('/trending', getTrendingProducts);
 router.get('/:id', getProductById);
 router.get('/:id/related', getRelatedProducts);
 
-router.post('/', protect, authorizeRoles('vendor', 'admin'), createProduct);
-router.put('/:id', protect, authorizeRoles('vendor', 'admin'), updateProduct);
-router.delete('/:id', protect, authorizeRoles('vendor', 'admin'), deleteProduct);
+router.post('/', protect, authorizeRoles('vendor', 'admin'), authorizeVendor, createProduct);
+router.put('/:id', protect, authorizeRoles('vendor', 'admin'), authorizeVendor, updateProduct);
+router.delete('/:id', protect, authorizeRoles('vendor', 'admin'), authorizeVendor, deleteProduct);
 
 module.exports = router;

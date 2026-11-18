@@ -13,8 +13,9 @@ router.get('/', getVendors);
 router.get('/store/:slug', getVendorStoreBySlug);
 
 // Vendor dashboard protected routes
-router.get('/dashboard/stats', protect, authorizeRoles('vendor'), getVendorDashboardStats);
-router.get('/orders', protect, authorizeRoles('vendor'), getVendorOrders);
-router.put('/orders/:orderId/items/:itemId/status', protect, authorizeRoles('vendor'), updateVendorOrderItemStatus);
+// authorizeVendor rejects pending/rejected stores so admin approval actually gates access.
+router.get('/dashboard/stats', protect, authorizeRoles('vendor'), authorizeVendor, getVendorDashboardStats);
+router.get('/orders', protect, authorizeRoles('vendor'), authorizeVendor, getVendorOrders);
+router.put('/orders/:orderId/items/:itemId/status', protect, authorizeRoles('vendor'), authorizeVendor, updateVendorOrderItemStatus);
 
 module.exports = router;

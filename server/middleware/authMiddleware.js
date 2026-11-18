@@ -46,7 +46,12 @@ const authorizeVendor = async (req, res, next) => {
   }
 
   if (req.user.role === 'vendor') {
-    const vendor = await Vendor.findOne({ user: req.user._id });
+    let vendor;
+    try {
+      vendor = await Vendor.findOne({ user: req.user._id });
+    } catch (error) {
+      return next(error);
+    }
     if (!vendor) {
       return res.status(404).json({ message: 'Vendor store profile not found' });
     }

@@ -27,6 +27,7 @@ const VendorDashboardPage = ({ onToast }) => {
   const [analytics, setAnalytics] = useState(null);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [accessError, setAccessError] = useState(null);
 
   // Add / Edit Product Modal State
   const [productModalOpen, setProductModalOpen] = useState(false);
@@ -63,6 +64,10 @@ const VendorDashboardPage = ({ onToast }) => {
       }
     } catch (err) {
       console.error('Error loading vendor dashboard:', err);
+      // A pending/rejected store gets 403 from authorizeVendor; surface the reason.
+      if (err.response?.status === 403) {
+        setAccessError(err.response.data?.message || 'Your store is not approved yet.');
+      }
     } finally {
       setLoading(false);
     }
@@ -157,6 +162,17 @@ const VendorDashboardPage = ({ onToast }) => {
         <div className="flex flex-col items-center gap-3">
           <div className="w-10 h-10 border-4 border-brand-500 border-t-transparent rounded-full animate-spin"></div>
           <p className="text-sm font-medium text-slate-500">Loading Seller Portal & Analytics...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (accessError) {
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center px-4">
+        <div className="max-w-md text-center bg-white border border-amber-200 rounded-2xl p-8 shadow-sm">
+          <h2 className="text-lg font-bold text-slate-900">Seller portal unavailable</h2>
+          <p className="mt-2 text-sm text-slate-600">{accessError}</p>
         </div>
       </div>
     );
