@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const guestCartItemSchema = new mongoose.Schema({
   product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
   vendor: { type: mongoose.Schema.Types.ObjectId, ref: 'Vendor', required: true },
-  quantity: { type: Number, required: true, min: 1, default: 1 },
+  quantity: {
+    type: Number, required: true, min: 1, default: 1,
+    validate: { validator: Number.isInteger, message: 'Quantity must be a whole number' }
+  },
   priceAtAdd: { type: Number, required: true }
 });
 

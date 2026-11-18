@@ -50,6 +50,10 @@ const addToCart = async (req, res) => {
     if (!isValidProductId(productId)) {
       return res.status(400).json({ message: 'A valid productId is required' });
     }
+    const addQty = Number(quantity);
+    if (!Number.isInteger(addQty) || addQty < 1) {
+      return res.status(400).json({ message: 'Quantity must be a whole number of at least 1' });
+    }
 
     const product = await Product.findById(productId);
     if (!product) {
@@ -74,19 +78,19 @@ const addToCart = async (req, res) => {
       );
 
       if (existingIndex > -1) {
-        const newQty = cart.items[existingIndex].quantity + Number(quantity);
+        const newQty = cart.items[existingIndex].quantity + addQty;
         if (newQty > product.stock) {
           return res.status(400).json({ message: `Cannot exceed available stock (${product.stock} units)` });
         }
         cart.items[existingIndex].quantity = newQty;
       } else {
-        if (Number(quantity) > product.stock) {
+        if (addQty > product.stock) {
           return res.status(400).json({ message: `Cannot exceed available stock (${product.stock} units)` });
         }
         cart.items.push({
           product: product._id,
           vendor: product.vendor,
-          quantity: Number(quantity),
+          quantity: addQty,
           priceAtAdd: price
         });
       }
@@ -111,19 +115,19 @@ const addToCart = async (req, res) => {
       );
 
       if (existingIndex > -1) {
-        const newQty = guestCart.items[existingIndex].quantity + Number(quantity);
+        const newQty = guestCart.items[existingIndex].quantity + addQty;
         if (newQty > product.stock) {
           return res.status(400).json({ message: `Cannot exceed available stock (${product.stock} units)` });
         }
         guestCart.items[existingIndex].quantity = newQty;
       } else {
-        if (Number(quantity) > product.stock) {
+        if (addQty > product.stock) {
           return res.status(400).json({ message: `Cannot exceed available stock (${product.stock} units)` });
         }
         guestCart.items.push({
           product: product._id,
           vendor: product.vendor,
-          quantity: Number(quantity),
+          quantity: addQty,
           priceAtAdd: price
         });
       }
@@ -146,6 +150,10 @@ const updateCartItem = async (req, res) => {
       return res.status(400).json({ message: 'A valid productId is required' });
     }
     const qty = Number(quantity);
+    // 0 or below removes the item; otherwise only whole units are allowed.
+    if (!Number.isInteger(qty)) {
+      return res.status(400).json({ message: 'Quantity must be a whole number' });
+    }
 
     const product = await Product.findById(productId);
     if (!product) {
