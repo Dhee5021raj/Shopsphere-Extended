@@ -487,6 +487,20 @@ const autoSeed = async () => {
 // ─────────────────────────────────────────────────────────────
 // CONNECT DB
 // ─────────────────────────────────────────────────────────────
+// Demo seeding creates accounts with well-known passwords (incl. an admin), and
+// the in-memory fallback silently discards all writes on restart. Neither may
+// run in production unless explicitly opted into.
+const isProduction = () => process.env.NODE_ENV === 'production';
+const demoSeedAllowed = () => !isProduction() || process.env.ALLOW_DEMO_SEED === '1';
+
+const seedIfAllowed = async () => {
+  if (!demoSeedAllowed()) {
+    console.log('[ShopSphere DB] Production mode: demo auto-seed disabled (set ALLOW_DEMO_SEED=1 to override).');
+    return;
+  }
+  await autoSeed();
+};
+
 const connectDB = async () => {
   let mongoUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/shopsphere';
 
@@ -496,8 +510,12 @@ const connectDB = async () => {
       serverSelectionTimeoutMS: 3000
     });
     console.log(`[ShopSphere DB] Connected to MongoDB: ${conn.connection.host}`);
-    await autoSeed();
+    await seedIfAllowed();
   } catch (error) {
+    if (isProduction()) {
+      console.error(`[ShopSphere DB Error] Cannot connect to MongoDB in production; refusing in-memory fallback:`, error.message);
+      process.exit(1);
+    }
     console.warn(`[ShopSphere DB Warning] Local MongoDB not available on ${mongoUri}.`);
     try {
       console.log(`[ShopSphere DB] Initializing MongoMemoryServer fallback...`);
@@ -506,7 +524,7 @@ const connectDB = async () => {
       const memoryUri = replSet.getUri();
       await mongoose.connect(memoryUri, { autoIndex: true });
       console.log(`[ShopSphere DB] Fallback: MongoMemoryServer with ReplicaSet ACID Transaction support!`);
-      await autoSeed();
+      await seedIfAllowed();
     } catch (memError) {
       console.error(`[ShopSphere DB Error] Connection failed:`, memError.message);
       process.exit(1);
