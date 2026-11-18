@@ -1,7 +1,16 @@
 const Cart = require('../models/Cart');
 const GuestCart = require('../models/GuestCart');
 const Product = require('../models/Product');
+const mongoose = require('mongoose');
 const { purgeOrphanedCartItems, populateCartItems } = require('../services/cartService');
+
+// Guest session IDs and product IDs come from the client. Only accept plain
+// strings so a JSON body like {"sessionId": {"$ne": ""}} cannot be passed into
+// a Mongo filter as a query operator (and match some other guest's cart).
+const readSessionId = (value) =>
+  typeof value === 'string' && value.trim() && value.length <= 128 ? value.trim() : null;
+const isValidProductId = (value) =>
+  typeof value === 'string' && mongoose.Types.ObjectId.isValid(value);
 
 // @desc    Get user or guest cart
 // @route   GET /api/cart
@@ -16,7 +25,7 @@ const getCart = async (req, res) => {
       const cartData = await populateCartItems(cart.items);
       return res.json(cartData);
     } else {
-      const sessionId = req.headers['x-session-id'];
+      const sessionId = readSessionId(req.headers['x-session-id']);
       if (!sessionId) {
         return res.json({ items: [], subtotal: 0, shipping: 0, tax: 0, total: 0 });
       }
@@ -38,6 +47,9 @@ const getCart = async (req, res) => {
 const addToCart = async (req, res) => {
   try {
     const { productId, quantity = 1 } = req.body;
+    if (!isValidProductId(productId)) {
+      return res.status(400).json({ message: 'A valid productId is required' });
+    }
 
     const product = await Product.findById(productId);
     if (!product) {
@@ -83,7 +95,7 @@ const addToCart = async (req, res) => {
       const updated = await populateCartItems(cart.items);
       return res.json(updated);
     } else {
-      const sessionId = req.headers['x-session-id'];
+      const sessionId = readSessionId(req.headers['x-session-id']);
       if (!sessionId) {
         return res.status(400).json({ message: 'Session ID header (x-session-id) required for guest cart' });
       }
@@ -130,6 +142,9 @@ const addToCart = async (req, res) => {
 const updateCartItem = async (req, res) => {
   try {
     const { productId, quantity } = req.body;
+    if (!isValidProductId(productId)) {
+      return res.status(400).json({ message: 'A valid productId is required' });
+    }
     const qty = Number(quantity);
 
     const product = await Product.findById(productId);
@@ -157,7 +172,7 @@ const updateCartItem = async (req, res) => {
       const updated = await populateCartItems(cart.items);
       return res.json(updated);
     } else {
-      const sessionId = req.headers['x-session-id'];
+      const sessionId = readSessionId(req.headers['x-session-id']);
       const guestCart = await GuestCart.findOne({ sessionId });
       if (!guestCart) return res.status(404).json({ message: 'Guest cart not found' });
       await purgeOrphanedCartItems(guestCart, true);
@@ -194,7 +209,7 @@ const removeFromCart = async (req, res) => {
         return res.json(updated);
       }
     } else {
-      const sessionId = req.headers['x-session-id'];
+      const sessionId = readSessionId(req.headers['x-session-id']);
       const guestCart = await GuestCart.findOne({ sessionId });
       if (guestCart) {
         await purgeOrphanedCartItems(guestCart, true);
@@ -214,7 +229,7 @@ const removeFromCart = async (req, res) => {
 // @route   POST /api/cart/sync
 const syncGuestCart = async (req, res) => {
   try {
-    const { sessionId } = req.body;
+    const sessionId = readSessionId(req.body?.sessionId);
     if (!sessionId || !req.user) {
       return res.status(400).json({ message: 'Session ID and User context required' });
     }

@@ -57,29 +57,37 @@ const restoreInventoryItems = async (items, session = null) => {
 
   try {
     for (const [prodId, qtyToRestore] of qtyByProduct.entries()) {
-      let productQuery = Product.findById(prodId);
-      if (session) {
-        productQuery = productQuery.session(session);
-      }
-      const product = await productQuery;
+      // Single atomic server-side update (relative to the current values), so a
+      // concurrent checkout's $inc on the same product can never be overwritten
+      // by a stale read-modify-write. soldCount is clamped at 0 in the pipeline.
+      const before = await Product.findOneAndUpdate(
+        { _id: prodId },
+        [
+          {
+            $set: {
+              stock: { $add: [{ $ifNull: ['$stock', 0] }, qtyToRestore] },
+              soldCount: {
+                $max: [0, { $subtract: [{ $ifNull: ['$soldCount', 0] }, qtyToRestore] }]
+              }
+            }
+          }
+        ],
+        { new: false, session: session || undefined, projection: { stock: 1, soldCount: 1 } }
+      ).lean();
 
-      if (!product) {
+      if (!before) {
         console.warn(`[InventoryService] Product ID ${prodId} not found in database; skipping stock restoration.`);
         continue;
       }
 
-      const prevStock = product.stock || 0;
-      const prevSoldCount = product.soldCount || 0;
+      const prevStock = before.stock || 0;
+      const prevSoldCount = before.soldCount || 0;
+      const newStock = prevStock + qtyToRestore;
+      const newSoldCount = Math.max(0, prevSoldCount - qtyToRestore);
 
-      product.stock = prevStock + qtyToRestore;
-      product.soldCount = Math.max(0, prevSoldCount - qtyToRestore);
-
-      if (session) {
-        await product.save({ session });
-      } else {
-        await product.save();
+      if (!session) {
         // Record compensation action for standalone rollback
-        const soldDelta = prevSoldCount - product.soldCount;
+        const soldDelta = prevSoldCount - newSoldCount;
         compensationStack.push(async () => {
           await Product.findByIdAndUpdate(prodId, {
             $inc: { stock: -qtyToRestore, soldCount: soldDelta }
@@ -90,8 +98,8 @@ const restoreInventoryItems = async (items, session = null) => {
       restored.push({
         productId: prodId,
         restoredQuantity: qtyToRestore,
-        newStock: product.stock,
-        newSoldCount: product.soldCount
+        newStock,
+        newSoldCount
       });
     }
 
@@ -157,6 +165,12 @@ const cancelCustomerOrder = async ({ orderId, userId }) => {
       item => item.status !== 'Cancelled' && item.status !== 'Shipped' && item.status !== 'Delivered'
     );
 
+    if (activeItems.length === 0) {
+      const err = new Error('No cancellable items remain: all items are already Shipped, Delivered, or Cancelled');
+      err.statusCode = 400;
+      throw err;
+    }
+
     const isTxnSupported = checkTransactionSupport();
     let executionMode;
 
@@ -171,7 +185,9 @@ const cancelCustomerOrder = async ({ orderId, userId }) => {
         activeItems.forEach(item => {
           item.status = 'Cancelled';
         });
-        order.orderStatus = 'Cancelled';
+        // Derive parent status from items: a fully cancelled order becomes 'Cancelled',
+        // but already-Shipped/Delivered items keep the order Shipped/Delivered.
+        syncOrderLifecycle(order);
 
         await order.save({ session });
         await session.commitTransaction();
@@ -188,7 +204,9 @@ const cancelCustomerOrder = async ({ orderId, userId }) => {
       activeItems.forEach(item => {
         item.status = 'Cancelled';
       });
-      order.orderStatus = 'Cancelled';
+      // Derive parent status from items: a fully cancelled order becomes 'Cancelled',
+      // but already-Shipped/Delivered items keep the order Shipped/Delivered.
+      syncOrderLifecycle(order);
 
       try {
         await order.save();
@@ -252,6 +270,12 @@ const cancelAdminOrder = async ({ orderId }) => {
       item => item.status !== 'Cancelled' && item.status !== 'Shipped' && item.status !== 'Delivered'
     );
 
+    if (activeItems.length === 0) {
+      const err = new Error('No cancellable items remain: all items are already Shipped, Delivered, or Cancelled');
+      err.statusCode = 400;
+      throw err;
+    }
+
     const isTxnSupported = checkTransactionSupport();
     let executionMode;
 
@@ -266,7 +290,9 @@ const cancelAdminOrder = async ({ orderId }) => {
         activeItems.forEach(item => {
           item.status = 'Cancelled';
         });
-        order.orderStatus = 'Cancelled';
+        // Derive parent status from items: a fully cancelled order becomes 'Cancelled',
+        // but already-Shipped/Delivered items keep the order Shipped/Delivered.
+        syncOrderLifecycle(order);
 
         await order.save({ session });
         await session.commitTransaction();
@@ -283,7 +309,9 @@ const cancelAdminOrder = async ({ orderId }) => {
       activeItems.forEach(item => {
         item.status = 'Cancelled';
       });
-      order.orderStatus = 'Cancelled';
+      // Derive parent status from items: a fully cancelled order becomes 'Cancelled',
+      // but already-Shipped/Delivered items keep the order Shipped/Delivered.
+      syncOrderLifecycle(order);
 
       try {
         await order.save();

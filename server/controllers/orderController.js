@@ -52,7 +52,9 @@ const cancelOrder = async (req, res) => {
       userId: req.user._id
     });
     res.json({
-      message: 'Order successfully cancelled',
+      message: result.order.orderStatus === 'Cancelled'
+        ? 'Order successfully cancelled'
+        : 'Unshipped items cancelled; already-shipped items will still be delivered',
       order: result.order,
       executionMode: result.executionMode
     });
