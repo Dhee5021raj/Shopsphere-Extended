@@ -96,9 +96,15 @@ function oracleMath(records) {
   const wins = valid.filter((r) => (r.speedup ?? 0) > 1).length;
   const winRate = parseFloat(((wins / valid.length) * 100).toFixed(1));
 
-  const gap = stdTimes.length >= 2 && Math.min(...stdTimes) > 0
-    ? parseFloat((Math.max(...stdTimes) / Math.min(...stdTimes)).toFixed(2))
-    : null;
+  // Join-order gap: per record, slower / faster of pinned vs best order; median.
+  const gaps = valid
+    .map((r) => {
+      const a = r.naive_ms != null ? r.naive_ms : r.standard_ms;
+      const b = r.best ? (r.best.naive_ms != null ? r.best.naive_ms : r.best.standard_ms) : null;
+      return a > 0 && b > 0 ? Math.max(a, b) / Math.min(a, b) : null;
+    })
+    .filter((g) => g != null);
+  const gap = gaps.length ? parseFloat(median(gaps).toFixed(2)) : null;
 
   return {
     totalRuns: valid.length,
@@ -122,9 +128,9 @@ describe('Challenger M2-2: Math & Metrics Empirical Tests', () => {
   describe('Suite 1: Mathematical Accuracy of getPtMetrics', () => {
     test('1.1 Odd record count: exact median, average, throughput, and speedup match oracle', async () => {
       const records = [
-        { kind: 'shadow', spec: 'rare_category_revenue_7d', standard_ms: 100, optimized_ms: 20, speedup: 5.0, transfer_ms: 2, materialization_ms: 3, transfer_overhead_pct: 25.0 },
-        { kind: 'shadow', spec: 'rare_category_revenue_7d', standard_ms: 200, optimized_ms: 50, speedup: 4.0, transfer_ms: 5, materialization_ms: 5, transfer_overhead_pct: 20.0 },
-        { kind: 'shadow', spec: 'rare_category_revenue_7d', standard_ms: 600, optimized_ms: 50, speedup: 12.0, transfer_ms: 5, materialization_ms: 5, transfer_overhead_pct: 20.0 }
+        { kind: 'shadow', spec: 'rare_category_revenue_7d', standard_ms: 100, optimized_ms: 20, speedup: 5.0, transfer_ms: 2, materialization_ms: 3, transfer_overhead_pct: 25.0, best: { standard_ms: 50 } },
+        { kind: 'shadow', spec: 'rare_category_revenue_7d', standard_ms: 200, optimized_ms: 50, speedup: 4.0, transfer_ms: 5, materialization_ms: 5, transfer_overhead_pct: 20.0, best: { standard_ms: 50 } },
+        { kind: 'shadow', spec: 'rare_category_revenue_7d', standard_ms: 600, optimized_ms: 50, speedup: 12.0, transfer_ms: 5, materialization_ms: 5, transfer_overhead_pct: 20.0, best: { standard_ms: 100 } }
       ];
 
       await withTempLog(records, async () => {
@@ -144,7 +150,8 @@ describe('Challenger M2-2: Math & Metrics Empirical Tests', () => {
         assert.equal(data.maxSpeedup, 12.0);
         assert.equal(data.minSpeedup, 4.0);
         assert.equal(data.winRate, 100.0);
-        assert.equal(data.robustnessGap, 6.0); // 600 / 100
+        assert.equal(data.robustnessGap, 4.0); // per-record gaps 2, 4, 6 -> median 4
+        assert.equal(data.robustnessGap, expected.robustnessGap);
 
         // Parity with legacy keys
         assert.equal(data.avgNaiveMs, data.avgStandardMs);
@@ -197,8 +204,8 @@ describe('Challenger M2-2: Math & Metrics Empirical Tests', () => {
 
     test('1.4 Per-spec math matches per-spec aggregate statistics', async () => {
       const records = [
-        { kind: 'shadow', spec: 'specA', standard_ms: 100, optimized_ms: 20, speedup: 5.0, transfer_overhead_pct: 10, transfer_ms: 1, materialization_ms: 1 },
-        { kind: 'shadow', spec: 'specA', standard_ms: 300, optimized_ms: 30, speedup: 10.0, transfer_overhead_pct: 20, transfer_ms: 3, materialization_ms: 3 },
+        { kind: 'shadow', spec: 'specA', standard_ms: 100, optimized_ms: 20, speedup: 5.0, transfer_overhead_pct: 10, transfer_ms: 1, materialization_ms: 1, best: { standard_ms: 25 } },
+        { kind: 'shadow', spec: 'specA', standard_ms: 300, optimized_ms: 30, speedup: 10.0, transfer_overhead_pct: 20, transfer_ms: 3, materialization_ms: 3, best: { standard_ms: 150 } },
         { kind: 'shadow', spec: 'specB', standard_ms: 50, optimized_ms: 50, speedup: 1.0, transfer_overhead_pct: 5, transfer_ms: 1, materialization_ms: 1 }
       ];
 
@@ -225,7 +232,7 @@ describe('Challenger M2-2: Math & Metrics Empirical Tests', () => {
         assert.equal(specA.minSpeedup, 5.0);
         assert.equal(specA.wins, 2);
         assert.equal(specA.winRate, 100.0);
-        assert.equal(specA.robustnessGap, 3.0); // 300 / 100
+        assert.equal(specA.robustnessGap, 3.0); // per-record gaps 4 and 2 -> median 3
         assert.equal(specA.avgOverheadPct, 15.0);
         assert.equal(specA.avgTransferMs, 2.0);
         assert.equal(specA.avgMatMs, 2.0);
@@ -233,7 +240,7 @@ describe('Challenger M2-2: Math & Metrics Empirical Tests', () => {
         assert.equal(specB.runs, 1);
         assert.equal(specB.wins, 0); // speedup 1.0 is not > 1
         assert.equal(specB.winRate, 0.0);
-        assert.equal(specB.robustnessGap, null); // only 1 run
+        assert.equal(specB.robustnessGap, null); // no second join order timed
       });
     });
   });

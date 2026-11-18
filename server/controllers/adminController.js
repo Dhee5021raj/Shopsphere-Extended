@@ -132,6 +132,16 @@ const updateOrderStatusAdmin = async (req, res) => {
     }
 
     syncOrderLifecycle(order);
+
+    // The parent status is derived from item statuses. Pending/Processing do not
+    // move items, so if the items say otherwise the sync above overrides the
+    // request. Report that instead of claiming success for a no-op.
+    if (order.orderStatus !== orderStatus) {
+      return res.status(400).json({
+        message: `Cannot set order to "${orderStatus}": its item statuses make it "${order.orderStatus}". Update the items instead.`
+      });
+    }
+
     await order.save();
     res.json({ message: 'Order status updated successfully', order });
   } catch (error) {
@@ -344,6 +354,30 @@ const getPtStatus = async (req, res) => {
   }
 };
 
+// Per-record join-order gap: slower / faster of the pinned order and the
+// greedy best order for the same query. `side` is 'standard' or 'optimized'.
+const recordOrderGap = (r, side) => {
+  const pick = (o) => {
+    if (!o || typeof o !== 'object') return null;
+    const v = side === 'standard'
+      ? (o.naive_ms != null ? o.naive_ms : o.standard_ms)
+      : (o.reduced_ms != null ? o.reduced_ms : (o.optimized_ms != null ? o.optimized_ms : o.total_ms));
+    return typeof v === 'number' && Number.isFinite(v) && v > 0 ? v : null;
+  };
+  const a = pick(r);
+  const b = pick(r && r.best);
+  if (a == null || b == null) return null;
+  return Math.max(a, b) / Math.min(a, b);
+};
+
+const medianOrderGap = (records, side) => {
+  const gaps = records.map((r) => recordOrderGap(r, side)).filter((g) => g != null).sort((x, y) => x - y);
+  if (gaps.length === 0) return null;
+  const m = Math.floor(gaps.length / 2);
+  const med = gaps.length % 2 === 0 ? (gaps[m - 1] + gaps[m]) / 2 : gaps[m];
+  return parseFloat(med.toFixed(2));
+};
+
 // @desc    Compute aggregate performance metrics from the pt-log for the dashboard
 // @route   GET /api/admin/pt-metrics
 //
@@ -351,7 +385,8 @@ const getPtStatus = async (req, res) => {
 //   - avgStandardMs / avgOptimizedMs     : mean latency per side (ms)
 //   - throughputStandard / throughputOptimized : queries per second (1000 / avgMs)
 //   - avgSpeedup / maxSpeedup / minSpeedup : speedup factor distribution
-//   - robustnessGap               : max_standard_ms / min_standard_ms (order-sensitivity)
+//   - robustnessGap               : median per-record (pinned vs best join order) standard-time ratio
+//   - optimizedRobustnessGap      : same ratio on the optimized side (near 1 = order-insensitive)
 //   - winRate                     : % of runs where PT was faster (speedup > 1)
 //   - avgOverheadPct              : mean transfer+mat overhead as % of optimized time
 //   - avgTransferMs / avgMatMs    : mean transfer and materialisation costs
@@ -409,10 +444,14 @@ const getPtMetrics = async (req, res) => {
     const throughputNaive   = throughputStandard;
     const throughputReduced = throughputOptimized;
 
-    // Robustness gap: measures how sensitive standard/naive is to join order (max/min standard time)
-    const robustnessGap = standardTimes.length >= 2 && Math.min(...standardTimes) > 0
-      ? parseFloat((Math.max(...standardTimes) / Math.min(...standardTimes)).toFixed(2))
-      : null;
+    // Robustness gap = join-order sensitivity. Each shadow record times the SAME
+    // query under two join orders: the pinned order (top-level fields) and the
+    // greedy "best" order (r.best). The per-record gap is slower / faster of the
+    // two; the metric is the median over records that have both. Comparing
+    // times ACROSS records would mix different queries/searches, which measures
+    // query variety, not order sensitivity.
+    const robustnessGap = medianOrderGap(shadows, 'standard');
+    const optimizedRobustnessGap = medianOrderGap(shadows, 'optimized');
 
     // Win rate: fraction of runs where PT reduced latency
     const wins    = shadows.filter((r) => (r.speedup ?? 0) > 1).length;
@@ -431,9 +470,11 @@ const getPtMetrics = async (req, res) => {
           overheads: [],
           transfers: [],
           mats: [],
-          timeline: []
+          timeline: [],
+          records: []
         };
       }
+      specMap[s].records.push(r);
       if (r.description) specMap[s].descriptions.push(r.description);
       const std = r.naive_ms != null ? r.naive_ms : r.standard_ms;
       const opt = r.reduced_ms != null ? r.reduced_ms : (r.optimized_ms ?? r.total_ms);
@@ -460,9 +501,8 @@ const getPtMetrics = async (req, res) => {
     const perSpecStats = Object.entries(specMap).map(([spec, d]) => {
       const specWins = d.speedups.filter((sp) => sp > 1).length;
       const specWinRate = d.speedups.length > 0 ? parseFloat(((specWins / d.speedups.length) * 100).toFixed(1)) : 0;
-      const specGap = d.standardTimes.length >= 2 && Math.min(...d.standardTimes) > 0
-        ? parseFloat((Math.max(...d.standardTimes) / Math.min(...d.standardTimes)).toFixed(2))
-        : null;
+      const specGap = medianOrderGap(d.records, 'standard');
+      const specOptGap = medianOrderGap(d.records, 'optimized');
 
       const avgStd = avg(d.standardTimes);
       const avgOpt = avg(d.optimizedTimes);
@@ -499,6 +539,7 @@ const getPtMetrics = async (req, res) => {
         maxSpeedup: d.speedups.length ? parseFloat(Math.max(...d.speedups).toFixed(2)) : null,
         minSpeedup: d.speedups.length ? parseFloat(Math.min(...d.speedups).toFixed(2)) : null,
         robustnessGap: specGap,
+        optimizedRobustnessGap: specOptGap,
         avgOverheadPct: d.overheads.length ? parseFloat(avg(d.overheads).toFixed(1)) : null,
         avgTransferMs: d.transfers.length ? parseFloat(avg(d.transfers).toFixed(1)) : null,
         avgMatMs: d.mats.length ? parseFloat(avg(d.mats).toFixed(1)) : null,
@@ -546,6 +587,7 @@ const getPtMetrics = async (req, res) => {
       maxSpeedup:         speedups.length ? parseFloat(Math.max(...speedups).toFixed(2)) : null,
       minSpeedup:         speedups.length ? parseFloat(Math.min(...speedups).toFixed(2)) : null,
       robustnessGap,
+      optimizedRobustnessGap,
       avgOverheadPct:     overheads.length ? parseFloat(avg(overheads).toFixed(1)) : null,
       avgTransferMs:      transfers.length ? parseFloat(avg(transfers).toFixed(1)) : null,
       avgMatMs:           mats.length      ? parseFloat(avg(mats).toFixed(1))      : null,

@@ -760,7 +760,7 @@ const MetricsPanel = ({ metrics }) => {
     throughputStandard, throughputNaive,
     throughputOptimized, throughputReduced,
     avgSpeedup: overallAvgSpeedup, maxSpeedup: overallMaxSpeedup, minSpeedup: overallMinSpeedup,
-    robustnessGap: overallGap,
+    robustnessGap: overallGap, optimizedRobustnessGap: overallOptGap,
     avgOverheadPct: overallOverhead, avgTransferMs: overallTransfer, avgMatMs: overallMat,
     perSpecStats = [], timeline: overallTimeline = [],
   } = metrics;
@@ -791,6 +791,7 @@ const MetricsPanel = ({ metrics }) => {
     maxSpeedup: activeSpecData.maxSpeedup,
     minSpeedup: activeSpecData.minSpeedup,
     robustnessGap: activeSpecData.robustnessGap,
+    optimizedRobustnessGap: activeSpecData.optimizedRobustnessGap,
     avgOverheadPct: activeSpecData.avgOverheadPct,
     avgTransferMs: activeSpecData.avgTransferMs,
     avgMatMs: activeSpecData.avgMatMs,
@@ -810,6 +811,7 @@ const MetricsPanel = ({ metrics }) => {
     maxSpeedup: overallMaxSpeedup,
     minSpeedup: overallMinSpeedup,
     robustnessGap: overallGap,
+    optimizedRobustnessGap: overallOptGap,
     avgOverheadPct: overallOverhead,
     avgTransferMs: overallTransfer,
     avgMatMs: overallMat,
@@ -979,8 +981,8 @@ const MetricsPanel = ({ metrics }) => {
             <StatCard
               icon={AlertTriangle}
               label="Robustness Gap"
-              value={displayData.robustnessGap != null ? `${displayData.robustnessGap}×` : '≥ 2 runs needed'}
-              sub="max standard ÷ min standard order spread"
+              value={displayData.robustnessGap != null ? `${displayData.robustnessGap}×` : 'needs a 2-order run'}
+              sub={`standard: slower ÷ faster join order (median)${displayData.optimizedRobustnessGap != null ? ` · optimized ${displayData.optimizedRobustnessGap}×` : ''}`}
               color={displayData.robustnessGap > 3 ? 'rose' : 'amber'}
             />
           </div>

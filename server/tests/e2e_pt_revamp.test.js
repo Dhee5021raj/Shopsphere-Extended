@@ -515,16 +515,17 @@ describe('Tier 1: Feature Coverage (R1 - R5)', () => {
       });
     });
 
-    test('T1.4.6 [R3-Metrics-RobustnessGap] robustnessGap measures join order sensitivity (max/min standard latency)', async () => {
+    test('T1.4.6 [R3-Metrics-RobustnessGap] robustnessGap measures join order sensitivity (pinned vs best order, per record)', async () => {
       const records = [
-        { ...SAMPLE_SHADOW_RECORD, naive_ms: 1000, standard_ms: 1000 },
-        { ...SAMPLE_SHADOW_RECORD, naive_ms: 5000, standard_ms: 5000 }
+        { ...SAMPLE_SHADOW_RECORD, naive_ms: 1000, standard_ms: 1000, best: { naive_ms: 200, reduced_ms: 1000 } },
+        { ...SAMPLE_SHADOW_RECORD, naive_ms: 5000, standard_ms: 5000, best: { naive_ms: 1000, reduced_ms: 1000 } }
       ];
       await withTempLog(records, async () => {
         const { res, getState } = createMockRes();
         await getPtMetrics({}, res);
         const data = getState().data;
-        assert.strictEqual(data.robustnessGap, 5.0);
+        assert.strictEqual(data.robustnessGap, 5.0); // 1000/200 and 5000/1000 -> median 5
+        assert.strictEqual(data.optimizedRobustnessGap, 1.05); // 1050/1000 on both records
       });
     });
   });
