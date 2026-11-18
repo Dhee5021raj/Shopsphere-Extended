@@ -64,6 +64,14 @@ const ProductDetailPage = ({ onToast }) => {
     fetchProductData();
   }, [id]);
 
+  // Deep link from an order ("Write a review" -> /products/:id#reviews):
+  // once the page has rendered, scroll the reviews section into view.
+  useEffect(() => {
+    if (!loading && product && window.location.hash === '#reviews') {
+      document.getElementById('reviews')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [loading, product]);
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-900">
@@ -304,7 +312,7 @@ const ProductDetailPage = ({ onToast }) => {
       </div>
 
       {/* REVIEWS & RATINGS SECTION */}
-      <section className="bg-white border border-slate-200 rounded-3xl p-8 space-y-8 shadow-sm">
+      <section id="reviews" className="bg-white border border-slate-200 rounded-3xl p-8 space-y-8 shadow-sm scroll-mt-24">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
           <div>
             <h2 className="text-2xl font-bold text-slate-900">Customer Reviews</h2>

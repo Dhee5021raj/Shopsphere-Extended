@@ -117,10 +117,10 @@ const CheckoutPage = ({ onToast }) => {
 
         <div className="flex gap-4">
           <button
-            onClick={() => navigate('/dashboard')}
+            onClick={() => navigate(`/orders/${successResult.order._id}`)}
             className="flex-1 gradient-button text-white font-bold py-3.5 rounded-2xl shadow-sm cursor-pointer"
           >
-            Track Order History
+            View Order
           </button>
           <button
             onClick={() => navigate('/products')}

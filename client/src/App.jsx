@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage';
 import ProductDiscoveryPage from './pages/ProductDiscoveryPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import VendorsPage from './pages/VendorsPage';
+import OrderDetailPage from './pages/OrderDetailPage';
 import VendorStorefrontPage from './pages/VendorStorefrontPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
@@ -89,6 +90,14 @@ function App() {
                     element={
                       <ProtectedRoute>
                         <CustomerDashboardPage onToast={showToast} />
+                      </ProtectedRoute>
+                    }
+                  />
+                  <Route
+                    path="/orders/:id"
+                    element={
+                      <ProtectedRoute>
+                        <OrderDetailPage onToast={showToast} />
                       </ProtectedRoute>
                     }
                   />

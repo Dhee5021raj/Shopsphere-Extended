@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Package, Heart, User, MapPin, Clock, CheckCircle2, Truck, XCircle, Store } from 'lucide-react';
+import { Package, User, Store } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import api from '../services/api';
+import OrderStatusBadge from '../components/OrderStatusBadge';
 import { useAuth } from '../context/AuthContext';
 import { useWishlist } from '../context/WishlistContext';
 
@@ -60,19 +62,6 @@ const CustomerDashboardPage = ({ onToast }) => {
       if (onToast) onToast('Profile & Address saved');
     } catch (err) {
       if (onToast) onToast('Failed to update profile', 'error');
-    }
-  };
-
-  const getStatusBadge = (status) => {
-    switch (status) {
-      case 'Delivered':
-        return <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold flex items-center gap-1"><CheckCircle2 size={13} /> Delivered</span>;
-      case 'Shipped':
-        return <span className="px-3 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-200 text-xs font-bold flex items-center gap-1"><Truck size={13} /> Shipped</span>;
-      case 'Cancelled':
-        return <span className="px-3 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 text-xs font-bold flex items-center gap-1"><XCircle size={13} /> Cancelled</span>;
-      default:
-        return <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-xs font-bold flex items-center gap-1"><Clock size={13} /> Processing</span>;
     }
   };
 
@@ -140,7 +129,7 @@ const CustomerDashboardPage = ({ onToast }) => {
                       <div className="text-[11px] text-slate-400 mt-0.5">Placed on {new Date(ord.createdAt).toLocaleDateString()}</div>
                     </div>
                     <div className="flex items-center gap-3">
-                      {getStatusBadge(ord.orderStatus)}
+                      <OrderStatusBadge status={ord.orderStatus} />
                       <span className="text-base font-extrabold text-slate-900">₹{ord.totalAmount?.toLocaleString('en-IN')}</span>
                     </div>
                   </div>
@@ -172,17 +161,20 @@ const CustomerDashboardPage = ({ onToast }) => {
                     ))}
                   </div>
 
-                  {/* Cancel Button */}
+                  {/* Order actions */}
+                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between gap-3">
+                    <Link to={`/orders/${ord._id}`} className="text-xs font-bold text-emerald-600 hover:text-emerald-700">
+                      View details
+                    </Link>
                   {(ord.orderStatus === 'Pending' || ord.orderStatus === 'Processing') && (
-                    <div className="pt-2 border-t border-slate-100 text-right">
                       <button
                         onClick={() => handleCancelOrder(ord._id)}
                         className="text-xs text-rose-600 hover:text-rose-700 font-semibold"
                       >
                         Cancel Order
                       </button>
-                    </div>
                   )}
+                  </div>
 
                 </div>
               ))}
