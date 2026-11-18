@@ -110,7 +110,7 @@ const ProductDiscoveryPage = ({ onToast }) => {
     minRating: searchParams.get('minRating') || '',
     inStock: searchParams.get('inStock') || 'false',
     featured: searchParams.get('featured') || 'false',
-    sort: searchParams.get('sort') || 'newest'
+    sort: searchParams.get('sort') || ''
   });
 
   // Fetch Categories & Vendors metadata once
@@ -141,9 +141,10 @@ const ProductDiscoveryPage = ({ onToast }) => {
       try {
         const params = {
           page,
-          limit: 12,
-          sort: filters.sort
+          limit: 12
         };
+        // Empty sort lets the server pick: text relevance when searching, newest otherwise.
+        if (filters.sort) params.sort = filters.sort;
 
         if (filters.search) params.search = filters.search;
         if (filters.category && filters.category !== 'all') params.category = filters.category;
@@ -205,7 +206,7 @@ const ProductDiscoveryPage = ({ onToast }) => {
       minRating: '',
       inStock: 'false',
       featured: 'false',
-      sort: 'newest'
+      sort: ''
     });
     setPage(1);
   };
@@ -252,10 +253,15 @@ const ProductDiscoveryPage = ({ onToast }) => {
             <div className="flex items-center gap-2 text-xs">
               <span className="text-slate-500 font-medium">Sort by:</span>
               <select
-                value={filters.sort}
+                value={
+                  filters.sort && (filters.sort !== 'relevance' || filters.search)
+                    ? filters.sort
+                    : (filters.search ? 'relevance' : 'newest')
+                }
                 onChange={(e) => handleFilterChange('sort', e.target.value)}
                 className="bg-slate-50 border border-slate-200 text-slate-800 text-xs rounded-xl px-3 py-2 focus:border-emerald-500 focus:outline-none"
               >
+                {filters.search && <option value="relevance">Best Match</option>}
                 <option value="newest">Newest Arrivals</option>
                 <option value="price_asc">Price: Low to High</option>
                 <option value="price_desc">Price: High to Low</option>

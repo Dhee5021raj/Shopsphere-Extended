@@ -49,7 +49,12 @@ const getProducts = async (req, res) => {
     }
 
     // SORTING LOGIC
-    let sortOptions = { createdAt: -1 }; // Default: Newest
+    // With a text search and no explicit sort (or sort=relevance), rank by the
+    // text index's weighted score (name x10, description x5); otherwise newest.
+    const useRelevance = Boolean(query.$text) && (!req.query.sort || req.query.sort === 'relevance');
+    let sortOptions = useRelevance
+      ? { score: { $meta: 'textScore' }, createdAt: -1 }
+      : { createdAt: -1 }; // Default: Newest
     if (req.query.sort === 'price_asc') sortOptions = { price: 1 };
     if (req.query.sort === 'price_desc') sortOptions = { price: -1 };
     if (req.query.sort === 'rating') sortOptions = { rating: -1 };
@@ -58,7 +63,7 @@ const getProducts = async (req, res) => {
     // Concurrently count total matching documents and retrieve paginated lean results
     const [total, products] = await Promise.all([
       Product.countDocuments(query),
-      Product.find(query)
+      Product.find(query, useRelevance ? { score: { $meta: 'textScore' } } : undefined)
         .populate('category', 'name slug icon')
         .populate('vendor', 'storeName storeSlug logo rating')
         .sort(sortOptions)
