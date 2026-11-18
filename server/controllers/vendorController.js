@@ -8,8 +8,9 @@ const { syncOrderLifecycle, validateItemStatusTransition } = require('../service
 // @route   GET /api/vendors
 const getVendors = async (req, res) => {
   try {
+    // Public endpoint: never expose the vendor owner's email address.
     const vendors = await Vendor.find({ status: 'approved' })
-      .populate('user', 'name email avatar')
+      .populate('user', 'name avatar')
       .sort({ rating: -1, totalSales: -1 });
 
     res.json(vendors);
@@ -23,7 +24,7 @@ const getVendors = async (req, res) => {
 const getVendorStoreBySlug = async (req, res) => {
   try {
     const vendor = await Vendor.findOne({ storeSlug: req.params.slug, status: 'approved' })
-      .populate('user', 'name email avatar createdAt');
+      .populate('user', 'name avatar createdAt');
 
     if (!vendor) {
       return res.status(404).json({ message: 'Vendor store not found or account pending approval' });

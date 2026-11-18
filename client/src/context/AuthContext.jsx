@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import api from '../services/api';
+import api, { AUTH_EXPIRED_EVENT } from '../services/api';
 
 const AuthContext = createContext();
 
@@ -36,6 +36,14 @@ export const AuthProvider = ({ children }) => {
     return () => {
       isMounted = false;
     };
+  }, []);
+
+  // A 401 on any request means the stored token is no longer valid
+  // (expired, user deleted or blocked); drop the in-memory session too.
+  useEffect(() => {
+    const handleExpired = () => setUser(null);
+    window.addEventListener(AUTH_EXPIRED_EVENT, handleExpired);
+    return () => window.removeEventListener(AUTH_EXPIRED_EVENT, handleExpired);
   }, []);
 
   const login = async (email, password) => {

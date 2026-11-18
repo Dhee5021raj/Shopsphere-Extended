@@ -31,7 +31,7 @@ const createReview = async (req, res) => {
 
     if (!eligible) {
       return res.status(403).json({
-        message: 'Verified Purchase Required: You can only review products you have purchased on ShopSphere.'
+        message: 'Verified Purchase Required: You can only review products that have been delivered to you on ShopSphere.'
       });
     }
 

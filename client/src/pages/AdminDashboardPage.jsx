@@ -111,7 +111,7 @@ const AdminDashboardPage = ({ onToast }) => {
       if (onToast) onToast('Category deleted');
       fetchAdminData();
     } catch (err) {
-      if (onToast) onToast('Delete failed', 'error');
+      if (onToast) onToast(err.response?.data?.message || 'Delete failed', 'error');
     }
   };
 

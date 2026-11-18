@@ -15,7 +15,10 @@ const Review = require('../models/Review');
 
 /**
  * Validates whether a user has legitimately purchased a product.
- * Returns true if customer has a non-cancelled order with a non-cancelled line item for the product.
+ * Returns true if the customer has a non-cancelled order in which a line item for
+ * the product has been DELIVERED. Pending/processing/shipped items do not count:
+ * a buyer can only review what they actually received, and a delivered item can
+ * no longer be cancelled, so a review can never outlive its purchase.
  * Admin users are granted a bypass.
  */
 async function verifyPurchaseEligibility({ userId, productId, role }) {
@@ -30,7 +33,7 @@ async function verifyPurchaseEligibility({ userId, productId, role }) {
     items: {
       $elemMatch: {
         product: productId,
-        status: { $ne: 'Cancelled' }
+        status: 'Delivered'
       }
     }
   });
@@ -79,42 +82,34 @@ async function recalculateProductAndVendorRatings({ productId, vendorId }) {
     }
   }
 
-  let vendorRating = 0;
-  let numRatings = 0;
-
-  if (targetVendorId) {
-    const vendorObjectId = new mongoose.Types.ObjectId(targetVendorId);
-
-    // Recalculate Vendor Rating & Review Count across all products belonging to this vendor
-    const vendorStats = await Review.aggregate([
-      { $match: { vendor: vendorObjectId } },
-      {
-        $group: {
-          _id: '$vendor',
-          avgRating: { $avg: '$rating' },
-          numRatings: { $sum: 1 }
-        }
-      }
-    ]);
-
-    numRatings = vendorStats[0] ? vendorStats[0].numRatings : 0;
-    const rawVendorAvg = vendorStats[0] ? vendorStats[0].avgRating : 0;
-    vendorRating = numRatings > 0 ? Math.round(rawVendorAvg * 10) / 10 : 0;
-
-    await Vendor.findByIdAndUpdate(
-      targetVendorId,
-      { rating: vendorRating, numRatings },
-      { new: true }
-    );
-  }
+  const vendor = targetVendorId
+    ? await recalculateVendorRating(targetVendorId)
+    : { rating: 0, numRatings: 0 };
 
   return {
     product: { rating: productRating, numReviews },
-    vendor: { rating: vendorRating, numRatings }
+    vendor: { rating: vendor.rating, numRatings: vendor.numRatings }
   };
+}
+
+/**
+ * Recalculates a vendor's average rating and rating count from its reviews.
+ */
+async function recalculateVendorRating(vendorId) {
+  if (!vendorId) return { rating: 0, numRatings: 0 };
+  const vendorObjectId = new mongoose.Types.ObjectId(vendorId);
+  const stats = await Review.aggregate([
+    { $match: { vendor: vendorObjectId } },
+    { $group: { _id: '$vendor', avgRating: { $avg: '$rating' }, numRatings: { $sum: 1 } } }
+  ]);
+  const numRatings = stats[0] ? stats[0].numRatings : 0;
+  const rating = numRatings > 0 ? Math.round(stats[0].avgRating * 10) / 10 : 0;
+  await Vendor.findByIdAndUpdate(vendorId, { rating, numRatings });
+  return { rating, numRatings };
 }
 
 module.exports = {
   verifyPurchaseEligibility,
+  recalculateVendorRating,
   recalculateProductAndVendorRatings
 };

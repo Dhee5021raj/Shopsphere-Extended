@@ -1,5 +1,7 @@
 const Product = require('../models/Product');
 const Vendor = require('../models/Vendor');
+const Review = require('../models/Review');
+const ratingService = require('../services/ratingService');
 
 // @desc    Get all products with Text Search, Filters, Sorting & Pagination
 // @route   GET /api/products
@@ -264,6 +266,14 @@ const deleteProduct = async (req, res) => {
     }
 
     await Product.findByIdAndDelete(req.params.id);
+
+    // Reviews of a deleted product would otherwise keep counting towards the
+    // vendor's average rating. Remove them and recompute the vendor rating.
+    const { deletedCount } = await Review.deleteMany({ product: product._id });
+    if (deletedCount > 0) {
+      await ratingService.recalculateVendorRating(product.vendor);
+    }
+
     res.json({ message: 'Product successfully removed' });
   } catch (error) {
     res.status(500).json({ message: error.message });

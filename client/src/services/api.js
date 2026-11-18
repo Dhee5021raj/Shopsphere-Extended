@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+export const AUTH_EXPIRED_EVENT = 'shopsphere:auth-expired';
+
 const api = axios.create({
   baseURL: '/api',
   headers: {
@@ -36,7 +38,17 @@ api.interceptors.response.use(
       // Only clear token if this 401 was not from an explicit login or registration attempt
       if (!url.includes('/auth/login') && !url.includes('/auth/register')) {
         localStorage.removeItem('shopsphere_token');
+        // Tell AuthContext so the UI logs out now, not on the next page reload.
+        window.dispatchEvent(new Event(AUTH_EXPIRED_EVENT));
       }
+    } else if (
+      error.response &&
+      error.response.status === 403 &&
+      /suspended/i.test(error.response.data?.message || '')
+    ) {
+      // protect() answers 403 for an admin-blocked account: end that session too.
+      localStorage.removeItem('shopsphere_token');
+      window.dispatchEvent(new Event(AUTH_EXPIRED_EVENT));
     }
     return Promise.reject(error);
   }

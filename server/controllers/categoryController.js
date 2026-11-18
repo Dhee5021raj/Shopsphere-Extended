@@ -1,4 +1,5 @@
 const Category = require('../models/Category');
+const Product = require('../models/Product');
 
 const getCategories = async (req, res) => {
   try {
@@ -63,8 +64,19 @@ const updateCategory = async (req, res) => {
 
 const deleteCategory = async (req, res) => {
   try {
-    const category = await Category.findByIdAndDelete(req.params.id);
+    const category = await Category.findById(req.params.id);
     if (!category) return res.status(404).json({ message: 'Category not found' });
+
+    // Products reference their category; deleting it would leave them dangling
+    // (missing from category browsing and failing to populate).
+    const inUse = await Product.countDocuments({ category: category._id });
+    if (inUse > 0) {
+      return res.status(409).json({
+        message: `Cannot delete category "${category.name}": ${inUse} product(s) still use it. Reassign or remove them first.`
+      });
+    }
+
+    await Category.deleteOne({ _id: category._id });
     res.json({ message: 'Category removed successfully' });
   } catch (error) {
     res.status(500).json({ message: error.message });
